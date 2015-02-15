@@ -65,7 +65,7 @@ import com.google.android.gms.plus.model.people.Person;
 /**
  * A login screen that offers login via email/password.
  */
-public class LoginActivity extends Activity implements OnClickListener, ConnectionCallbacks, OnConnectionFailedListener {
+public class LoginActivity extends Activity implements OnClickListener, ConnectionCallbacks, OnConnectionFailedListener{
 
     private static final int RC_SIGN_IN = 0;
     // Logcat tag
@@ -88,10 +88,12 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
     private ConnectionResult mConnectionResult;
 
     private SignInButton btnSignIn;
-    private Button btnSignOut, btnRevokeAccess;
+    private Button btnSignOut, btnMainMenu, btnRevokeAccess;
     private ImageView imgProfilePic;
     private TextView txtName, txtEmail;
     private LinearLayout llProfileLayout;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,6 +103,7 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
         btnSignIn = (SignInButton) findViewById(R.id.btn_sign_in);
         btnSignOut = (Button) findViewById(R.id.btn_sign_out);
         btnRevokeAccess = (Button) findViewById(R.id.btn_revoke_access);
+        btnMainMenu = (Button)findViewById(R.id.btn_main_menu);
         imgProfilePic = (ImageView) findViewById(R.id.imgProfilePic);
         txtName = (TextView) findViewById(R.id.txtName);
         txtEmail = (TextView) findViewById(R.id.txtEmail);
@@ -110,6 +113,7 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
         btnSignIn.setOnClickListener(this);
         btnSignOut.setOnClickListener(this);
         btnRevokeAccess.setOnClickListener(this);
+        btnMainMenu.setOnClickListener(this);
 
         // Initializing google plus api client
         mGoogleApiClient = new GoogleApiClient.Builder(this)
@@ -118,7 +122,14 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
                 .addApi(Plus.API)
                 .addScope(Plus.SCOPE_PLUS_LOGIN)
                 .build();
+
+
     }
+
+
+
+
+        //Google+ Implementation
 
     @Override
     protected void onStart() {
@@ -148,6 +159,10 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
             case R.id.btn_revoke_access:
                 // Revoke access button clicked
                 revokeGplusAccess();
+                break;
+            case R.id.btn_main_menu:
+                Intent i = new Intent(this, MainActivity.class);
+                this.startActivity(i);
                 break;
         }
     }
@@ -215,10 +230,12 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
             btnSignOut.setVisibility(View.VISIBLE);
             btnRevokeAccess.setVisibility(View.VISIBLE);
             llProfileLayout.setVisibility(View.VISIBLE);
+            btnMainMenu.setVisibility(View.VISIBLE);
         } else {
             btnSignIn.setVisibility(View.VISIBLE);
             btnSignOut.setVisibility(View.GONE);
             btnRevokeAccess.setVisibility(View.GONE);
+            btnMainMenu.setVisibility(View.GONE);
             llProfileLayout.setVisibility(View.GONE);
         }
     }
@@ -313,6 +330,8 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
             bmImage.setImageBitmap(result);
         }
     }
+
+
 
     /**
      * Sign-out from google
@@ -691,6 +710,8 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
 
 
 }
+
+
 
 
 

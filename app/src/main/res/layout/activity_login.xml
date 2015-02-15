@@ -6,6 +6,42 @@
     android:padding="16dp"
     tools:context=".LoginActivity" >
 
+       <ProgressBar android:id="@+id/login_progress" style="?android:attr/progressBarStyleLarge"
+           android:layout_width="wrap_content" android:layout_height="wrap_content"
+           android:layout_marginBottom="8dp" android:visibility="gone" />
+
+       <LinearLayout android:id="@+id/email_login_form" android:layout_width="349dp"
+           android:layout_height="222dp" android:orientation="vertical">
+
+           <AutoCompleteTextView android:id="@+id/email" android:layout_width="match_parent"
+               android:layout_height="wrap_content" android:hint="@string/prompt_email"
+               android:inputType="textEmailAddress" android:maxLines="1"
+               android:singleLine="true"
+               android:padding="15dp"/>
+
+           <EditText android:id="@+id/password" android:layout_width="match_parent"
+               android:layout_height="wrap_content" android:hint="@string/prompt_password"
+               android:imeActionId="@+id/login"
+               android:imeActionLabel="@string/action_sign_in_short"
+               android:imeOptions="actionUnspecified" android:inputType="textPassword"
+               android:maxLines="1" android:singleLine="true"
+               android:padding="15dp"/>
+
+           <Button android:id="@+id/email_sign_in_button" style="?android:textAppearanceSmall"
+               android:layout_width="match_parent" android:layout_height="wrap_content"
+               android:layout_marginTop="16dp" android:text="@string/action_sign_in"
+               android:textStyle="bold" />
+
+       </LinearLayout>
+
+       <ScrollView android:id="@+id/login_form" android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="0.77"
+           >
+
+       </ScrollView>
+
+
     <LinearLayout
         android:id="@+id/llProfile"
         android:layout_width="fill_parent"
@@ -19,7 +55,8 @@
             android:id="@+id/imgProfilePic"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -65,50 +102,14 @@
         android:text="@string/btn_revoke_access"
         android:visibility="gone" />
 
+    <Button
+        android:id="@+id/btn_main_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_main_menu"
+        android:visibility="gone"/>
+
 </LinearLayout>
 
 
 
-    <!-- Login progress
-        <ProgressBar android:id="@+id/login_progress" style="?android:attr/progressBarStyleLarge"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp" android:visibility="gone" />
-
-        <LinearLayout android:id="@+id/email_login_form" android:layout_width="349dp"
-            android:layout_height="222dp" android:orientation="vertical">
-
-            <AutoCompleteTextView android:id="@+id/email" android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:hint="@string/prompt_email"
-                android:inputType="textEmailAddress" android:maxLines="1"
-                android:singleLine="true"
-                android:padding="15dp"/>
-
-            <EditText android:id="@+id/password" android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:hint="@string/prompt_password"
-                android:imeActionId="@+id/login"
-                android:imeActionLabel="@string/action_sign_in_short"
-                android:imeOptions="actionUnspecified" android:inputType="textPassword"
-                android:maxLines="1" android:singleLine="true"
-                android:padding="15dp"/>
-
-            <Button android:id="@+id/email_sign_in_button" style="?android:textAppearanceSmall"
-                android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="16dp" android:text="@string/action_sign_in"
-                android:textStyle="bold" />
-
-            <com.google.android.gms.common.SignInButton
-                android:id="@+id/sign_in_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"/>
-
-        </LinearLayout>
-
-        <ScrollView android:id="@+id/login_form" android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.77"
-            >
-
-        </ScrollView>
-        Login process -->
