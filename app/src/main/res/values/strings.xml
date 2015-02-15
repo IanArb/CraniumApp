@@ -22,5 +22,8 @@
     <string name="leg">The legs</string>
     <string name="youtube_text">YouTube Tutorials</string>
     <string name="title_activity_history_tutorials">HistoryTutorials</string>
+    <!-- Google+ Button text -->
+    <string name="btn_logout_from_google">Logout from Google</string>
+    <string name="btn_revoke_access">Revoke Access</string>
 
 </resources>
