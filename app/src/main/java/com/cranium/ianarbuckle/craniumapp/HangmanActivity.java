@@ -23,6 +23,11 @@ import android.widget.ImageView;
 
 import java.util.Random;
 
+/**
+ * Our first hangman game
+ * Author: Ian Arbuckle
+ * Reference: http://code.tutsplus.com/tutorials/create-a-hangman-game-user-interaction--mobile-21893
+ */
 
 public class HangmanActivity extends Activity {
 

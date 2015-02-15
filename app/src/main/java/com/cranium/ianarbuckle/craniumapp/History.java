@@ -8,6 +8,10 @@ import android.widget.Button;
 import android.content.Intent;
 import android.view.View;
 
+/**
+ * The history main menu
+ * Author: Ian Arbuckle
+ */
 
 public class History extends ActionBarActivity {
 

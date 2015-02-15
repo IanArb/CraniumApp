@@ -63,7 +63,9 @@ import com.google.android.gms.plus.model.people.Person;
 
 
 /**
- * A login screen that offers login via email/password.
+ * A login screen that offers login via Google+
+ * Reference: http://www.androidhive.info/2014/02/android-login-with-google-plus-account-1/
+ * Author: Ian Arbuckle
  */
 public class LoginActivity extends Activity implements OnClickListener, ConnectionCallbacks, OnConnectionFailedListener{
 

@@ -1,7 +1,9 @@
 package com.cranium.ianarbuckle.craniumapp;
 
 /**
- * Created by Fujitsu user on 09/02/2015.
+ * Generating the letters of our hangman application
+ * Author: Ian Arbuckle
+ * Reference: http://code.tutsplus.com/tutorials/create-a-hangman-game-user-interaction--mobile-21893
  */
 
 import android.view.View;

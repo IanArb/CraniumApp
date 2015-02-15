@@ -8,7 +8,10 @@ import android.view.View;
 import android.content.Intent;
 import android.widget.EditText;
 
-
+/**
+ * The main menu of our application
+ * Author: Ian Arbuckle
+ */
 public class MainActivity extends ActionBarActivity {
 
     @Override

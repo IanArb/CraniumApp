@@ -7,7 +7,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 /**
- * Created by Fujitsu user on 08/02/2015.
+ * Our Database set up for the normal log in form.
+ * Author: Ian Arbuckle
  * Reference: http://stackoverflow.com/questions/22209046/fix-android-studio-login-activity-template-generated-activity
  */
 public class MyDBHandler extends SQLiteOpenHelper {
