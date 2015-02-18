@@ -122,8 +122,7 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
                 .addConnectionCallbacks(this)
                 .addOnConnectionFailedListener(this)
                 .addApi(Plus.API)
-                .addScope(Plus.SCOPE_PLUS_LOGIN)
-                .build();
+                .addScope(Plus.SCOPE_PLUS_LOGIN).build();
 
 
     }

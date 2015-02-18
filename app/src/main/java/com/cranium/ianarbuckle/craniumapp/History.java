@@ -24,12 +24,17 @@ public class History extends ActionBarActivity {
 
     }
 
-    public void onClickGame1(View view){
-        if(view.getId()== R.id.hangman1Btn){
-            Intent i = new Intent(this, HangmanActivity.class);
-            this.startActivity(i);
+    public void onClick(View view){
+        switch(view.getId()){
+            case R.id.hangman1Btn:
+                Intent i = new Intent(this, HangmanActivity.class);
+                this.startActivity(i);
+                break;
+
         }
-    }
+
+        }
+
 
 
     @Override
