@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.content.Intent;
 import android.view.View;
 
+import com.facebook.stetho.Stetho;
+
 /**
  * The history main menu
  * Author: Ian Arbuckle
@@ -15,16 +17,25 @@ import android.view.View;
 
 public class History extends ActionBarActivity {
 
+
+    private Button hangman1Btn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
-        Button hangman1Btn = (Button) findViewById(R.id.hangman1Btn);
+        Stetho.initialize(
+                Stetho.newInitializerBuilder(this)
+                        .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
+                        .enableWebKitInspector(Stetho.defaultInspectorModulesProvider(this))
+                        .build());
+
+        hangman1Btn = (Button) findViewById(R.id.hangman1Btn);
 
 
     }
 
-    public void onClick(View view){
+    public void OnClick(View view){
         switch(view.getId()){
             case R.id.hangman1Btn:
                 Intent i = new Intent(this, HangmanActivity.class);

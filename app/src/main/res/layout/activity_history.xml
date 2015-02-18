@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:text="@string/hangman1_btn"
         android:id="@+id/hangman1Btn"
-        android:onClick="onClickGame1"
+        android:onClick="OnClick"
         android:layout_above="@+id/hangman2Btn"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="38dp" />

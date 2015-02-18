@@ -21,6 +21,8 @@ import android.view.View;
 import android.widget.ImageView;
 
 
+import com.facebook.stetho.Stetho;
+
 import java.util.Random;
 
 /**
@@ -61,6 +63,12 @@ public class HangmanActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hangman_activity);
+
+        Stetho.initialize(
+                Stetho.newInitializerBuilder(this)
+                        .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
+                        .enableWebKitInspector(Stetho.defaultInspectorModulesProvider(this))
+                        .build());
 
         Resources res = getResources();
         words = res.getStringArray(R.array.words);
