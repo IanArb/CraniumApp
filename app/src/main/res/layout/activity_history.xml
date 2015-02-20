@@ -43,7 +43,7 @@
         android:id="@+id/historyTextView"
         android:layout_above="@+id/ytBtn"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="38dp" />
+        android:layout_marginBottom="48dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -51,29 +51,10 @@
         android:text="@string/hangman1_btn"
         android:id="@+id/hangman1Btn"
         android:onClick="OnClick"
-        android:layout_above="@+id/hangman2Btn"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="38dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hangman2_btn"
-        android:id="@+id/hangman2Btn"
-        android:layout_above="@+id/hangman3Btn"
-        android:layout_alignLeft="@+id/hangman1Btn"
-        android:layout_alignStart="@+id/hangman1Btn"
-        android:layout_marginBottom="38dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hangman3_btn"
-        android:id="@+id/hangman3Btn"
         android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/hangman2Btn"
-        android:layout_alignStart="@+id/hangman2Btn"
-        android:layout_marginBottom="38dp" />
+        android:layout_alignRight="@+id/historyTextView"
+        android:layout_alignEnd="@+id/historyTextView"
+        android:layout_marginBottom="128dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -81,7 +62,9 @@
         android:text="@string/youtube_text"
         android:id="@+id/ytBtn"
         android:onClick="ytOnClick"
-        android:layout_above="@+id/hangman1Btn"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="41dp" />
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/historyTextView"
+        android:layout_alignEnd="@+id/historyTextView"
+        android:layout_alignLeft="@+id/hangman1Btn"
+        android:layout_alignStart="@+id/hangman1Btn" />
 </RelativeLayout>

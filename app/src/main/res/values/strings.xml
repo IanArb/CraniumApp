@@ -11,9 +11,7 @@
     <string name="no">No</string>
     <string name="updatingReport">Updating Report</string>
     <string name="history_text">Welcome to History!</string>
-    <string name="hangman1_btn">Play Hangman Game 1</string>
-    <string name="hangman2_btn">Play Hangman Game 2</string>
-    <string name="hangman3_btn">Play Hangman Game 3</string>
+    <string name="hangman1_btn">Play Hangman Game</string>
     <string name="title_activity_hangman_game">HangmanGame</string>
     <string name="gallows">The gallows</string>
     <string name="head">The head</string>
@@ -26,5 +24,6 @@
     <string name="btn_logout_from_google">Logout from Google</string>
     <string name="btn_revoke_access">Revoke Access</string>
     <string name="btn_main_menu">Go to Main Menu</string>
+    <string name="title_activity_hangman_b">HangmanB</string>
 
 </resources>

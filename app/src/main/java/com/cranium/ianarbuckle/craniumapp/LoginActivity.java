@@ -34,6 +34,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.facebook.stetho.Stetho;
@@ -63,12 +64,14 @@ import com.google.android.gms.plus.model.people.Person;
 
 
 
+
+
 /**
  * A login screen that offers login via Google+
  * Reference: http://www.androidhive.info/2014/02/android-login-with-google-plus-account-1/
  * Author: Ian Arbuckle
  */
-public class LoginActivity extends Activity implements OnClickListener, ConnectionCallbacks, OnConnectionFailedListener{
+public class LoginActivity extends Activity implements OnClickListener, ConnectionCallbacks, OnConnectionFailedListener, LoaderCallbacks<Cursor>{
 
     private static final int RC_SIGN_IN = 0;
     // Logcat tag
@@ -95,6 +98,17 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
     private ImageView imgProfilePic;
     private TextView txtName, txtEmail;
     private LinearLayout llProfileLayout;
+
+    //Normal login
+    private User myUser;
+    private UserLoginTask mAuthTask = null;
+
+    // UI references.
+    private AutoCompleteTextView mEmailView;
+    private EditText mPasswordView;
+    private View mProgressView;
+    private View mLoginFormView;
+    private View login;
 
 
 
@@ -131,6 +145,37 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
                 .addOnConnectionFailedListener(this)
                 .addApi(Plus.API)
                 .addScope(Plus.SCOPE_PLUS_LOGIN).build();
+
+        //Normal login implementation
+        // Set up the login form.
+
+        login = (View)findViewById(R.id.login);
+
+        mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
+        populateAutoComplete();
+
+        mPasswordView = (EditText) findViewById(R.id.password);
+        mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
+                if (id == R.id.login || id == EditorInfo.IME_NULL) {
+                    attemptLogin();
+                    return true;
+                }
+                return false;
+            }
+        });
+
+        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
+        mEmailSignInButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                attemptLogin();
+            }
+        });
+
+        mLoginFormView = findViewById(R.id.login_form);
+        mProgressView = findViewById(R.id.login_progress);
 
 
     }
@@ -240,12 +285,15 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
             btnRevokeAccess.setVisibility(View.VISIBLE);
             llProfileLayout.setVisibility(View.VISIBLE);
             btnMainMenu.setVisibility(View.VISIBLE);
+            login.setVisibility(View.GONE);
         } else {
             btnSignIn.setVisibility(View.VISIBLE);
             btnSignOut.setVisibility(View.GONE);
             btnRevokeAccess.setVisibility(View.GONE);
             btnMainMenu.setVisibility(View.GONE);
             llProfileLayout.setVisibility(View.GONE);
+            login.setVisibility(View.VISIBLE);
+
         }
     }
 
@@ -378,70 +426,7 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
 
 
 
-    /**
-     * A dummy authentication store containing known user names and passwords.
-     * TODO: remove after connecting to a real authentication system.
-     */
-    /*private static final String[] DUMMY_CREDENTIALS = new String[]{
-            "foo@example.com:hello", "bar@example.com:world"
-    };
-    /**
-     * Keep track of the login task to ensure we can cancel it if requested.
-     */
 
-    /*
-    private User myUser;
-    private UserLoginTask mAuthTask = null;
-
-    // UI references.
-    private AutoCompleteTextView mEmailView;
-    private EditText mPasswordView;
-    private View mProgressView;
-    private View mLoginFormView;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-
-        // Set up the login form.
-        mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
-        populateAutoComplete();
-
-        mPasswordView = (EditText) findViewById(R.id.password);
-        mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
-                if (id == R.id.login || id == EditorInfo.IME_NULL) {
-                    attemptLogin();
-                    return true;
-                }
-                return false;
-            }
-        });
-
-        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
-        mEmailSignInButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                attemptLogin();
-            }
-        });
-
-        mLoginFormView = findViewById(R.id.login_form);
-        mProgressView = findViewById(R.id.login_progress);
-
-        //Google API Client
-        GoogleApiClient mGoogleApiClient = new GoogleApiClient.Builder(this)
-                .addApi(Plus.API)
-                .addScope(Plus.SCOPE_PLUS_LOGIN)
-                .build();
-
-
-
-
-    }
-    /*
     private void populateAutoComplete() {
         getLoaderManager().initLoader(0, null, this);
     }
@@ -452,7 +437,7 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
      * If there are form errors (invalid email, missing fields, etc.), the
      * errors are presented and no actual login attempt is made.
      */
-    /*
+
     public void attemptLogin() {
         if (mAuthTask != null) {
             return;
@@ -514,7 +499,7 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
     /**
      * Shows the progress UI and hides the login form.
      */
-    /*
+
     @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
     public void showProgress(final boolean show) {
         // On Honeycomb MR2 we have the ViewPropertyAnimator APIs, which allow
@@ -577,9 +562,9 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
         addEmailsToAutoComplete(emails);
     }
 
-    /*
 
-    /*
+
+
     @Override
     public void onLoaderReset(Loader<Cursor> cursorLoader) {
 
@@ -595,7 +580,7 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
         int IS_PRIMARY = 1;
     }
 
-    /*
+
     private void addEmailsToAutoComplete(List<String> emailAddressCollection) {
         //Create adapter to tell the AutoCompleteTextView what to show in its dropdown list.
         ArrayAdapter<String> adapter =
@@ -605,13 +590,13 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
         mEmailView.setAdapter(adapter);
     }
 
-    /*
+
 
     /**
      * Represents an asynchronous login/registration task used to authenticate
      * the user.
      */
-    /*
+
     public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
 
         private final String mEmail;
@@ -623,18 +608,12 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
             mEmail = email;
             mPassword = password;
         }
-     /*
+
 
         @Override
         protected Boolean doInBackground(Void... params) {
-            // TODO: attempt authentication against a network service.
 
-
-
-            // TODO: register the new account here.
-            return false;
-            /*
-            MyDBHandler dbTools=null;
+            MyDBHandler dbTools = null;
             try{
                 dbTools = new MyDBHandler(mContext);
                 myUser = dbTools.getUser(mEmail);
@@ -654,9 +633,9 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
                     dbTools.close();
             }
         }
-        /*
 
-    /*
+
+
         @Override
         protected void onPostExecute(final Boolean success) {
             mAuthTask = null;
@@ -714,7 +693,7 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
         }
     }
 
-    */
+
 
 
 

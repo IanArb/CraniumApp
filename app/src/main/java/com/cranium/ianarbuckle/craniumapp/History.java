@@ -19,6 +19,7 @@ public class History extends ActionBarActivity {
 
 
     private Button hangman1Btn;
+    private Button hangman2Btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,14 +34,16 @@ public class History extends ActionBarActivity {
         hangman1Btn = (Button) findViewById(R.id.hangman1Btn);
 
 
+
     }
 
     public void OnClick(View view){
         switch(view.getId()){
             case R.id.hangman1Btn:
-                Intent i = new Intent(this, HangmanActivity.class);
-                this.startActivity(i);
+                Intent a = new Intent(this, HangmanActivity.class);
+                this.startActivity(a);
                 break;
+
 
         }
 

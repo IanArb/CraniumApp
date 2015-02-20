@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="irish">
+        <item>COLLINS</item>
+        <item>DEVALERA</item>
+        <item>PEARSE</item>
+        <item>CONNOLLY</item>
+        <item>CLARKE</item>
+        <item>LARKIN</item>
+        <item>CASEMENT</item>
+        <item>BRUGHA</item>
+        <item>BOLAND</item>
+        <item>MACDARMUID</item>
+    </string-array>
+</resources>
