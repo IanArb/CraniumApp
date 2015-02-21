@@ -9,9 +9,14 @@
     <string name="confirm_registry">Username not found. You want to create a new user with that email and password?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="sign_in">Sign In</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_username">Username</string>
     <string name="updatingReport">Updating Report</string>
     <string name="history_text">Welcome to History!</string>
-    <string name="hangman1_btn">Play Hangman Game</string>
+    <string name="hangman1_btn">Play Hangman Game 1</string>
+    <string name="hangman2_btn">Play Hangman Game 2</string>
+    <string name="hangman3_btn">Play Hangman Game 3</string>
     <string name="title_activity_hangman_game">HangmanGame</string>
     <string name="gallows">The gallows</string>
     <string name="head">The head</string>
@@ -25,5 +30,11 @@
     <string name="btn_revoke_access">Revoke Access</string>
     <string name="btn_main_menu">Go to Main Menu</string>
     <string name="title_activity_hangman_b">HangmanB</string>
+    <string name="search">search</string>
+    <string name="title_activity_player">PlayerActivity</string>
+    <string name="error_incorrect_password">Incorrect Password</string>
+    <string name="error_invalid_password">Invalid Password</string>
+    <string name="error_field_required">Field required</string>
+    <string name="error_invalid_email">Invalid username</string>
 
 </resources>

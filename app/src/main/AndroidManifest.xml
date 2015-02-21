@@ -39,11 +39,7 @@
             android:label="HangmanActivity"
             android:parentActivityName=".History" >
         </activity>
-        <activity
-            android:name=".HistoryTutorials"
-            android:label="@string/title_activity_history_tutorials"
-            android:parentActivityName=".History">
-        </activity>
+
     </application>
 
 </manifest>
