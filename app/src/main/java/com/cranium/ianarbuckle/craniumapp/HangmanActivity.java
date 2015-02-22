@@ -202,7 +202,7 @@ public class HangmanActivity extends Activity {
                 //let the user know they have won, ask if they wish to play again
                 AlertDialog.Builder winBuild = new AlertDialog.Builder(this);
                 winBuild.setTitle("Well done, hoss!");
-                winBuild.setMessage("Sup hoss \n\n You guessed the correct letter" + currWord);
+                winBuild.setMessage("Sup hoss \n\n You guessed the correct letter\n\n" + currWord);
                 winBuild.setPositiveButton("Play again",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {

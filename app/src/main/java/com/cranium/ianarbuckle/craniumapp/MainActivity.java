@@ -1,6 +1,7 @@
 package com.cranium.ianarbuckle.craniumapp;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.IntentSender;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -20,6 +21,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+//scrolling
+import android.view.MotionEvent;
+import android.view.GestureDetector;
+import android.support.v4.view.GestureDetectorCompat;
+
 import com.facebook.stetho.Stetho;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
@@ -38,7 +44,11 @@ import java.io.InputStream;
  * The main menu of our application
  * Author: Ian Arbuckle
  */
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements GestureDetector.OnGestureListener,
+GestureDetector.OnDoubleTapListener{
+
+    private GestureDetectorCompat gestureDetector;
+
 
     private static final int RC_SIGN_IN = 0;
     // Logcat tag
@@ -70,11 +80,16 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         Stetho.initialize(
                 Stetho.newInitializerBuilder(this)
                         .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
                         .enableWebKitInspector(Stetho.defaultInspectorModulesProvider(this))
                         .build());
+
+
+        this.gestureDetector = new GestureDetectorCompat(this, this);
+        gestureDetector.setOnDoubleTapListener(this);
 
         btnSignOut = (Button) findViewById(R.id.btn_sign_out);
         btnRevokeAccess = (Button) findViewById(R.id.btn_revoke_access);
@@ -97,6 +112,65 @@ public class MainActivity extends Activity {
                 .build();
          **/
 
+    }
+
+    @Override
+    public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+        Toast.makeText(this, "On Fling ",Toast.LENGTH_SHORT).show();
+        return true;
+    }
+
+    @Override
+    public boolean onDoubleTap(MotionEvent e) {
+        Toast.makeText(this, "On Double tap ",Toast.LENGTH_SHORT).show();
+        return true;
+    }
+
+    @Override
+    public boolean onDoubleTapEvent(MotionEvent e) {
+        Toast.makeText(this, "On double tap event ",Toast.LENGTH_SHORT).show();
+        return true;
+    }
+
+    @Override
+    public boolean onDown(MotionEvent e) {
+        Toast.makeText(this, "On Down ",Toast.LENGTH_SHORT).show();
+        return true;
+    }
+
+    @Override
+    public void onShowPress(MotionEvent e) {
+        Toast.makeText(this, "On press ",Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    public boolean onSingleTapUp(MotionEvent e) {
+        Toast.makeText(this, "On Single tap up ",Toast.LENGTH_SHORT).show();
+        return true;
+    }
+
+    @Override
+    public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+        Toast.makeText(this, "On Scroll ",Toast.LENGTH_SHORT).show();
+        return true;
+    }
+
+    @Override
+    public void onLongPress(MotionEvent e) {
+        Toast.makeText(this, "On long press ",Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public boolean onSingleTapConfirmed(MotionEvent e) {
+        Toast.makeText(this, "On Single tap confirmed ",Toast.LENGTH_SHORT).show();
+        return true;
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        this.gestureDetector.onTouchEvent(event);
+        return super.onTouchEvent(event);
     }
 
     //Google+ implementation
