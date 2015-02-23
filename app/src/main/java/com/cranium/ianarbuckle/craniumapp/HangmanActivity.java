@@ -34,6 +34,8 @@ import java.util.Random;
 public class HangmanActivity extends Activity {
 
     private String[] words;
+    private String[] irishWords;
+    private String[] amerWords;
     private Random rand;
     private String currWord;
     private LinearLayout wordLayout;
@@ -73,6 +75,9 @@ public class HangmanActivity extends Activity {
 
         Resources res = getResources();
         words = res.getStringArray(R.array.words);
+        irishWords = res.getStringArray(R.array.irish);
+        amerWords = res.getStringArray(R.array.american);
+
 
         rand = new Random();
         currWord = "";
@@ -93,7 +98,29 @@ public class HangmanActivity extends Activity {
         bodyParts[5] = (ImageView) findViewById(R.id.leg2);
 
 
-        playGame();
+        AlertDialog.Builder build = new AlertDialog.Builder(this);
+        build.setTitle(R.string.pick_category);
+        build.setItems(R.array.categories,
+
+                new DialogInterface.OnClickListener(){
+                    public void onClick(DialogInterface dialog, int which){
+                        //'which contains index position
+                        switch(which){
+                            case 0:
+                                HangmanActivity.this.playGame();
+                                break;
+                            case 1:
+                                HangmanActivity.this.playGameIrish();
+                                break;
+                            case 2:
+                                HangmanActivity.this.playGameAmerican();
+                                break;
+                        }
+                    }
+                });
+        build.create().show();
+
+
 
 
     }
@@ -167,6 +194,100 @@ public class HangmanActivity extends Activity {
         }
 
 
+    }
+
+    private void playGameIrish(){
+        //play a new game
+        String newWord = irishWords[rand.nextInt(irishWords.length)];
+
+        while (newWord.equals(currWord)) newWord = irishWords[rand.nextInt(irishWords.length)];
+
+        currWord = newWord;
+
+        charViews = new TextView[currWord.length()];
+
+        wordLayout.removeAllViews();
+
+
+        //Loop through the characters
+        for (int c = 0; c < currWord.length(); c++) {
+
+            charViews[c] = new TextView(this);
+            //set the current letter
+            charViews[c].setText("" + currWord.charAt(c));
+
+            //set the layout
+
+            charViews[c].setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
+            charViews[c].setGravity(Gravity.CENTER);
+            charViews[c].setTextColor(Color.WHITE);
+            charViews[c].setBackgroundResource(R.drawable.letter_bg);
+
+            //add to layout
+            wordLayout.addView(charViews[c]);
+
+        }
+
+        ltrAdapt = new LetterAdapter(this);
+        letters.setAdapter(ltrAdapt);
+
+        //Initialise part at 0 (start at 0)
+        currPart = 0;
+
+        //set word length and correct answers
+        numChars = currWord.length();
+        numCorr = 0;
+
+        for (int p = 0; p < numParts; p++) {
+            bodyParts[p].setVisibility(View.INVISIBLE);
+        }
+    }
+
+    private void playGameAmerican(){
+        //play a new game
+        String newWord = amerWords[rand.nextInt(amerWords.length)];
+
+        while (newWord.equals(currWord)) newWord = amerWords[rand.nextInt(amerWords.length)];
+
+        currWord = newWord;
+
+        charViews = new TextView[currWord.length()];
+
+        wordLayout.removeAllViews();
+
+
+        //Loop through the characters
+        for (int c = 0; c < currWord.length(); c++) {
+
+            charViews[c] = new TextView(this);
+            //set the current letter
+            charViews[c].setText("" + currWord.charAt(c));
+
+            //set the layout
+
+            charViews[c].setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
+            charViews[c].setGravity(Gravity.CENTER);
+            charViews[c].setTextColor(Color.WHITE);
+            charViews[c].setBackgroundResource(R.drawable.letter_bg);
+
+            //add to layout
+            wordLayout.addView(charViews[c]);
+
+        }
+
+        ltrAdapt = new LetterAdapter(this);
+        letters.setAdapter(ltrAdapt);
+
+        //Initialise part at 0 (start at 0)
+        currPart = 0;
+
+        //set word length and correct answers
+        numChars = currWord.length();
+        numCorr = 0;
+
+        for (int p = 0; p < numParts; p++) {
+            bodyParts[p].setVisibility(View.INVISIBLE);
+        }
     }
 
     public void letterPressed(View view) {

@@ -37,4 +37,6 @@
     <string name="error_field_required">Field required</string>
     <string name="error_invalid_email">Invalid username</string>
 
+    <string name="pick_category">Choose your category</string>
+
 </resources>

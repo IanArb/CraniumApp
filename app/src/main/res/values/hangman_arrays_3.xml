@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="american">
+        <item>Rooselvt</item>
+        <item>Washington</item>
+        <item>Lincoln</item>
+    </string-array>
+</resources>
