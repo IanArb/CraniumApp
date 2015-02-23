@@ -70,6 +70,7 @@ public class HangmanActivity extends Activity {
                         .enableWebKitInspector(Stetho.defaultInspectorModulesProvider(this))
                         .build());
 
+
         Resources res = getResources();
         words = res.getStringArray(R.array.words);
 
@@ -132,7 +133,7 @@ public class HangmanActivity extends Activity {
         wordLayout.removeAllViews();
 
 
-        //Loop throught the characters
+        //Loop through the characters
         for (int c = 0; c < currWord.length(); c++) {
 
             charViews[c] = new TextView(this);
