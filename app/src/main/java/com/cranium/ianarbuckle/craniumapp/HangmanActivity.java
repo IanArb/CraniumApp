@@ -36,6 +36,7 @@ public class HangmanActivity extends Activity {
     private String[] words;
     private String[] irishWords;
     private String[] amerWords;
+    private String[] russWords;
     private Random rand;
     private String currWord;
     private LinearLayout wordLayout;
@@ -77,6 +78,7 @@ public class HangmanActivity extends Activity {
         words = res.getStringArray(R.array.words);
         irishWords = res.getStringArray(R.array.irish);
         amerWords = res.getStringArray(R.array.american);
+        russWords = res.getStringArray(R.array.russian);
 
 
         rand = new Random();
@@ -107,7 +109,7 @@ public class HangmanActivity extends Activity {
                         //'which contains index position
                         switch(which){
                             case 0:
-                                HangmanActivity.this.playGame();
+                                HangmanActivity.this.playGameDictatorship();
                                 break;
                             case 1:
                                 HangmanActivity.this.playGameIrish();
@@ -115,6 +117,8 @@ public class HangmanActivity extends Activity {
                             case 2:
                                 HangmanActivity.this.playGameAmerican();
                                 break;
+                            case 3:
+                                HangmanActivity.this.playGameRussian();
                         }
                     }
                 });
@@ -147,7 +151,7 @@ public class HangmanActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void playGame() {
+    private void playGameDictatorship() {
         //play a new game
         String newWord = words[rand.nextInt(words.length)];
 
@@ -290,6 +294,53 @@ public class HangmanActivity extends Activity {
         }
     }
 
+    private void playGameRussian(){
+        //play a new game
+        String newWord = russWords[rand.nextInt(russWords.length)];
+
+        while (newWord.equals(currWord)) newWord = russWords[rand.nextInt(russWords.length)];
+
+        currWord = newWord;
+
+        charViews = new TextView[currWord.length()];
+
+        wordLayout.removeAllViews();
+
+
+        //Loop through the characters
+        for (int c = 0; c < currWord.length(); c++) {
+
+            charViews[c] = new TextView(this);
+            //set the current letter
+            charViews[c].setText("" + currWord.charAt(c));
+
+            //set the layout
+
+            charViews[c].setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
+            charViews[c].setGravity(Gravity.CENTER);
+            charViews[c].setTextColor(Color.WHITE);
+            charViews[c].setBackgroundResource(R.drawable.letter_bg);
+
+            //add to layout
+            wordLayout.addView(charViews[c]);
+
+        }
+
+        ltrAdapt = new LetterAdapter(this);
+        letters.setAdapter(ltrAdapt);
+
+        //Initialise part at 0 (start at 0)
+        currPart = 0;
+
+        //set word length and correct answers
+        numChars = currWord.length();
+        numCorr = 0;
+
+        for (int p = 0; p < numParts; p++) {
+            bodyParts[p].setVisibility(View.INVISIBLE);
+        }
+    }
+
     public void letterPressed(View view) {
 
         //Find out which letter was pressed
@@ -323,12 +374,27 @@ public class HangmanActivity extends Activity {
                 disableBtns();
                 //let the user know they have won, ask if they wish to play again
                 AlertDialog.Builder winBuild = new AlertDialog.Builder(this);
-                winBuild.setTitle("Well done, hoss!");
-                winBuild.setMessage("Sup hoss \n\n You guessed the correct letter\n\n" + currWord);
-                winBuild.setPositiveButton("Play again",
+                winBuild.setTitle("Sup hoss \n\n You guessed the correct letter\n\n" + currWord);
+                winBuild.setItems(R.array.categories,
                         new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                HangmanActivity.this.playGame();
+                            public void onClick(DialogInterface dialog, int which) {
+                                switch(which){
+                                    case 0:
+                                        HangmanActivity.this.playGameDictatorship();
+                                        break;
+                                    case 1:
+                                        HangmanActivity.this.playGameIrish();
+                                        break;
+                                    case 2:
+                                        HangmanActivity.this.playGameAmerican();
+                                        break;
+                                    case 3:
+                                        HangmanActivity.this.playGameRussian();
+                                        break;
+
+                                }
+
+
                             }
                         });
                 winBuild.setNegativeButton("Exit",
@@ -353,12 +419,24 @@ public class HangmanActivity extends Activity {
             disableBtns();
             //let the user know they lost, ask if they want to play again
             AlertDialog.Builder loseBuild = new AlertDialog.Builder(this);
-            loseBuild.setTitle("Unlucky, hoss!");
-            loseBuild.setMessage("You lose!\n\nThe answer was:\n\n" + currWord);
-            loseBuild.setPositiveButton("Play Again",
+            loseBuild.setTitle("Sorry hoss! The answer was: " +currWord+" Play again");
+            loseBuild.setItems(R.array.categories,
                     new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-                            HangmanActivity.this.playGame();
+                        public void onClick(DialogInterface dialog, int which) {
+                            switch(which){
+                                case 0:
+                                    HangmanActivity.this.playGameDictatorship();
+                                    break;
+                                case 1:
+                                    HangmanActivity.this.playGameIrish();
+                                    break;
+                                case 2:
+                                    HangmanActivity.this.playGameAmerican();
+                                    break;
+                                case 3:
+                                    HangmanActivity.this.playGameRussian();
+                                    break;
+                            }
                         }
                     });
             loseBuild.setNegativeButton("Exit",

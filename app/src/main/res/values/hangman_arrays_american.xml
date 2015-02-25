@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="american">
+        <item>FRANKLINROOSEVELT</item>
+        <item>GEORGEWASHINGTON</item>
+        <item>JOHNADAMS</item>
+        <item>JAMESBUCHANAN</item>
+        <item>WOODROWWILSON</item>
+        <item>JOHNFKENNEDY</item>
+        <item>RICHARDNIXON</item>
+        <item>RONALDREAGAN</item>
+        <item>BILLCLINTON</item>
+        <item>GEORGEWBUSH</item>
+        <item>BARACKOBAMA</item>
+    </string-array>
+</resources>

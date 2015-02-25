@@ -14,9 +14,7 @@
     <string name="prompt_username">Username</string>
     <string name="updatingReport">Updating Report</string>
     <string name="history_text">Welcome to History!</string>
-    <string name="hangman1_btn">Play Hangman Game 1</string>
-    <string name="hangman2_btn">Play Hangman Game 2</string>
-    <string name="hangman3_btn">Play Hangman Game 3</string>
+    <string name="hangman_btn">Play Hangman Game</string>
     <string name="title_activity_hangman_game">HangmanGame</string>
     <string name="gallows">The gallows</string>
     <string name="head">The head</string>
@@ -38,5 +36,6 @@
     <string name="error_invalid_email">Invalid username</string>
 
     <string name="pick_category">Choose your category</string>
+    <string name="help_message">To play the game, you guess a letter and remember you have 6 lives!</string>
 
 </resources>

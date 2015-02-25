@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="irish">
+        <item>COLLINS</item>
+        <item>DEVALERA</item>
+        <item>COLUMNS</item>
+        <item>BLACKANDTANS</item>
+        <item>CAIROGANG</item>
+        <item>ANGLOIRISHWAR</item>
+        <item>BLOODYSUNDAY</item>
+        <item>CUSTOMSHOUSE</item>
+        <item>BOLAND</item>
+        <item>EASTERRISING</item>
+    </string-array>
+</resources>

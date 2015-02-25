@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="words">
+        <item>BLITZKRIEG</item>
+        <item>TREATYOFVERSAILLES</item>
+        <item>NORMANDY</item>
+        <item>BATTLEOFBUlGE</item>
+        <item>HITLER</item>
+        <item>GOERING</item>
+        <item>CHURCHILL</item>
+        <item>STALIN</item>
+        <item>MUSSOLINI</item>
+        <item>PEARLHABOUR</item>
+    </string-array>
+</resources>

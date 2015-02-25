@@ -18,8 +18,7 @@ import com.facebook.stetho.Stetho;
 public class History extends ActionBarActivity {
 
 
-    private Button hangman1Btn;
-    private Button hangman2Btn;
+    private Button hangmanBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +30,7 @@ public class History extends ActionBarActivity {
                         .enableWebKitInspector(Stetho.defaultInspectorModulesProvider(this))
                         .build());
 
-        hangman1Btn = (Button) findViewById(R.id.hangman1Btn);
+        hangmanBtn = (Button) findViewById(R.id.hangmanBtn);
 
 
 
@@ -39,11 +38,10 @@ public class History extends ActionBarActivity {
 
     public void OnClick(View view){
         switch(view.getId()){
-            case R.id.hangman1Btn:
+            case R.id.hangmanBtn:
                 Intent a = new Intent(this, HangmanActivity.class);
                 this.startActivity(a);
                 break;
-
 
         }
 

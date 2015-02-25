@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="russian">
+        <item>LENIN</item>
+        <item>ROMANOVS</item>
+        <item>TSAR</item>
+        <item>FEBRUARYREVOLUTION</item>
+        <item>BOLSHEVIK</item>
+        <item>USSR</item>
+        <item>STALIN</item>
+        <item>PETROGRAD</item>
+        <item>TROTSKY</item>
+    </string-array>
+</resources>

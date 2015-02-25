@@ -48,8 +48,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hangman1_btn"
-        android:id="@+id/hangman1Btn"
+        android:text="@string/hangman_btn"
+        android:id="@+id/hangmanBtn"
         android:onClick="OnClick"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/historyTextView"
@@ -65,6 +65,6 @@
         android:layout_centerVertical="true"
         android:layout_alignRight="@+id/historyTextView"
         android:layout_alignEnd="@+id/historyTextView"
-        android:layout_alignLeft="@+id/hangman1Btn"
-        android:layout_alignStart="@+id/hangman1Btn" />
+        android:layout_alignLeft="@+id/hangmanBtn"
+        android:layout_alignStart="@+id/hangmanBtn" />
 </RelativeLayout>

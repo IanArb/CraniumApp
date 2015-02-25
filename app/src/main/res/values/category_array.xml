@@ -2,8 +2,8 @@
 <resources>
     <string-array name="categories">
         <item>Dictatorship and Democracy</item>
-        <item>Irish Easter Rising Figures</item>
+        <item>Irish War of Independence</item>
         <item>American Presidents</item>
-        <item>Russian History</item>
+        <item>Russian Revolution</item>
     </string-array>
 </resources>
