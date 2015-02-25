@@ -374,7 +374,7 @@ public class HangmanActivity extends Activity {
                 disableBtns();
                 //let the user know they have won, ask if they wish to play again
                 AlertDialog.Builder winBuild = new AlertDialog.Builder(this);
-                winBuild.setTitle("Sup hoss \n\n You guessed the correct letter\n\n" + currWord);
+                winBuild.setTitle("Sup hoss! You guessed the correct letter " + currWord);
                 winBuild.setItems(R.array.categories,
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {

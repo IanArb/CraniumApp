@@ -37,5 +37,6 @@
 
     <string name="pick_category">Choose your category</string>
     <string name="help_message">To play the game, you guess a letter and remember you have 6 lives!</string>
+    <string name="title_activity_splash">SplashActivity</string>
 
 </resources>
