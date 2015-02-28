@@ -4,13 +4,29 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.cranium.ianarbuckle.craniumapp.History">
+    tools:context="com.cranium.ianarbuckle.craniumapp.History"
+    android:id="@+id/history">
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_logout_from_google"
+        android:id="@+id/btn_sign_out"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="OnClick" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
         android:id="@+id/llProfile"
-        android:orientation="horizontal">
+        android:layout_width="fill_parent"
+        android:layout_height="140dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        >
+
         <ImageView
             android:id="@+id/imgProfilePic"
             android:layout_width="80dp"
@@ -18,53 +34,59 @@
             android:layout_weight="1"
             />
 
-        <TextView
-            android:id="@+id/txtName"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:textSize="20dp" />
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_weight="2" >
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginRight="100dp"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="61dp"
+        android:layout_below="@+id/llProfile"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/gridLayout">
 
         <Button
-            android:id="@+id/btn_sign_out"
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/btn_logout_from_google"
-            android:visibility="gone"
-            android:layout_marginBottom="10dp"/>
+            android:text="Youtube Search"
+            android:id="@+id/ytBtn"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:onClick="OnClickTabs"
+            android:layout_rowWeight="0" />
 
-        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Play Hangman"
+            android:id="@+id/hangmanBtn"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:onClick="OnClickTabs" />
+    </GridLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/history_text"
-        android:id="@+id/historyTextView"
-        android:layout_above="@+id/ytBtn"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="48dp" />
+        android:text="Welcome to History"
+        android:id="@+id/hisText"
+        android:layout_below="@+id/llProfile"
+        android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hangman_btn"
-        android:id="@+id/hangmanBtn"
-        android:onClick="OnClick"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/historyTextView"
-        android:layout_alignEnd="@+id/historyTextView"
-        android:layout_marginBottom="128dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/youtube_text"
-        android:id="@+id/ytBtn"
-        android:onClick="OnClick"
-        android:layout_centerVertical="true"
-        android:layout_alignRight="@+id/historyTextView"
-        android:layout_alignEnd="@+id/historyTextView"
-        android:layout_alignLeft="@+id/hangmanBtn"
-        android:layout_alignStart="@+id/hangmanBtn" />
 </RelativeLayout>
