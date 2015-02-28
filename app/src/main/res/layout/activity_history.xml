@@ -61,7 +61,7 @@
         android:layout_height="wrap_content"
         android:text="@string/youtube_text"
         android:id="@+id/ytBtn"
-        android:onClick="ytOnClick"
+        android:onClick="OnClick"
         android:layout_centerVertical="true"
         android:layout_alignRight="@+id/historyTextView"
         android:layout_alignEnd="@+id/historyTextView"

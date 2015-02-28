@@ -1,5 +1,6 @@
 package com.cranium.ianarbuckle.craniumapp;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
 import android.content.IntentSender;
@@ -44,10 +45,8 @@ import java.io.InputStream;
  * The main menu of our application
  * Author: Ian Arbuckle
  */
-public class MainActivity extends Activity implements GestureDetector.OnGestureListener,
-GestureDetector.OnDoubleTapListener{
+public class MainActivity extends Activity implements ConnectionCallbacks, OnConnectionFailedListener, OnClickListener{
 
-    private GestureDetectorCompat gestureDetector;
 
 
     private static final int RC_SIGN_IN = 0;
@@ -70,10 +69,15 @@ GestureDetector.OnDoubleTapListener{
 
     private ConnectionResult mConnectionResult;
 
-    private Button btnSignOut, btnMainMenu, btnRevokeAccess;
+    private Button btnSignOut, btnRevokeAccess;
     private ImageView imgProfilePic;
     private TextView txtName;
     private LinearLayout llProfileLayout;
+
+    private Button hisBtn;
+    private Button mathsBtn;
+    private Button geoBtn;
+    private Button engBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,21 +91,20 @@ GestureDetector.OnDoubleTapListener{
                         .enableWebKitInspector(Stetho.defaultInspectorModulesProvider(this))
                         .build());
 
-
-        this.gestureDetector = new GestureDetectorCompat(this, this);
-        gestureDetector.setOnDoubleTapListener(this);
-
         btnSignOut = (Button) findViewById(R.id.btn_sign_out);
-        btnRevokeAccess = (Button) findViewById(R.id.btn_revoke_access);
         imgProfilePic = (ImageView) findViewById(R.id.imgProfilePic);
         txtName = (TextView) findViewById(R.id.txtName);
         llProfileLayout = (LinearLayout) findViewById(R.id.llProfile);
 
-        /** Closing tag
+        //Menu buttons
+        hisBtn = (Button) findViewById(R.id.hisBtn);
+        mathsBtn = (Button) findViewById(R.id.mathsBtn);
+        geoBtn = (Button) findViewById(R.id.geoBtn);
+        engBtn = (Button) findViewById(R.id.engBtn);
+
+
         // Button click listeners
         btnSignOut.setOnClickListener(this);
-        btnRevokeAccess.setOnClickListener(this);
-        btnMainMenu.setOnClickListener(this);
 
         // Initializing google plus api client
         mGoogleApiClient = new GoogleApiClient.Builder(this)
@@ -110,72 +113,14 @@ GestureDetector.OnDoubleTapListener{
                 .addApi(Plus.API)
                 .addScope(Plus.SCOPE_PLUS_LOGIN)
                 .build();
-         **/
+
 
     }
 
-    @Override
-    public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-        Toast.makeText(this, "On Fling ",Toast.LENGTH_SHORT).show();
-        return true;
-    }
 
-    @Override
-    public boolean onDoubleTap(MotionEvent e) {
-        Toast.makeText(this, "On Double tap ",Toast.LENGTH_SHORT).show();
-        return true;
-    }
-
-    @Override
-    public boolean onDoubleTapEvent(MotionEvent e) {
-        Toast.makeText(this, "On double tap event ",Toast.LENGTH_SHORT).show();
-        return true;
-    }
-
-    @Override
-    public boolean onDown(MotionEvent e) {
-        Toast.makeText(this, "On Down ",Toast.LENGTH_SHORT).show();
-        return true;
-    }
-
-    @Override
-    public void onShowPress(MotionEvent e) {
-        Toast.makeText(this, "On press ",Toast.LENGTH_SHORT).show();
-
-    }
-
-    @Override
-    public boolean onSingleTapUp(MotionEvent e) {
-        Toast.makeText(this, "On Single tap up ",Toast.LENGTH_SHORT).show();
-        return true;
-    }
-
-    @Override
-    public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
-        Toast.makeText(this, "On Scroll ",Toast.LENGTH_SHORT).show();
-        return true;
-    }
-
-    @Override
-    public void onLongPress(MotionEvent e) {
-        Toast.makeText(this, "On long press ",Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public boolean onSingleTapConfirmed(MotionEvent e) {
-        Toast.makeText(this, "On Single tap confirmed ",Toast.LENGTH_SHORT).show();
-        return true;
-    }
-
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        this.gestureDetector.onTouchEvent(event);
-        return super.onTouchEvent(event);
-    }
 
     //Google+ implementation
 
-    /* Closing tag
     @Override
     protected void onStart() {
         super.onStart();
@@ -190,20 +135,18 @@ GestureDetector.OnDoubleTapListener{
         }
     }
 
-    /* Closing tag
     @Override
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.btn_sign_out:
                 signOutFromGplus();
-                break;
-            case R.id.btn_revoke_access:
-                revokeGplusAccess();
+                Intent i = new Intent(this, LoginActivity.class);
+                startActivity(i);
                 break;
         }
 
     }
-    /* Closing tag
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -235,7 +178,6 @@ GestureDetector.OnDoubleTapListener{
     /**
      * Method to resolve any signin errors
      * */
-    /* Closing tag
      private void resolveSignInError() {
         if (mConnectionResult.hasResolution()) {
             try {
@@ -248,7 +190,7 @@ GestureDetector.OnDoubleTapListener{
         }
     }
 
-    /* Closing tag
+
     @Override
     public void onConnectionSuspended(int i) {
         mGoogleApiClient.connect();
@@ -257,7 +199,7 @@ GestureDetector.OnDoubleTapListener{
     }
 
     @Override
-    /* Closing Tag
+
     public void onConnected(Bundle bundle) {
         mSignInClicked = false;
         Toast.makeText(this, "User is connected!", Toast.LENGTH_LONG).show();
@@ -282,25 +224,20 @@ GestureDetector.OnDoubleTapListener{
     /**
      * Updating the UI, showing/hiding buttons and profile layout
      * */
-    /* Closing tag
      private void updateUI(boolean isSignedIn) {
         if (isSignedIn) {
             btnSignOut.setVisibility(View.VISIBLE);
-            btnRevokeAccess.setVisibility(View.VISIBLE);
             llProfileLayout.setVisibility(View.VISIBLE);
 
         } else {
             btnSignOut.setVisibility(View.GONE);
-            btnRevokeAccess.setVisibility(View.GONE);
-
-
         }
     }
 
     /**
      * Sign-out from google
      * */
-    /* Closing tag
+
      private void signOutFromGplus() {
         if (mGoogleApiClient.isConnected()) {
             Plus.AccountApi.clearDefaultAccount(mGoogleApiClient);
@@ -310,31 +247,11 @@ GestureDetector.OnDoubleTapListener{
         }
     }
 
-    /**
-     * Revoking access from google
-     * */
-    /* Closing tag
-     private void revokeGplusAccess() {
-        if (mGoogleApiClient.isConnected()) {
-            Plus.AccountApi.clearDefaultAccount(mGoogleApiClient);
-            Plus.AccountApi.revokeAccessAndDisconnect(mGoogleApiClient)
-                    .setResultCallback(new ResultCallback<Status>() {
-                        @Override
-                        public void onResult(Status arg0) {
-                            Log.e(TAG, "User access revoked!");
-                            mGoogleApiClient.connect();
-                            updateUI(false);
-                        }
-
-                    });
-        }
-    }
 
     /**
      * Fetching user's information name, email, profile pic
      * */
 
-     /* Closing tag
      private void getProfileInformation() {
         try {
             if (Plus.PeopleApi.getCurrentPerson(mGoogleApiClient) != null) {
@@ -372,7 +289,7 @@ GestureDetector.OnDoubleTapListener{
     /**
      * Background Async task to load user profile picture from url
      * */
-        /*
+
      private class LoadProfileImage extends AsyncTask<String, Void, Bitmap> {
         ImageView bmImage;
 
@@ -399,12 +316,17 @@ GestureDetector.OnDoubleTapListener{
     }
 
     //End of Google+ Implementation
-    */
 
-    public void historyOnClick(View view){
 
-        Intent i = new Intent(this, History.class);
-        startActivity(i);
+    public void OnClickTabs(View view){
+
+        switch(view.getId()){
+            case R.id.hisBtn:
+                Intent a = new Intent(this, History.class);
+                startActivity(a);
+                break;
+        }
+
     }
 
 

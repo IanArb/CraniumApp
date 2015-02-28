@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:xliff="http://schemas.android.com/apk/res-auto">
 
     <string name="app_name">CraniumApp</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_history">History</string>
+
+    <!-- Basic login text -->
     <string name="confirm_registry">Username not found. You want to create a new user with that email and password?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
-    <string name="sign_in">Sign In</string>
+    <string name="sign_in">Sign In Or Register</string>
     <string name="prompt_password">Password</string>
     <string name="prompt_username">Username</string>
     <string name="updatingReport">Updating Report</string>
+
     <string name="history_text">Welcome to History!</string>
+
+    <!-- Hangman Game text -->
     <string name="hangman_btn">Play Hangman Game</string>
     <string name="title_activity_hangman_game">HangmanGame</string>
     <string name="gallows">The gallows</string>
@@ -21,22 +25,43 @@
     <string name="body">The body</string>
     <string name="arm">The arms</string>
     <string name="leg">The legs</string>
-    <string name="youtube_text">YouTube Tutorials</string>
-    <string name="title_activity_history_tutorials">HistoryTutorials</string>
+    <string name="pick_category">Choose your category</string>
+    <string name="help_message">To play the game, you guess a letter and remember you have 6 lives!</string>
+
+
     <!-- Google+ Button text -->
-    <string name="btn_logout_from_google">Logout from Google</string>
+    <string name="btn_logout_from_google">Logout</string>
     <string name="btn_revoke_access">Revoke Access</string>
     <string name="btn_main_menu">Go to Main Menu</string>
     <string name="title_activity_hangman_b">HangmanB</string>
     <string name="search">search</string>
-    <string name="title_activity_player">PlayerActivity</string>
+    <string name="failed">Failed</string>
     <string name="error_incorrect_password">Incorrect Password</string>
     <string name="error_invalid_password">Invalid Password</string>
     <string name="error_field_required">Field required</string>
     <string name="error_invalid_email">Invalid username</string>
 
-    <string name="pick_category">Choose your category</string>
-    <string name="help_message">To play the game, you guess a letter and remember you have 6 lives!</string>
     <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_history_youtube">HistoryYoutubeActivity</string>
+    <string name="actionbar_tutorial">Testing the Youtube video activity.</string>
+
+    <!-- Youtube API text -->
+    <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
+    <string name="youtube_text">YouTube Tutorials</string>
+    <string name="title_activity_history_tutorials">HistoryTutorials</string>
+    <string name="title_activity_player">Youtube tutorial</string>
+    <string name="demo_select">Please select a tutorial:</string>
+    <string name="some_demos_disabled">* Your device is currently running Android API version <xliff:g id="current_version">%1$s</xliff:g>.</string>
+    <string name="list_item_disabled">Requires Android API version <xliff:g id="required_version">%1$s</xliff:g> or higher.</string>
+    <string name="fullscreen_tutorial">Welcome to your tutorial</string>
+    <string name="landscape_fullscreen">Landscape view</string>
+    <string name="enter_fullscreen">Enter fullscreen</string>
+    <string name="maths_btn">Maths</string>
+    <string name="eng_btn">English</string>
+    <string name="history_btn">History</string>
+    <string name="geo_btn">Geography</string>
+    <string name="welcome_text">Welcome to Cranium!</string>
+
 
 </resources>

@@ -7,52 +7,103 @@
     tools:context="com.cranium.ianarbuckle.craniumapp.MainActivity"
     android:background="@drawable/school">
 
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/llProfile"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="51dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/maths_btn"
+            android:id="@+id/mathsBtn"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:onClick="OnClickTabs" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/eng_btn"
+            android:id="@+id/engBtn"
+            android:layout_row="0"
+            android:layout_column="11"
+            android:onClick="OnClickTabs" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/history_btn"
+            android:id="@+id/hisBtn"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:onClick="OnClickTabs" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/geo_btn"
+            android:id="@+id/geoBtn"
+            android:layout_row="3"
+            android:layout_column="11"
+            android:onClick="OnClickTabs" />
+    </GridLayout>
+
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_logout_from_google"
+        android:id="@+id/btn_sign_out"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="OnClick" />
+
+    <LinearLayout
+        android:id="@+id/llProfile"
+        android:layout_width="fill_parent"
+        android:layout_height="140dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        >
+
+        <ImageView
+            android:id="@+id/imgProfilePic"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_weight="2" >
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginRight="100dp"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Welcome to Cranium"
-        android:id="@+id/welText"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="68dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Maths"
-        android:id="@+id/mathsBtn"
-        android:layout_marginTop="41dp"
-        android:layout_below="@+id/welText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="English"
-        android:id="@+id/engBtn"
-        android:layout_alignTop="@+id/mathsBtn"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="History"
-        android:id="@+id/hisBtn"
-        android:layout_marginTop="103dp"
-        android:layout_below="@+id/mathsBtn"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:onClick="historyOnClick" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Geography"
-        android:id="@+id/geoBtn"
-        android:layout_alignBottom="@+id/hisBtn"
-        android:layout_alignRight="@+id/engBtn"
-        android:layout_alignEnd="@+id/engBtn" />
+        android:text="@string/welcome_text"
+        android:id="@+id/textView"
+        android:layout_below="@+id/llProfile"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
