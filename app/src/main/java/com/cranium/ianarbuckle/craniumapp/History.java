@@ -108,7 +108,7 @@ public class History extends ActionBarActivity implements ConnectionCallbacks, O
                 this.startActivity(b);
                 break;
 
-        }
+            }
 
         }
 

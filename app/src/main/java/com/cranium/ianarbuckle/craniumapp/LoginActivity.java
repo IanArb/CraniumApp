@@ -246,6 +246,9 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
 
         // Update the UI after signin
         updateUI(true);
+
+        //Remove keyboard
+
     }
 
     @Override
