@@ -2,9 +2,7 @@
 <resources>
     <string-array name="words">
         <item>BLITZKRIEG</item>
-        <item>TREATYOFVERSAILLES</item>
         <item>NORMANDY</item>
-        <item>BATTLEOFBUlGE</item>
         <item>HITLER</item>
         <item>GOERING</item>
         <item>CHURCHILL</item>

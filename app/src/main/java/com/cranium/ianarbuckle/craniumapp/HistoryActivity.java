@@ -18,11 +18,8 @@ import com.facebook.stetho.Stetho;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
 import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
-import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.common.api.Status;
 import com.google.android.gms.plus.Plus;
 import com.google.android.gms.plus.model.people.Person;
-import com.facebook.stetho.Stetho;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import android.view.View.OnClickListener;
@@ -38,7 +35,7 @@ import java.io.InputStream;
  * Author: Ian Arbuckle
  */
 
-public class History extends ActionBarActivity implements ConnectionCallbacks, OnConnectionFailedListener, OnClickListener{
+public class HistoryActivity extends ActionBarActivity implements ConnectionCallbacks, OnConnectionFailedListener, OnClickListener{
 
 
     private Button hangmanBtn;
@@ -104,8 +101,8 @@ public class History extends ActionBarActivity implements ConnectionCallbacks, O
                 this.startActivity(a);
                 break;
             case R.id.ytBtn:
-                Intent b = new Intent(this, FullscreenDemoActivity.class);
-                this.startActivity(b);
+                Intent b = new Intent(this, YouTubeActivity.class);
+                startActivity(b);
                 break;
 
             }
@@ -136,6 +133,7 @@ public class History extends ActionBarActivity implements ConnectionCallbacks, O
                 Intent i = new Intent(this, LoginActivity.class);
                 startActivity(i);
                 break;
+
         }
 
     }
@@ -195,7 +193,7 @@ public class History extends ActionBarActivity implements ConnectionCallbacks, O
 
     public void onConnected(Bundle bundle) {
         mSignInClicked = false;
-        Toast.makeText(this, "User is connected!", Toast.LENGTH_LONG).show();
+
 
         // Get user's information
         getProfileInformation();

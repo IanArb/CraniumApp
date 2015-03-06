@@ -98,6 +98,7 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
     private ImageView imgProfilePic;
     private TextView txtName, txtEmail;
     private LinearLayout llProfileLayout;
+    private TextView helpText;
 
     //Normal login
     private User myUser;
@@ -289,6 +290,7 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
             llProfileLayout.setVisibility(View.VISIBLE);
             btnMainMenu.setVisibility(View.VISIBLE);
             login.setVisibility(View.GONE);
+
         } else {
             btnSignIn.setVisibility(View.VISIBLE);
             btnSignOut.setVisibility(View.GONE);
@@ -296,6 +298,7 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
             btnMainMenu.setVisibility(View.GONE);
             llProfileLayout.setVisibility(View.GONE);
             login.setVisibility(View.VISIBLE);
+
 
         }
     }

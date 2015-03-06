@@ -9,8 +9,11 @@ import android.content.res.Resources;
 import android.graphics.Color;
 import android.view.Gravity;
 import android.view.ViewGroup.LayoutParams;
+import android.widget.Button;
+import android.widget.GridLayout;
 import android.widget.GridView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -26,7 +29,7 @@ import com.facebook.stetho.Stetho;
 import java.util.Random;
 
 /**
- * Our first hangman game
+ *
  * Author: Ian Arbuckle
  * Reference: http://code.tutsplus.com/tutorials/create-a-hangman-game-user-interaction--mobile-21893
  */
@@ -43,6 +46,7 @@ public class HangmanActivity extends Activity {
     private TextView[] charViews;
     private GridView letters;
     private LetterAdapter ltrAdapt;
+    private GridLayout category;
 
     //body part images
     private ImageView[] bodyParts;
@@ -61,6 +65,14 @@ public class HangmanActivity extends Activity {
 
     //help
     private AlertDialog helpAlert;
+
+    //category buttons
+    private Button cat1;
+    private Button cat2;
+    private Button cat3;
+    private Button cat4;
+    private TextView catText;
+    private RelativeLayout gallow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,6 +112,22 @@ public class HangmanActivity extends Activity {
         bodyParts[5] = (ImageView) findViewById(R.id.leg2);
 
 
+        //category buttons
+
+        cat1 = (Button) findViewById(R.id.cat1Btn);
+        cat2 = (Button) findViewById(R.id.cat2Btn);
+        cat3 = (Button) findViewById(R.id.cat3Btn);
+        cat4 = (Button) findViewById(R.id.cat4Btn);
+        catText = (TextView) findViewById(R.id.catText);
+        gallow = (RelativeLayout) findViewById(R.id.gallow);
+
+
+
+        category = (GridLayout) findViewById(R.id.category);
+
+
+
+        /*
         AlertDialog.Builder build = new AlertDialog.Builder(this);
         build.setTitle(R.string.pick_category);
         build.setItems(R.array.categories,
@@ -123,6 +151,8 @@ public class HangmanActivity extends Activity {
                     }
                 });
         build.create().show();
+        */
+
 
 
 
@@ -151,9 +181,47 @@ public class HangmanActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void playGameDictatorship() {
+
+    public void onClickCat(View v) {
+        switch (v.getId()) {
+            case R.id.cat1Btn:
+                HangmanActivity.this.playGameDictatorship();
+                category.setVisibility(View.GONE);
+                letters.setVisibility(View.VISIBLE);
+                gallow.setVisibility(View.VISIBLE);
+                catText.setVisibility(View.GONE);
+
+                break;
+            case R.id.cat2Btn:
+                HangmanActivity.this.playGameIrish();
+                category.setVisibility(View.GONE);
+                letters.setVisibility(View.VISIBLE);
+                gallow.setVisibility(View.VISIBLE);
+                catText.setVisibility(View.GONE);
+                break;
+            case R.id.cat3Btn:
+                HangmanActivity.this.playGameAmerican();
+                category.setVisibility(View.GONE);
+                letters.setVisibility(View.VISIBLE);
+                gallow.setVisibility(View.VISIBLE);
+                catText.setVisibility(View.GONE);
+                break;
+            case R.id.cat4Btn:
+                HangmanActivity.this.playGameRussian();
+                category.setVisibility(View.GONE);
+                letters.setVisibility(View.VISIBLE);
+                gallow.setVisibility(View.VISIBLE);
+                catText.setVisibility(View.GONE);
+                break;
+        }
+    }
+
+
+    public void playGameDictatorship() {
         //play a new game
         String newWord = words[rand.nextInt(words.length)];
+
+
 
         while (newWord.equals(currWord)) newWord = words[rand.nextInt(words.length)];
 
@@ -162,7 +230,6 @@ public class HangmanActivity extends Activity {
         charViews = new TextView[currWord.length()];
 
         wordLayout.removeAllViews();
-
 
         //Loop through the characters
         for (int c = 0; c < currWord.length(); c++) {

@@ -62,6 +62,14 @@
     <string name="history_btn">History</string>
     <string name="geo_btn">Geography</string>
     <string name="welcome_text">Welcome to Cranium!</string>
+    <string name="rec_text">Recommended to sign with google+ for better user experience</string>
+
+    <!-- Google Play Services Games -->
+    <string name="app_id">135954237544</string>
+    <string name="title_activity_hangman_category">HangmanCategory</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="category">Pick a category</string>
 
 
 </resources>

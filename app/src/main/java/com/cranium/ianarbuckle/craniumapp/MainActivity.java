@@ -1,13 +1,10 @@
 package com.cranium.ianarbuckle.craniumapp;
 
-import android.app.ActionBar;
 import android.app.Activity;
-import android.content.Context;
 import android.content.IntentSender;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -15,7 +12,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.content.Intent;
 import android.widget.Button;
-import android.widget.EditText;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -23,19 +19,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 //scrolling
-import android.view.MotionEvent;
-import android.view.GestureDetector;
-import android.support.v4.view.GestureDetectorCompat;
 
 import com.facebook.stetho.Stetho;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
-import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
 import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
-import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.common.api.Status;
 import com.google.android.gms.plus.Plus;
 import com.google.android.gms.plus.model.people.Person;
 
@@ -322,7 +312,7 @@ public class MainActivity extends Activity implements ConnectionCallbacks, OnCon
 
         switch(view.getId()){
             case R.id.hisBtn:
-                Intent a = new Intent(this, History.class);
+                Intent a = new Intent(this, HistoryActivity.class);
                 startActivity(a);
                 break;
         }

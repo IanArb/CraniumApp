@@ -16,6 +16,7 @@
 
 package com.cranium.ianarbuckle.craniumapp;
 
+import android.annotation.TargetApi;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Build;
@@ -40,7 +41,8 @@ import static com.cranium.ianarbuckle.craniumapp.DeveloperKey.*;
  * This is the preferred way of handling fullscreen because the default fullscreen implementation
  * will cause re-buffering of the video.
  */
-public class FullscreenDemoActivity extends YouTubeFailureRecoveryActivity implements
+@TargetApi(Build.VERSION_CODES.GINGERBREAD)
+public class YouTubeActivity extends YouTubeFailureRecoveryActivity implements
     View.OnClickListener,
     CompoundButton.OnCheckedChangeListener,
     YouTubePlayer.OnFullscreenListener {
@@ -62,7 +64,7 @@ public class FullscreenDemoActivity extends YouTubeFailureRecoveryActivity imple
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
-    setContentView(R.layout.fullscreen_demo);
+    setContentView(R.layout.fullscreen_youtube);
     baseLayout = (LinearLayout) findViewById(R.id.layout);
     playerView = (YouTubePlayerView) findViewById(R.id.player);
     fullscreenButton = (Button) findViewById(R.id.fullscreen_button);
@@ -73,7 +75,7 @@ public class FullscreenDemoActivity extends YouTubeFailureRecoveryActivity imple
     // You can use your own button to switch to fullscreen too
     fullscreenButton.setOnClickListener(this);
 
-    playerView.initialize(DEVELOPER_KEY, this);
+    playerView.initialize(DeveloperKey.DEVELOPER_KEY, this);
 
     doLayout();
   }

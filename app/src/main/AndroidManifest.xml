@@ -16,6 +16,9 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <meta-data
+            android:name="com.google.android.gms.games.APP_ID"
+            android:value="@string/app_id" />
+        <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
@@ -40,25 +43,28 @@
             android:parentActivityName=".LoginActivity" >
         </activity>
         <activity
-            android:name=".History"
+            android:name=".HistoryActivity"
             android:label="@string/title_activity_history"
             android:parentActivityName=".MainActivity" >
         </activity>
         <activity
             android:name=".HangmanActivity"
             android:label="HangmanActivity"
-            android:parentActivityName=".History" >
+            android:parentActivityName=".HistoryActivity" >
         </activity>
-
         <activity
-            android:name=".FullscreenDemoActivity"
+            android:name=".YouTubeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="FullscreenDemoActivity"
             android:screenOrientation="sensor"
-            android:configChanges="keyboardHidden|orientation|screenSize"
             android:theme="@style/BlackNoTitleBarTheme" >
-            <meta-data android:name="@string/minVersion" android:value="8"/>
-            <meta-data android:name="@string/isLaunchableActivity" android:value="true"/>
-
+            <meta-data
+                android:name="@string/minVersion"
+                android:value="8" />
+        </activity>
+        <activity
+            android:name=".HangmanCategory"
+            android:label="@string/title_activity_hangman_category" >
         </activity>
     </application>
 
