@@ -34,7 +34,7 @@ import java.util.Random;
  * Reference: http://code.tutsplus.com/tutorials/create-a-hangman-game-user-interaction--mobile-21893
  */
 
-public class HangmanActivity extends Activity {
+public class HangmanActivity extends ActionBarActivity {
 
     private String[] words;
     private String[] irishWords;

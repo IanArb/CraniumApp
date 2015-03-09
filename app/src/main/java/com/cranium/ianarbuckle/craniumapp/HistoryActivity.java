@@ -102,7 +102,7 @@ public class HistoryActivity extends ActionBarActivity implements ConnectionCall
                 break;
             case R.id.ytBtn:
                 Intent b = new Intent(this, YouTubeActivity.class);
-                startActivity(b);
+                this.startActivity(b);
                 break;
 
             }

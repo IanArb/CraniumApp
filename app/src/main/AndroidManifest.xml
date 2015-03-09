@@ -62,10 +62,6 @@
                 android:name="@string/minVersion"
                 android:value="8" />
         </activity>
-        <activity
-            android:name=".HangmanCategory"
-            android:label="@string/title_activity_hangman_category" >
-        </activity>
     </application>
 
 </manifest>
