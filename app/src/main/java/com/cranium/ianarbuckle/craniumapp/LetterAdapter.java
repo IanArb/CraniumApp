@@ -1,11 +1,12 @@
 package com.cranium.ianarbuckle.craniumapp;
 
 /**
- * Generating the letters of our hangman application
+ * Generating the letters of our hangman game-
  * Author: Ian Arbuckle
  * Reference: http://code.tutsplus.com/tutorials/create-a-hangman-game-user-interaction--mobile-21893
  */
 
+import android.text.Editable;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -16,16 +17,21 @@ import android.widget.Button;
 public class LetterAdapter extends BaseAdapter {
 
     private String[] letters;
+    private String[] space;
     private LayoutInflater letterInf;
 
     public LetterAdapter(Context c) {
         //setup adapter
-        letters=new String[26];
+        letters = new String[26];
+
+
         for (int a = 0; a < letters.length; a++) {
-            letters[a] = "" + (char)(a+'A');
+            letters[a] = "" + (char) (a + 'A');
             letterInf = LayoutInflater.from(c);
         }
+
     }
+
 
     @Override
     public long getItemId(int position) {
@@ -48,7 +54,7 @@ public class LetterAdapter extends BaseAdapter {
         Button letterBtn;
         if (convertView == null) {
             //inflate the button layout
-            letterBtn = (Button)letterInf.inflate(R.layout.letter, parent, false);
+            letterBtn = (Button) letterInf.inflate(R.layout.letter, parent, false);
         } else {
             letterBtn = (Button) convertView;
         }

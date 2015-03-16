@@ -27,6 +27,13 @@
     <string name="leg">The legs</string>
     <string name="pick_category">Choose your category</string>
     <string name="help_message">To play the game, you guess a letter and remember you have 6 lives!</string>
+    <string name="category">Choose a Category</string>
+
+    <!-- Scramble Game text -->
+
+    <string name="TextBox">Text</string>
+    <string name="EnglishText">Welcome to English</string>
+    <string name="GameBtn">Play Scramble</string>
 
 
     <!-- Google+ Button text -->
@@ -46,16 +53,15 @@
     <string name="actionbar_tutorial">Testing the Youtube video activity.</string>
 
     <!-- Youtube API text -->
-    <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
-    <string name="youtube_text">YouTube Tutorials</string>
-    <string name="title_activity_history_tutorials">HistoryTutorials</string>
-    <string name="title_activity_player">Youtube tutorial</string>
-    <string name="demo_select">Please select a tutorial:</string>
-    <string name="some_demos_disabled">* Your device is currently running Android API version <xliff:g id="current_version">%1$s</xliff:g>.</string>
-    <string name="list_item_disabled">Requires Android API version <xliff:g id="required_version">%1$s</xliff:g> or higher.</string>
-    <string name="fullscreen_tutorial">Welcome to your tutorial</string>
-    <string name="landscape_fullscreen">Landscape view</string>
+    <string name="title_logo">NATIONAL GEOGRAPHIC</string>
+    <string name="btn_skip_intro">Skip Intro</string>
+    <string name="error_player">Could not initialise player</string>
+    <string name="history_tutorial">Welcome to your History tutorial playlist on Dictatorship and Democracy</string>
+    <string name="landscape_fullscreen">Landscape</string>
     <string name="enter_fullscreen">Enter fullscreen</string>
+    <string name="english_tutorial">Welcome to your English tutorial on grammar</string>
+
+    <!-- Main Button text -->
     <string name="maths_btn">Maths</string>
     <string name="eng_btn">English</string>
     <string name="history_btn">History</string>
@@ -66,9 +72,8 @@
     <!-- Google Play Services Games -->
     <string name="app_id">135954237544</string>
     <string name="title_activity_hangman_category">Hangman Category</string>
-
-    <string name="hello_world">Hello world!</string>
-    <string name="category">Pick a category</string>
+    <string name="youtube_search_text">Youtube Playlist Tutorial</string>
+    <string name="play_hangman_text">Play Hangman</string>
 
 
 </resources>

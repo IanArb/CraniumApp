@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="word">
+        <item>MEW</item>
+        <item>OWL</item>
+        <item>WOE</item>
+        <item>LOW</item>
+        <item>WELL</item>
+        <item>MOLE</item>
+        <item>MOLL</item>
+        <item>MEWL</item>
+        <item>OWE</item>
+        <item>MELLOW</item>
+    </string-array>
+
+</resources>

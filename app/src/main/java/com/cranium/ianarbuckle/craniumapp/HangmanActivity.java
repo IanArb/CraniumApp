@@ -29,7 +29,6 @@ import com.facebook.stetho.Stetho;
 import java.util.Random;
 
 /**
- *
  * Author: Ian Arbuckle
  * Reference: http://code.tutsplus.com/tutorials/create-a-hangman-game-user-interaction--mobile-21893
  */
@@ -122,41 +121,7 @@ public class HangmanActivity extends ActionBarActivity {
         gallow = (RelativeLayout) findViewById(R.id.gallow);
 
 
-
         category = (GridLayout) findViewById(R.id.category);
-
-
-
-        /*
-        AlertDialog.Builder build = new AlertDialog.Builder(this);
-        build.setTitle(R.string.pick_category);
-        build.setItems(R.array.categories,
-
-                new DialogInterface.OnClickListener(){
-                    public void onClick(DialogInterface dialog, int which){
-                        //'which contains index position
-                        switch(which){
-                            case 0:
-                                HangmanActivity.this.playGameDictatorship();
-                                break;
-                            case 1:
-                                HangmanActivity.this.playGameIrish();
-                                break;
-                            case 2:
-                                HangmanActivity.this.playGameAmerican();
-                                break;
-                            case 3:
-                                HangmanActivity.this.playGameRussian();
-                        }
-                    }
-                });
-        build.create().show();
-        */
-
-
-
-
-
     }
 
     @Override
@@ -221,8 +186,6 @@ public class HangmanActivity extends ActionBarActivity {
         //play a new game
         String newWord = words[rand.nextInt(words.length)];
 
-
-
         while (newWord.equals(currWord)) newWord = words[rand.nextInt(words.length)];
 
         currWord = newWord;
@@ -267,7 +230,7 @@ public class HangmanActivity extends ActionBarActivity {
 
     }
 
-    private void playGameIrish(){
+    private void playGameIrish() {
         //play a new game
         String newWord = irishWords[rand.nextInt(irishWords.length)];
 
@@ -314,7 +277,7 @@ public class HangmanActivity extends ActionBarActivity {
         }
     }
 
-    private void playGameAmerican(){
+    private void playGameAmerican() {
         //play a new game
         String newWord = amerWords[rand.nextInt(amerWords.length)];
 
@@ -361,7 +324,7 @@ public class HangmanActivity extends ActionBarActivity {
         }
     }
 
-    private void playGameRussian(){
+    private void playGameRussian() {
         //play a new game
         String newWord = russWords[rand.nextInt(russWords.length)];
 
@@ -380,6 +343,12 @@ public class HangmanActivity extends ActionBarActivity {
             charViews[c] = new TextView(this);
             //set the current letter
             charViews[c].setText("" + currWord.charAt(c));
+
+            if (currWord.charAt(c) == ' ') {
+                charViews[c].setText(null);
+
+            }
+
 
             //set the layout
 
@@ -425,6 +394,7 @@ public class HangmanActivity extends ActionBarActivity {
 
         boolean correct = false; //initialise to false
 
+
         for (int k = 0; k < currWord.length(); k++) {
             if (currWord.charAt(k) == letterChar) {
                 correct = true;
@@ -432,6 +402,7 @@ public class HangmanActivity extends ActionBarActivity {
                 charViews[k].setTextColor(Color.BLACK);
             }
         }
+
 
         //Check in case won
 
@@ -445,7 +416,7 @@ public class HangmanActivity extends ActionBarActivity {
                 winBuild.setItems(R.array.categories,
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
-                                switch(which){
+                                switch (which) {
                                     case 0:
                                         HangmanActivity.this.playGameDictatorship();
                                         break;
@@ -486,11 +457,11 @@ public class HangmanActivity extends ActionBarActivity {
             disableBtns();
             //let the user know they lost, ask if they want to play again
             AlertDialog.Builder loseBuild = new AlertDialog.Builder(this);
-            loseBuild.setTitle("Sorry hoss! The answer was: " +currWord+" Play again");
+            loseBuild.setTitle("Sorry hoss! The answer was: " + currWord + " Play again");
             loseBuild.setItems(R.array.categories,
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            switch(which){
+                            switch (which) {
                                 case 0:
                                     HangmanActivity.this.playGameDictatorship();
                                     break;
@@ -524,8 +495,6 @@ public class HangmanActivity extends ActionBarActivity {
             letters.getChildAt(l).setEnabled(false);
         }
     }
-
-
 
 
 }

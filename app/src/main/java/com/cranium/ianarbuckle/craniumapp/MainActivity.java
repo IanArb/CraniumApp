@@ -35,8 +35,7 @@ import java.io.InputStream;
  * The main menu of our application
  * Author: Ian Arbuckle
  */
-public class MainActivity extends Activity implements ConnectionCallbacks, OnConnectionFailedListener, OnClickListener{
-
+public class MainActivity extends Activity implements ConnectionCallbacks, OnConnectionFailedListener, OnClickListener {
 
 
     private static final int RC_SIGN_IN = 0;
@@ -108,7 +107,6 @@ public class MainActivity extends Activity implements ConnectionCallbacks, OnCon
     }
 
 
-
     //Google+ implementation
 
     @Override
@@ -120,14 +118,14 @@ public class MainActivity extends Activity implements ConnectionCallbacks, OnCon
     @Override
     protected void onStop() {
         super.onStop();
-        if(mGoogleApiClient.isConnected()){
+        if (mGoogleApiClient.isConnected()) {
             mGoogleApiClient.disconnect();
         }
     }
 
     @Override
     public void onClick(View v) {
-        switch(v.getId()){
+        switch (v.getId()) {
             case R.id.btn_sign_out:
                 signOutFromGplus();
                 Intent i = new Intent(this, LoginActivity.class);
@@ -167,8 +165,8 @@ public class MainActivity extends Activity implements ConnectionCallbacks, OnCon
 
     /**
      * Method to resolve any signin errors
-     * */
-     private void resolveSignInError() {
+     */
+    private void resolveSignInError() {
         if (mConnectionResult.hasResolution()) {
             try {
                 mIntentInProgress = true;
@@ -213,8 +211,8 @@ public class MainActivity extends Activity implements ConnectionCallbacks, OnCon
 
     /**
      * Updating the UI, showing/hiding buttons and profile layout
-     * */
-     private void updateUI(boolean isSignedIn) {
+     */
+    private void updateUI(boolean isSignedIn) {
         if (isSignedIn) {
             btnSignOut.setVisibility(View.VISIBLE);
             llProfileLayout.setVisibility(View.VISIBLE);
@@ -226,9 +224,9 @@ public class MainActivity extends Activity implements ConnectionCallbacks, OnCon
 
     /**
      * Sign-out from google
-     * */
+     */
 
-     private void signOutFromGplus() {
+    private void signOutFromGplus() {
         if (mGoogleApiClient.isConnected()) {
             Plus.AccountApi.clearDefaultAccount(mGoogleApiClient);
             mGoogleApiClient.disconnect();
@@ -240,9 +238,9 @@ public class MainActivity extends Activity implements ConnectionCallbacks, OnCon
 
     /**
      * Fetching user's information name, email, profile pic
-     * */
+     */
 
-     private void getProfileInformation() {
+    private void getProfileInformation() {
         try {
             if (Plus.PeopleApi.getCurrentPerson(mGoogleApiClient) != null) {
                 Person currentPerson = Plus.PeopleApi
@@ -278,9 +276,9 @@ public class MainActivity extends Activity implements ConnectionCallbacks, OnCon
 
     /**
      * Background Async task to load user profile picture from url
-     * */
+     */
 
-     private class LoadProfileImage extends AsyncTask<String, Void, Bitmap> {
+    private class LoadProfileImage extends AsyncTask<String, Void, Bitmap> {
         ImageView bmImage;
 
         public LoadProfileImage(ImageView bmImage) {
@@ -308,12 +306,16 @@ public class MainActivity extends Activity implements ConnectionCallbacks, OnCon
     //End of Google+ Implementation
 
 
-    public void OnClickTabs(View view){
+    public void OnClickTabs(View view) {
 
-        switch(view.getId()){
+        switch (view.getId()) {
             case R.id.hisBtn:
                 Intent a = new Intent(this, HistoryActivity.class);
                 startActivity(a);
+                break;
+            case R.id.engBtn:
+                Intent b = new Intent(this, EnglishActivity.class);
+                startActivity(b);
                 break;
         }
 

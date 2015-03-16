@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.cranium.ianarbuckle.craniumapp" >
+    package="com.cranium.ianarbuckle.craniumapp">
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -14,7 +14,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <meta-data
             android:name="com.google.android.gms.games.APP_ID"
             android:value="@string/app_id" />
@@ -22,9 +22,7 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity
-            android:name=".SplashActivity"
-            android:label="@string/app_name" >
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,34 +32,39 @@
         <activity
             android:name=".LoginActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:windowSoftInputMode="adjustResize|stateVisible" >
-        </activity>
+            android:label="Cranium"
+            android:windowSoftInputMode="adjustResize|stateVisible"></activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:parentActivityName=".LoginActivity" >
-        </activity>
+            android:parentActivityName=".LoginActivity"></activity>
         <activity
             android:name=".HistoryActivity"
             android:label="@string/title_activity_history"
-            android:parentActivityName=".MainActivity" >
-        </activity>
+            android:parentActivityName=".MainActivity"></activity>
         <activity
             android:name=".HangmanActivity"
-            android:label="HangmanActivity"
-            android:parentActivityName=".HistoryActivity" >
-        </activity>
+            android:label="Hangman"
+            android:parentActivityName=".HistoryActivity"></activity>
         <activity
-            android:name=".YouTubeActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="FullscreenDemoActivity"
-            android:screenOrientation="sensor"
-            android:theme="@style/BlackNoTitleBarTheme" >
-            <meta-data
-                android:name="@string/minVersion"
-                android:value="8" />
+            android:name=".EnglishActivity"
+            android:label="English Menu"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".ScrambleGame"
+            android:label="Scramble"
+            android:parentActivityName=".EnglishActivity"></activity>
+        <activity
+            android:name=".EnglishYouTubePlayer"
+            android:parentActivityName=".EnglishActivity"></activity>
+        <activity
+            android:name=".HistoryYouTubePlayer"
+            android:label="Youtube tutorial"
+            android:parentActivityName=".HistoryActivity">
+
         </activity>
+
+
     </application>
 
 </manifest>

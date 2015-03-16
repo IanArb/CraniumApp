@@ -31,15 +31,16 @@
       android:layout_height="0dp"
       android:layout_weight="1"
       android:padding="5dp"
-      android:orientation="vertical">
+      android:orientation="vertical"
+      android:background="@color/background_material_light">
 
-    <TextView
+      <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="@android:style/TextAppearance.Small"
-        android:text="@string/fullscreen_tutorial"/>
+          android:text="@string/history_tutorial" />
 
-    <CheckBox
+      <CheckBox
         android:id="@+id/landscape_fullscreen_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,7 +52,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="@string/enter_fullscreen"/>
+        android:layout_marginLeft="100dp"
+        android:background="@drawable/roundedbutton"
+        android:padding="10dp"
+        android:text="@string/enter_fullscreen"
+        android:textColor="#FFFFFFFF"
+        android:textStyle="bold" />
 
   </LinearLayout>
 
