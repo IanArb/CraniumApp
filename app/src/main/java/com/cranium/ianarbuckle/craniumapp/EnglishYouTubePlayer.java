@@ -63,7 +63,7 @@ public class EnglishYouTubePlayer extends YouTubeFailureRecoveryActivity impleme
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.history_youtube_player);
+        setContentView(R.layout.activity_english_youtube);
         baseLayout = (LinearLayout) findViewById(R.id.layout);
         playerView = (YouTubePlayerView) findViewById(R.id.player);
         fullscreenButton = (Button) findViewById(R.id.fullscreen_button);

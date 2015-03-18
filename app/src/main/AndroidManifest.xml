@@ -33,34 +33,51 @@
             android:name=".LoginActivity"
             android:exported="true"
             android:label="Cranium"
-            android:windowSoftInputMode="adjustResize|stateVisible"></activity>
+            android:windowSoftInputMode="adjustResize|stateVisible">
+
+        </activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:parentActivityName=".LoginActivity"></activity>
+            android:parentActivityName=".LoginActivity">
+
+        </activity>
         <activity
             android:name=".HistoryActivity"
             android:label="@string/title_activity_history"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity">
+
+        </activity>
         <activity
             android:name=".HangmanActivity"
             android:label="Hangman"
-            android:parentActivityName=".HistoryActivity"></activity>
+            android:parentActivityName=".HistoryActivity">
+
+        </activity>
         <activity
             android:name=".EnglishActivity"
             android:label="English Menu"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity">
+
+        </activity>
         <activity
             android:name=".ScrambleGame"
             android:label="Scramble"
-            android:parentActivityName=".EnglishActivity"></activity>
+            android:parentActivityName=".EnglishActivity">
+
+        </activity>
         <activity
             android:name=".EnglishYouTubePlayer"
-            android:parentActivityName=".EnglishActivity"></activity>
+            android:parentActivityName=".EnglishActivity"
+            android:label="English Grammar Tutorial"
+            android:screenOrientation="portrait">
+
+        </activity>
         <activity
             android:name=".HistoryYouTubePlayer"
-            android:label="Youtube tutorial"
-            android:parentActivityName=".HistoryActivity">
+            android:label="Dictatorship and Democracy Tutorial"
+            android:parentActivityName=".HistoryActivity"
+            android:screenOrientation="portrait">
 
         </activity>
 

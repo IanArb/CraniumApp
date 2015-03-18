@@ -1,6 +1,7 @@
 package com.cranium.ianarbuckle.craniumapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -24,16 +25,20 @@ import android.view.View;
 import android.widget.ImageView;
 
 
+import com.cranium.ianarbuckle.craniumapp.com.cranium.ianarbuckle.craniumapp.game.BaseGameActivity;
 import com.facebook.stetho.Stetho;
+import com.google.android.gms.games.Games;
+
 
 import java.util.Random;
+
 
 /**
  * Author: Ian Arbuckle
  * Reference: http://code.tutsplus.com/tutorials/create-a-hangman-game-user-interaction--mobile-21893
  */
 
-public class HangmanActivity extends ActionBarActivity {
+public class HangmanActivity extends BaseGameActivity {
 
     private String[] words;
     private String[] irishWords;
@@ -91,6 +96,11 @@ public class HangmanActivity extends ActionBarActivity {
         amerWords = res.getStringArray(R.array.american);
         russWords = res.getStringArray(R.array.russian);
 
+        //Google Game Services
+
+        findViewById(R.id.sign_out_button);
+        findViewById(R.id.achievements);
+
 
         rand = new Random();
         currWord = "";
@@ -122,6 +132,31 @@ public class HangmanActivity extends ActionBarActivity {
 
 
         category = (GridLayout) findViewById(R.id.category);
+    }
+
+
+    public void OnClick(View v) {
+        switch (v.getId()) {
+            case R.id.sign_out_button:
+                signOut();
+                Intent i = new Intent(this, LoginActivity.class);
+                startActivity(i);
+                break;
+            case R.id.achievements:
+                startActivityForResult(Games.Achievements.getAchievementsIntent(
+                        getApiClient()), 1);
+        }
+    }
+
+    @Override
+    public void onSignInFailed() {
+        findViewById(R.id.sign_out_button).setVisibility(View.GONE);
+
+    }
+
+    @Override
+    public void onSignInSucceeded() {
+        findViewById(R.id.sign_out_button).setVisibility(View.VISIBLE);
     }
 
     @Override
@@ -444,6 +479,10 @@ public class HangmanActivity extends ActionBarActivity {
                 winBuild.show();
 
             }
+
+            if (getApiClient().isConnected())
+                Games.Achievements.unlock(getApiClient(),
+                        getString(R.string.correct_guess_achievement));
         }
 
         //Check if the user still has guesses

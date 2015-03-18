@@ -11,6 +11,30 @@
     >
 
     <!-- Category selector -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/logout_btn"
+        android:id="@+id/sign_out_button"
+        android:layout_gravity="right"
+        android:onClick="OnClick"
+        android:padding="10dp"
+        android:textColor="#FFFFFFFF"
+        android:textStyle="bold"
+        android:background="@drawable/roundedbutton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/show_achievements"
+        android:id="@+id/achievements"
+        android:layout_gravity="center_horizontal"
+        android:onClick="OnClick"
+        android:padding="10dp"
+        android:textColor="#FFFFFFFF"
+        android:textStyle="bold"
+        android:background="@drawable/roundedbutton" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

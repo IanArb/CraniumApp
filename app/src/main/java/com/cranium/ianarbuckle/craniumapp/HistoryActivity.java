@@ -58,7 +58,7 @@ public class HistoryActivity extends ActionBarActivity implements ConnectionCall
 
     private ConnectionResult mConnectionResult;
 
-    private Button btnSignOut, btnRevokeAccess;
+    private Button btnSignOut;
     private ImageView imgProfilePic;
     private TextView txtName;
     private LinearLayout llProfileLayout;
