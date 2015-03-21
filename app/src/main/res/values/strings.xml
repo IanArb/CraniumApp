@@ -85,5 +85,30 @@
     <string name="license_failed">License failed</string>
     <string name="correct_guess_achievement">Well done, you guessed correctly!</string>
 
+    <!-- English Section -->
+    <string name="classText">Scramble Class #1</string>
+    <string name="classText2">Scramble Class #2</string>
+    <string name="classText3">Scramble Class #3</string>
+
+    <!-- Geography Section -->
+    <string name="geo_text">Welcome to Geography</string>
+    <string name="geo_quiz_text_1">Geography Quiz #1</string>
+    <string name="geo_quiz_text_2">Geography Quiz #2</string>
+    <string name="geo_quiz_text_3">Geography Quiz #3</string>
+    <string name="british_flag">British</string>
+    <string name="irish_flag">Irish</string>
+    <string name="swedish_flag">Swedish</string>
+    <string name="swiss_flag">Switzerland</string>
+    <string name="danish_flag">Denmark</string>
+    <string name="german_flag">Germany</string>
+    <string name="polish_flag">Poland</string>
+    <string name="italian_flag">Italy</string>
+    <string name="spanish_flag">Spain</string>
+    <string name="french_flag">France</string>
+    <string name="title_activity_geo_you_tube_player">GeoYouTubePlayer</string>
+    <string name="geo_tutorial">Welcome to your Geography tutorial</string>
+
+    <string name="hello_world">Hello world!</string>
+
 
 </resources>

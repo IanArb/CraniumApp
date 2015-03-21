@@ -189,7 +189,9 @@
         android:background="#FFFFFFFF"
         android:gravity="center"
         android:orientation="horizontal"
-        android:padding="10dp"></LinearLayout>
+        android:padding="10dp">
+
+    </LinearLayout>
 
     <GridView
         android:id="@+id/letters"

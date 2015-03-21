@@ -1,8 +1,6 @@
-package com.cranium.ianarbuckle.craniumapp;
+package com.cranium.ianarbuckle.craniumapp.History;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,13 +16,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.support.v4.app.NavUtils;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
 
+import com.cranium.ianarbuckle.craniumapp.LetterAdapter;
+import com.cranium.ianarbuckle.craniumapp.LoginActivity;
+import com.cranium.ianarbuckle.craniumapp.R;
 import com.cranium.ianarbuckle.craniumapp.com.cranium.ianarbuckle.craniumapp.game.BaseGameActivity;
 import com.facebook.stetho.Stetho;
 import com.google.android.gms.games.Games;

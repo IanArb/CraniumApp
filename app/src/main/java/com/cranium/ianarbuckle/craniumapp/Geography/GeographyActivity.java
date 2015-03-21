@@ -1,5 +1,6 @@
-package com.cranium.ianarbuckle.craniumapp;
+package com.cranium.ianarbuckle.craniumapp.Geography;
 
+import android.content.Intent;
 import android.content.IntentSender;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -9,38 +10,33 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
-import android.content.Intent;
 import android.view.View;
-
-import com.facebook.stetho.Stetho;
-
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
-import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
-import com.google.android.gms.plus.Plus;
-import com.google.android.gms.plus.model.people.Person;
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesUtil;
-
-import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.cranium.ianarbuckle.craniumapp.Geography.Geo_Quiz1;
+import com.cranium.ianarbuckle.craniumapp.Geography.Geo_Quiz2;
+import com.cranium.ianarbuckle.craniumapp.Geography.Geo_Quiz3;
+import com.cranium.ianarbuckle.craniumapp.LoginActivity;
+import com.cranium.ianarbuckle.craniumapp.R;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.plus.Plus;
+import com.google.android.gms.plus.model.people.Person;
+
 import java.io.InputStream;
 
-/**
- * The history main menu
- * Author: Ian Arbuckle
- */
 
-public class HistoryActivity extends ActionBarActivity implements ConnectionCallbacks, OnConnectionFailedListener, OnClickListener {
+public class GeographyActivity extends ActionBarActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
 
-
-    private Button hangmanBtn;
-    private Button ytBtn;
+    private Button GameBtn1;
+    private Button GameBtn2;
+    private Button GameBtn3;
+    private Button geoYt;
 
     private static final int RC_SIGN_IN = 0;
     // Logcat tag
@@ -66,15 +62,14 @@ public class HistoryActivity extends ActionBarActivity implements ConnectionCall
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_history);
-        Stetho.initialize(
-                Stetho.newInitializerBuilder(this)
-                        .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
-                        .enableWebKitInspector(Stetho.defaultInspectorModulesProvider(this))
-                        .build());
+        setContentView(R.layout.activity_geography__menu);
 
-        hangmanBtn = (Button) findViewById(R.id.hangmanBtn);
-        ytBtn = (Button) findViewById(R.id.ytBtn);
+        GameBtn1 = (Button) findViewById(R.id.GameBtn1);
+        GameBtn2 = (Button) findViewById(R.id.GameBtn2);
+        GameBtn3 = (Button) findViewById(R.id.GameBtn3);
+
+
+        //Google+
 
         btnSignOut = (Button) findViewById(R.id.btn_sign_out);
         imgProfilePic = (ImageView) findViewById(R.id.imgProfilePic);
@@ -93,21 +88,28 @@ public class HistoryActivity extends ActionBarActivity implements ConnectionCall
                 .addScope(Plus.SCOPE_PLUS_LOGIN)
                 .build();
 
+
     }
 
-    public void OnClickTabs(View view) {
+    public void OnClickGame(View view) {
         switch (view.getId()) {
-            case R.id.hangmanBtn:
-                Intent a = new Intent(this, HangmanActivity.class);
-                this.startActivity(a);
+            case R.id.GameBtn1:
+                Intent i = new Intent(this, Geo_Quiz1.class);
+                startActivity(i);
                 break;
-            case R.id.ytBtn:
-                Intent b = new Intent(this, HistoryYouTubePlayer.class);
-                this.startActivity(b);
+
+            case R.id.GameBtn2:
+                Intent j = new Intent(this, Geo_Quiz2.class);
+                startActivity(j);
                 break;
+
+            case R.id.GameBtn3:
+                Intent k = new Intent(this, Geo_Quiz3.class);
+                startActivity(k);
+                break;
+
 
         }
-
     }
 
     //Google+ implementation
@@ -268,6 +270,7 @@ public class HistoryActivity extends ActionBarActivity implements ConnectionCall
         }
     }
 
+
     /**
      * Background Async task to load user profile picture from url
      */
@@ -322,3 +325,4 @@ public class HistoryActivity extends ActionBarActivity implements ConnectionCall
         return super.onOptionsItemSelected(item);
     }
 }
+

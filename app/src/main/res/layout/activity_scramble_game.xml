@@ -8,7 +8,67 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/category"
+        android:id="@+id/catText"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+
+        android:textStyle="bold" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal"
+        android:visibility="visible"
+        android:id="@+id/category">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/classText"
+            android:id="@+id/cat1Btn"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_marginTop="50dp"
+            android:onClick="onClickCat"
+            android:background="@drawable/hangmanbuttons"
+            android:textStyle="bold"
+            android:textColor="#FFFfFFFF" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/classText2"
+            android:id="@+id/cat2Btn"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_marginTop="20dp"
+            android:onClick="onClickCat"
+            android:background="@drawable/hangmanbuttons"
+            android:textStyle="bold"
+            android:textColor="#FFFfFFFF" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/classText3"
+            android:id="@+id/cat3Btn"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_marginTop="20dp"
+            android:onClick="onClickCat"
+            android:background="@drawable/hangmanbuttons"
+            android:textStyle="bold"
+            android:textColor="#FFFfFFFF" />
+
+    </GridLayout>
+
     <RelativeLayout
+        android:id="@+id/letterLayout"
         android:layout_width="fill_parent"
         android:layout_height="250dp"
         android:background="#FFFFFFFF"
@@ -26,7 +86,8 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="-40dp"
-            android:text="You have 6 lives!" />
+            android:text="You have 6 lives!"
+            android:visibility="invisible" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -37,7 +98,8 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="-15dp"
-            android:text="You have 5 lives left!" />
+            android:text="You have 5 lives left!"
+            android:visibility="invisible" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -48,7 +110,8 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:text="You have 4 lives left!" />
+            android:text="You have 4 lives left!"
+            android:visibility="invisible" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -59,7 +122,8 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="35dp"
-            android:text="You have 3 lives left!" />
+            android:text="You have 3 lives left!"
+            android:visibility="invisible" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -70,7 +134,8 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="58dp"
-            android:text="You have 2 lives left!" />
+            android:text="You have 2 lives left!"
+            android:visibility="invisible" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -81,7 +146,8 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="80dp"
-            android:text="You have 1 life left!" />
+            android:text="You have 1 life left!"
+            android:visibility="invisible" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -93,7 +159,35 @@
             android:textStyle="bold"
             android:layout_marginTop="-70dp"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/text2"
+            android:layout_gravity="center_horizontal"
+            android:text="FGHIST"
+            android:textStyle="bold"
+            android:layout_marginTop="-70dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/text3"
+            android:layout_gravity="center_horizontal"
+            android:text="EILMSS"
+            android:textStyle="bold"
+            android:layout_marginTop="-70dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible" />
+
     </RelativeLayout>
 
     <LinearLayout

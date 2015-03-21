@@ -1,49 +1,40 @@
-package com.cranium.ianarbuckle.craniumapp;
+package com.cranium.ianarbuckle.craniumapp.English;
 
-import android.app.Activity;
 import android.content.IntentSender;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
+import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.content.Intent;
 import android.widget.Button;
-import android.view.View.OnClickListener;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-//scrolling
-
-import com.cranium.ianarbuckle.craniumapp.English.EnglishActivity;
-import com.cranium.ianarbuckle.craniumapp.Geography.GeographyActivity;
-import com.cranium.ianarbuckle.craniumapp.History.HistoryActivity;
-import com.facebook.stetho.Stetho;
+import com.cranium.ianarbuckle.craniumapp.LoginActivity;
+import com.cranium.ianarbuckle.craniumapp.R;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
-import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
 import com.google.android.gms.plus.Plus;
 import com.google.android.gms.plus.model.people.Person;
 
 import java.io.InputStream;
 
-/**
- * The main menu of our application
- * Author: Ian Arbuckle
- */
-public class MainActivity extends Activity implements ConnectionCallbacks, OnConnectionFailedListener, OnClickListener {
 
+public class EnglishActivity extends ActionBarActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
+    private Button GameBtn;
+    private Button ytBtn;
 
     private static final int RC_SIGN_IN = 0;
     // Logcat tag
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "EnglishActivity";
 
     // Profile pic image size in pixels
     private static final int PROFILE_PIC_SIZE = 400;
@@ -66,34 +57,20 @@ public class MainActivity extends Activity implements ConnectionCallbacks, OnCon
     private TextView txtName;
     private LinearLayout llProfileLayout;
 
-    private Button hisBtn;
-    private Button mathsBtn;
-    private Button geoBtn;
-    private Button engBtn;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-
-        Stetho.initialize(
-                Stetho.newInitializerBuilder(this)
-                        .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
-                        .enableWebKitInspector(Stetho.defaultInspectorModulesProvider(this))
-                        .build());
+        setContentView(R.layout.activity_english_menu);
 
         btnSignOut = (Button) findViewById(R.id.btn_sign_out);
         imgProfilePic = (ImageView) findViewById(R.id.imgProfilePic);
         txtName = (TextView) findViewById(R.id.txtName);
         llProfileLayout = (LinearLayout) findViewById(R.id.llProfile);
 
-        //Menu buttons
-        hisBtn = (Button) findViewById(R.id.hisBtn);
-        mathsBtn = (Button) findViewById(R.id.mathsBtn);
-        geoBtn = (Button) findViewById(R.id.geoBtn);
-        engBtn = (Button) findViewById(R.id.engBtn);
+        //Game Button
+        GameBtn = (Button) findViewById(R.id.GameBtn);
 
+        ytBtn = (Button) findViewById(R.id.ytEngBtn);
 
         // Button click listeners
         btnSignOut.setOnClickListener(this);
@@ -105,11 +82,21 @@ public class MainActivity extends Activity implements ConnectionCallbacks, OnCon
                 .addApi(Plus.API)
                 .addScope(Plus.SCOPE_PLUS_LOGIN)
                 .build();
-
-
     }
 
 
+    public void OnClick(View v) {
+        switch (v.getId()) {
+            case R.id.GameBtn:
+                Intent i = new Intent(this, ScrambleGame.class);
+                startActivity(i);
+                break;
+            case R.id.ytEngBtn:
+                Intent b = new Intent(this, EnglishYouTubePlayer.class);
+                startActivity(b);
+                break;
+        }
+    }
     //Google+ implementation
 
     @Override
@@ -193,21 +180,13 @@ public class MainActivity extends Activity implements ConnectionCallbacks, OnCon
 
     public void onConnected(Bundle bundle) {
         mSignInClicked = false;
-        Toast.makeText(this, "User is connected!", Toast.LENGTH_LONG).show();
+
 
         // Get user's information
         getProfileInformation();
 
         // Update the UI after signin
         updateUI(true);
-
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
 
     }
 
@@ -309,24 +288,12 @@ public class MainActivity extends Activity implements ConnectionCallbacks, OnCon
     //End of Google+ Implementation
 
 
-    public void OnClickTabs(View view) {
-
-        switch (view.getId()) {
-            case R.id.hisBtn:
-                Intent a = new Intent(this, HistoryActivity.class);
-                startActivity(a);
-                break;
-            case R.id.engBtn:
-                Intent b = new Intent(this, EnglishActivity.class);
-                startActivity(b);
-                break;
-            case R.id.geoBtn:
-                Intent c = new Intent(this, GeographyActivity.class);
-                startActivity(c);
-        }
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_english_menu, menu);
+        return true;
     }
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

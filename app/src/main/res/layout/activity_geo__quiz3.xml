@@ -1,0 +1,327 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    tools:context="com.cranium.ianarbuckle.craniumapp.Geography.Geo_Quiz3">
+
+    <ImageView
+        android:layout_width="187dp"
+        android:layout_height="75dp"
+        android:id="@+id/afghan"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="187dp"
+        android:layout_height="75dp"
+        android:id="@+id/chinese"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="187dp"
+        android:layout_height="75dp"
+        android:id="@+id/indian"
+        android:layout_below="@+id/afghan"
+        android:layout_alignLeft="@+id/afghan"
+        android:layout_alignStart="@+id/afghan" />
+
+    <ImageView
+        android:layout_width="187dp"
+        android:layout_height="75dp"
+        android:id="@+id/indonesian"
+        android:layout_below="@+id/chinese"
+        android:layout_alignLeft="@+id/chinese"
+        android:layout_alignStart="@+id/chinese" />
+
+    <ImageView
+        android:layout_width="187dp"
+        android:layout_height="75dp"
+        android:id="@+id/japanese"
+        android:layout_below="@+id/indian"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="187dp"
+        android:layout_height="75dp"
+        android:id="@+id/korean"
+        android:layout_above="@+id/pakistan"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="187dp"
+        android:layout_height="75dp"
+        android:id="@+id/laos"
+        android:layout_below="@+id/japanese"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="187dp"
+        android:layout_height="75dp"
+        android:id="@+id/mongolia"
+        android:layout_below="@+id/japanese"
+        android:layout_alignLeft="@+id/korean"
+        android:layout_alignStart="@+id/korean" />
+
+    <ImageView
+        android:layout_width="187dp"
+        android:layout_height="75dp"
+        android:id="@+id/pakistan"
+        android:layout_below="@+id/laos"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="187dp"
+        android:layout_height="75dp"
+        android:id="@+id/thailand"
+        android:layout_below="@+id/laos"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:background="@drawable/afghan"
+        android:layout_width="187dp"
+        android:layout_height="75dp"
+        android:id="@+id/Flag1"
+        android:layout_below="@+id/pakistan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp" />
+
+    <ImageView
+        android:background="@drawable/chinese"
+        android:layout_width="187dp"
+        android:layout_height="75dp"
+        android:id="@+id/Flag2"
+        android:layout_below="@+id/pakistan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:background="@drawable/indian"
+        android:layout_width="187dp"
+        android:layout_height="75dp"
+        android:id="@+id/Flag3"
+        android:layout_below="@+id/pakistan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:background="@drawable/indonesian"
+        android:layout_width="187dp"
+        android:layout_height="75dp"
+        android:id="@+id/Flag4"
+        android:layout_below="@+id/pakistan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:background="@drawable/japanese"
+        android:layout_width="187dp"
+        android:layout_height="75dp"
+        android:id="@+id/Flag5"
+        android:layout_below="@+id/pakistan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:background="@drawable/korean"
+        android:layout_width="187dp"
+        android:layout_height="75dp"
+        android:id="@+id/Flag6"
+        android:layout_below="@+id/pakistan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:background="@drawable/laos"
+        android:layout_width="187dp"
+        android:layout_height="75dp"
+        android:id="@+id/Flag7"
+        android:layout_below="@+id/pakistan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:background="@drawable/mongolia"
+        android:layout_width="187dp"
+        android:layout_height="75dp"
+        android:id="@+id/Flag8"
+        android:layout_below="@+id/pakistan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:background="@drawable/pakistan"
+        android:layout_width="187dp"
+        android:layout_height="75dp"
+        android:id="@+id/Flag9"
+        android:layout_below="@+id/pakistan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:background="@drawable/thailand"
+        android:layout_width="187dp"
+        android:layout_height="75dp"
+        android:id="@+id/Flag10"
+        android:layout_below="@+id/pakistan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Match Flag And Country"
+        android:id="@+id/Prompt_Text"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Country 1"
+        android:id="@+id/Country1"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/indian"
+        android:layout_alignRight="@+id/afghan"
+        android:layout_alignEnd="@+id/afghan"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Country 2"
+        android:id="@+id/Country2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/indonesian"
+        android:layout_alignLeft="@+id/chinese"
+        android:layout_alignStart="@+id/chinese" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Country 3"
+        android:id="@+id/Country3"
+        android:layout_below="@+id/afghan"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/japanese"
+        android:layout_alignRight="@+id/afghan"
+        android:layout_alignEnd="@+id/afghan" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Country 4"
+        android:id="@+id/Country4"
+        android:layout_below="@+id/chinese"
+        android:layout_alignLeft="@+id/indonesian"
+        android:layout_alignStart="@+id/indonesian"
+        android:layout_above="@+id/korean"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Country 5"
+        android:id="@+id/Country5"
+        android:layout_below="@+id/indian"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/japanese"
+        android:layout_alignRight="@+id/indian"
+        android:layout_alignEnd="@+id/indian" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Country 6"
+        android:id="@+id/Country6"
+        android:layout_below="@+id/indian"
+        android:layout_toRightOf="@+id/indian"
+        android:layout_alignBottom="@+id/korean"
+        android:layout_alignRight="@+id/indonesian"
+        android:layout_alignEnd="@+id/indonesian" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Country 7"
+        android:id="@+id/Country7"
+        android:layout_below="@+id/japanese"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/pakistan"
+        android:layout_alignRight="@+id/laos"
+        android:layout_alignEnd="@+id/laos" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Country 8"
+        android:id="@+id/Country8"
+        android:layout_alignTop="@+id/laos"
+        android:layout_toRightOf="@+id/laos"
+        android:layout_above="@+id/thailand"
+        android:layout_alignRight="@+id/mongolia"
+        android:layout_alignEnd="@+id/mongolia" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Country 9"
+        android:id="@+id/Country9"
+        android:layout_below="@+id/laos"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/pakistan"
+        android:layout_alignRight="@+id/laos"
+        android:layout_alignEnd="@+id/laos" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Country 10"
+        android:id="@+id/Country10"
+        android:layout_below="@+id/mongolia"
+        android:layout_alignLeft="@+id/mongolia"
+        android:layout_alignStart="@+id/mongolia"
+        android:layout_alignBottom="@+id/thailand"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
+

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.cranium.ianarbuckle.craniumapp;
+package com.cranium.ianarbuckle.craniumapp.Geography;
 
 import android.annotation.TargetApi;
 import android.content.pm.ActivityInfo;
@@ -28,6 +28,9 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 
+import com.cranium.ianarbuckle.craniumapp.DeveloperKey;
+import com.cranium.ianarbuckle.craniumapp.R;
+import com.cranium.ianarbuckle.craniumapp.YouTubeFailureRecoveryActivity;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
@@ -41,7 +44,7 @@ import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
  * will cause re-buffering of the video.
  */
 @TargetApi(Build.VERSION_CODES.GINGERBREAD)
-public class EnglishYouTubePlayer extends YouTubeFailureRecoveryActivity implements
+public class GeoYouTubePlayer extends YouTubeFailureRecoveryActivity implements
         View.OnClickListener,
         CompoundButton.OnCheckedChangeListener,
         YouTubePlayer.OnFullscreenListener {
@@ -63,7 +66,7 @@ public class EnglishYouTubePlayer extends YouTubeFailureRecoveryActivity impleme
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_english_youtube);
+        setContentView(R.layout.activity_geo_youtube_player);
         baseLayout = (LinearLayout) findViewById(R.id.layout);
         playerView = (YouTubePlayerView) findViewById(R.id.player);
         fullscreenButton = (Button) findViewById(R.id.fullscreen_button);
@@ -88,7 +91,7 @@ public class EnglishYouTubePlayer extends YouTubeFailureRecoveryActivity impleme
         player.addFullscreenControlFlag(YouTubePlayer.FULLSCREEN_FLAG_CUSTOM_LAYOUT);
         player.setOnFullscreenListener(this);
         if (!wasRestored) {
-            player.cueVideo("VFqi1pFC2RY");
+            player.cueVideo("WFYKrNptzXw");
         }
     }
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.cranium.ianarbuckle.craniumapp;
+package com.cranium.ianarbuckle.craniumapp.History;
 
 import android.annotation.TargetApi;
 import android.content.pm.ActivityInfo;
@@ -28,6 +28,9 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 
+import com.cranium.ianarbuckle.craniumapp.DeveloperKey;
+import com.cranium.ianarbuckle.craniumapp.R;
+import com.cranium.ianarbuckle.craniumapp.YouTubeFailureRecoveryActivity;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 

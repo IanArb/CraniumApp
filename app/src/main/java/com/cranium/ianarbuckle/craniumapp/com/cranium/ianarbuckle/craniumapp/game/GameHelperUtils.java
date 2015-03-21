@@ -8,7 +8,6 @@ import android.content.res.Resources;
 import android.util.Log;
 
 import com.cranium.ianarbuckle.craniumapp.R;
-import com.cranium.ianarbuckle.craniumapp.com.cranium.ianarbuckle.craniumapp.game.GameHelper;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.games.GamesActivityResultCodes;
 

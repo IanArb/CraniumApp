@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="class3">
+        <item>ELM</item>
+        <item>LEI</item>
+        <item>LIE</item>
+        <item>MIL</item>
+        <item>ELMS</item>
+        <item>ISLE</item>
+        <item>LIME</item>
+        <item>LESS</item>
+        <item>LEIS</item>
+        <item>LIES</item>
+        <item>MESS</item>
+        <item>MILE</item>
+        <item>MISE</item>
+        <item>MISS</item>
+        <item>SEMI</item>
+        <item>SLIM</item>
+        <item>ISLES</item>
+        <item>LIMES</item>
+        <item>MILES</item>
+        <item>SLIME</item>
+        <item>SLIMS</item>
+        <item>SMILE</item>
+        <item>SLIMES</item>
+        <item>SMILES</item>
+
+
+    </string-array>
+</resources>
