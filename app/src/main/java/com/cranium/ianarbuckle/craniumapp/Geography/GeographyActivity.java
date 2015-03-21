@@ -17,10 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.cranium.ianarbuckle.craniumapp.Geography.Geo_Quiz1;
-import com.cranium.ianarbuckle.craniumapp.Geography.Geo_Quiz2;
-import com.cranium.ianarbuckle.craniumapp.Geography.Geo_Quiz3;
-import com.cranium.ianarbuckle.craniumapp.LoginActivity;
+import com.cranium.ianarbuckle.craniumapp.Login.LoginActivity;
 import com.cranium.ianarbuckle.craniumapp.R;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;

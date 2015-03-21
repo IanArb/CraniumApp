@@ -1,4 +1,4 @@
-package com.cranium.ianarbuckle.craniumapp;
+package com.cranium.ianarbuckle.craniumapp.Login;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -6,7 +6,6 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.LoaderManager.LoaderCallbacks;
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.CursorLoader;
 import android.content.DialogInterface;
@@ -34,9 +33,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.cranium.ianarbuckle.craniumapp.MainActivity;
+import com.cranium.ianarbuckle.craniumapp.R;
 import com.facebook.stetho.Stetho;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.plus.Plus;
@@ -47,23 +47,16 @@ import java.util.List;
 
 //imports for connecting to the database
 import android.widget.Toast;
-import com.cranium.ianarbuckle.craniumapp.MyDBHandler;
-import com.cranium.ianarbuckle.craniumapp.User;
 
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.SignInButton;
-import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
 import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
-import com.google.android.gms.plus.Plus;
 import com.google.android.gms.plus.model.people.Person;
-
-
-
 
 
 /**
@@ -71,7 +64,7 @@ import com.google.android.gms.plus.model.people.Person;
  * Reference: http://www.androidhive.info/2014/02/android-login-with-google-plus-account-1/
  * Author: Ian Arbuckle
  */
-public class LoginActivity extends Activity implements OnClickListener, ConnectionCallbacks, OnConnectionFailedListener, LoaderCallbacks<Cursor>{
+public class LoginActivity extends Activity implements OnClickListener, ConnectionCallbacks, OnConnectionFailedListener, LoaderCallbacks<Cursor> {
 
     private static final int RC_SIGN_IN = 0;
     // Logcat tag
@@ -112,7 +105,6 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
     private View login;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -128,7 +120,7 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
         btnSignIn = (SignInButton) findViewById(R.id.btn_sign_in);
         btnSignOut = (Button) findViewById(R.id.btn_sign_out);
         btnRevokeAccess = (Button) findViewById(R.id.btn_revoke_access);
-        btnMainMenu = (Button)findViewById(R.id.btn_main_menu);
+        btnMainMenu = (Button) findViewById(R.id.btn_main_menu);
         imgProfilePic = (ImageView) findViewById(R.id.imgProfilePic);
         txtName = (TextView) findViewById(R.id.txtName);
         txtEmail = (TextView) findViewById(R.id.txtEmail);
@@ -150,7 +142,7 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
         //Normal login implementation
         // Set up the login form.
 
-        login = (View)findViewById(R.id.login);
+        login = (View) findViewById(R.id.login);
 
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
@@ -182,9 +174,7 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
     }
 
 
-
-
-        //Google+ Implementation
+    //Google+ Implementation
 
     @Override
     protected void onStart() {
@@ -264,7 +254,7 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
             GooglePlayServicesUtil.getErrorDialog(result.getErrorCode(), this,
                     0).show();
             return;
-    }
+        }
 
         if (!mIntentInProgress) {
             // Store the ConnectionResult for later usage
@@ -277,11 +267,11 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
                 resolveSignInError();
             }
         }
-}
+    }
 
     /**
      * Updating the UI, showing/hiding buttons and profile layout
-     * */
+     */
     private void updateUI(boolean isSignedIn) {
         if (isSignedIn) {
             btnSignIn.setVisibility(View.GONE);
@@ -305,7 +295,7 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
 
     /**
      * Sign-in into google
-     * */
+     */
     private void signInWithGplus() {
         if (!mGoogleApiClient.isConnecting()) {
             mSignInClicked = true;
@@ -315,7 +305,7 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
 
     /**
      * Method to resolve any signin errors
-     * */
+     */
     private void resolveSignInError() {
         if (mConnectionResult.hasResolution()) {
             try {
@@ -330,7 +320,7 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
 
     /**
      * Fetching user's information name, email, profile pic
-     * */
+     */
     private void getProfileInformation() {
         try {
             if (Plus.PeopleApi.getCurrentPerson(mGoogleApiClient) != null) {
@@ -368,7 +358,7 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
 
     /**
      * Background Async task to load user profile picture from url
-     * */
+     */
     private class LoadProfileImage extends AsyncTask<String, Void, Bitmap> {
         ImageView bmImage;
 
@@ -395,10 +385,9 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
     }
 
 
-
     /**
      * Sign-out from google
-     * */
+     */
     private void signOutFromGplus() {
         if (mGoogleApiClient.isConnected()) {
             Plus.AccountApi.clearDefaultAccount(mGoogleApiClient);
@@ -410,7 +399,7 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
 
     /**
      * Revoking access from google
-     * */
+     */
     private void revokeGplusAccess() {
         if (mGoogleApiClient.isConnected()) {
             Plus.AccountApi.clearDefaultAccount(mGoogleApiClient);
@@ -426,11 +415,6 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
                     });
         }
     }
-
-
-
-
-
 
 
     private void populateAutoComplete() {
@@ -569,8 +553,6 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
     }
 
 
-
-
     @Override
     public void onLoaderReset(Loader<Cursor> cursorLoader) {
 
@@ -597,7 +579,6 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
     }
 
 
-
     /**
      * Represents an asynchronous login/registration task used to authenticate
      * the user.
@@ -620,26 +601,25 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
         protected Boolean doInBackground(Void... params) {
 
             MyDBHandler dbTools = null;
-            try{
+            try {
                 dbTools = new MyDBHandler(mContext);
                 myUser = dbTools.getUser(mEmail);
 
-                if (myUser.userId>0) {
+                if (myUser.userId > 0) {
                     // Account exists, check password.
                     if (myUser.password.equals(mPassword))
                         return true;
                     else
                         return false;
                 } else {
-                    myUser.password=mPassword;
+                    myUser.password = mPassword;
                     return true;
                 }
-            } finally{
-                if (dbTools!=null)
+            } finally {
+                if (dbTools != null)
                     dbTools.close();
             }
         }
-
 
 
         @Override
@@ -648,27 +628,27 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
             showProgress(false);
 
             if (success) {
-                if (myUser.userId>0){
+                if (myUser.userId > 0) {
                     finish();
-                    Intent myIntent = new Intent(LoginActivity.this,MainActivity.class);
+                    Intent myIntent = new Intent(LoginActivity.this, MainActivity.class);
                     LoginActivity.this.startActivity(myIntent);
                 } else {
                     DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            switch (which){
+                            switch (which) {
                                 case DialogInterface.BUTTON_POSITIVE:
-                                    MyDBHandler dbTools=null;
-                                    try{
+                                    MyDBHandler dbTools = null;
+                                    try {
                                         finish();
                                         dbTools = new MyDBHandler(mContext);
-                                        myUser=dbTools.insertUser(myUser);
-                                        Toast myToast = Toast.makeText(mContext,R.string.updatingReport, Toast.LENGTH_SHORT);
+                                        myUser = dbTools.insertUser(myUser);
+                                        Toast myToast = Toast.makeText(mContext, R.string.updatingReport, Toast.LENGTH_SHORT);
                                         myToast.show();
-                                        Intent myIntent = new Intent(LoginActivity.this,MainActivity.class);
+                                        Intent myIntent = new Intent(LoginActivity.this, MainActivity.class);
                                         LoginActivity.this.startActivity(myIntent);
-                                    } finally{
-                                        if (dbTools!=null)
+                                    } finally {
+                                        if (dbTools != null)
                                             dbTools.close();
                                     }
                                     break;
@@ -698,9 +678,6 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
             showProgress(false);
         }
     }
-
-
-
 
 
 }

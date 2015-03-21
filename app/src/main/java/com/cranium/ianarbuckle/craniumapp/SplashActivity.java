@@ -2,14 +2,11 @@ package com.cranium.ianarbuckle.craniumapp;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Handler;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.Window;
 import android.view.WindowManager;
+
+import com.cranium.ianarbuckle.craniumapp.Login.LoginActivity;
 
 
 public class SplashActivity extends Activity {
@@ -34,13 +31,13 @@ public class SplashActivity extends Activity {
 
     }
 
-    private class IntentLauncher extends Thread{
+    private class IntentLauncher extends Thread {
         @Override
         public void run() {
-            try{
+            try {
                 //Sleeping
-                Thread.sleep(SLEEP_TIME*1000);
-            } catch(Exception e){
+                Thread.sleep(SLEEP_TIME * 1000);
+            } catch (Exception e) {
                 Log.e(TAG, e.getMessage());
             }
 

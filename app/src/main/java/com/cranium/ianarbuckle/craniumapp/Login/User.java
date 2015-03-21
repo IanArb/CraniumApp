@@ -1,4 +1,4 @@
-package com.cranium.ianarbuckle.craniumapp;
+package com.cranium.ianarbuckle.craniumapp.Login;
 
 /**
  * Our normal login form instiantiable class
@@ -11,9 +11,9 @@ public class User {
     public String username;
     public String password;
 
-    public User(long userId, String username, String password){
-        this.userId=userId;
-        this.username=username;
-        this.password=password;
+    public User(long userId, String username, String password) {
+        this.userId = userId;
+        this.username = username;
+        this.password = password;
     }
 }

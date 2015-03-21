@@ -28,9 +28,9 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 
-import com.cranium.ianarbuckle.craniumapp.DeveloperKey;
+import com.cranium.ianarbuckle.craniumapp.YouTube.DeveloperKey;
 import com.cranium.ianarbuckle.craniumapp.R;
-import com.cranium.ianarbuckle.craniumapp.YouTubeFailureRecoveryActivity;
+import com.cranium.ianarbuckle.craniumapp.YouTube.YouTubeFailureRecoveryActivity;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 

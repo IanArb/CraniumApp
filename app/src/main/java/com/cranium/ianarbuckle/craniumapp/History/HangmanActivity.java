@@ -21,7 +21,7 @@ import android.widget.ImageView;
 
 
 import com.cranium.ianarbuckle.craniumapp.LetterAdapter;
-import com.cranium.ianarbuckle.craniumapp.LoginActivity;
+import com.cranium.ianarbuckle.craniumapp.Login.LoginActivity;
 import com.cranium.ianarbuckle.craniumapp.R;
 import com.cranium.ianarbuckle.craniumapp.com.cranium.ianarbuckle.craniumapp.game.BaseGameActivity;
 import com.facebook.stetho.Stetho;

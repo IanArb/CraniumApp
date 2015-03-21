@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.content.Intent;
 import android.view.View;
 
-import com.cranium.ianarbuckle.craniumapp.LoginActivity;
+import com.cranium.ianarbuckle.craniumapp.Login.LoginActivity;
 import com.cranium.ianarbuckle.craniumapp.R;
 import com.facebook.stetho.Stetho;
 

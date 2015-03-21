@@ -23,6 +23,7 @@ import android.widget.Toast;
 import com.cranium.ianarbuckle.craniumapp.English.EnglishActivity;
 import com.cranium.ianarbuckle.craniumapp.Geography.GeographyActivity;
 import com.cranium.ianarbuckle.craniumapp.History.HistoryActivity;
+import com.cranium.ianarbuckle.craniumapp.Login.LoginActivity;
 import com.facebook.stetho.Stetho;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;

@@ -30,14 +30,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".Login.LoginActivity"
             android:exported="true"
             android:label="Cranium"
             android:windowSoftInputMode="adjustResize|stateVisible"></activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:parentActivityName=".LoginActivity"></activity>
+            android:parentActivityName=".Login.LoginActivity"></activity>
         <activity
             android:name=".History.HistoryActivity"
             android:label="@string/title_activity_history"
