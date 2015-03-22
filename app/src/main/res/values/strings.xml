@@ -108,7 +108,26 @@
     <string name="title_activity_geo_you_tube_player">GeoYouTubePlayer</string>
     <string name="geo_tutorial">Welcome to your Geography tutorial</string>
 
-    <string name="hello_world">Hello world!</string>
+    <!--Maths Section -->
+    <string name="title_activity_maths_you_tube_player">MathsYouTubePlayer</string>
+    <string name="maths_tutorial">Welcome to your Maths playlist tutorial!</string>
+    <string name="maths_text">Welcome to Maths</string>
+    <string name="maths_tut">Maths Tutorials</string>
+    <string name="maths_quiz">Maths Quiz</string>
+    <string name="question1Text">3+7 = ?</string>
+    <string name="image02">image_02</string>
+    <string name="image03">image04</string>
+    <string name="question2Text">4 x 9 = ?</string>
+    <string name="question3Text">8 / 2 = ?</string>
+    <string name="question4Text">70 - 14 = ?</string>
+    <string name="question5Text">(9 x 4) - 7 = ?</string>
+    <string name="question6Text">7 + 9 - 1 = ?</string>
+    <string name="question7Text">8 - 2 + 4 = ?</string>
+    <string name="question8Text">6 x 3 + 4 = ?</string>
+    <string name="question9Text">7 - 8 x 8 = ?</string>
+    <string name="question10Text">4 x 5 + 2 - 9</string>
+    <string name="correct_img">correct</string>
+    <string name="wrong_img_4">wrong</string>
 
 
 </resources>

@@ -79,7 +79,8 @@
             android:id="@+id/imageView2"
             android:layout_row="9"
             android:background="@drawable/logo"
-            android:layout_column="0" />
+            android:layout_column="0"
+            android:contentDescription="logo" />
     </GridLayout>
 
     <Button
@@ -109,7 +110,8 @@
             android:id="@+id/imgProfilePic"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:contentDescription="google" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -122,7 +124,7 @@
                 android:id="@+id/txtName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:layout_marginRight="100dp"
                 android:layout_marginTop="20dp"
                 android:padding="5dp"

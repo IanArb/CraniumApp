@@ -33,60 +33,76 @@
             android:name=".Login.LoginActivity"
             android:exported="true"
             android:label="Cranium"
-            android:windowSoftInputMode="adjustResize|stateVisible"></activity>
+            android:windowSoftInputMode="adjustResize|stateVisible" />
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:parentActivityName=".Login.LoginActivity"></activity>
+            android:parentActivityName=".Login.LoginActivity" />
         <activity
             android:name=".History.HistoryActivity"
             android:label="@string/title_activity_history"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".History.HangmanActivity"
             android:label="Hangman"
-            android:parentActivityName=".History.HistoryActivity"></activity>
+            android:parentActivityName=".History.HistoryActivity" />
         <activity
             android:name=".English.EnglishActivity"
             android:label="English Menu"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".English.ScrambleGame"
             android:label="Scramble"
-            android:parentActivityName=".English.EnglishActivity"></activity>
+            android:parentActivityName=".English.EnglishActivity" />
         <activity
             android:name=".English.EnglishYouTubePlayer"
             android:label="English Grammar Tutorial"
             android:parentActivityName=".English.EnglishActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".History.HistoryYouTubePlayer"
             android:label="Dictatorship and Democracy Tutorial"
             android:parentActivityName=".History.HistoryActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Geography.GeographyActivity"
             android:label="Geography Menu"
             android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Geography.Geo_Quiz1"
             android:label="Quiz #1"
             android:parentActivityName=".Geography.GeographyActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Geography.Geo_Quiz2"
             android:label="Quiz #2"
             android:parentActivityName=".Geography.GeographyActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Geography.Geo_Quiz3"
             android:label="Quiz #3"
             android:parentActivityName=".Geography.GeographyActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Geography.GeoYouTubePlayer"
-            android:label="@string/title_activity_geo_you_tube_player"></activity>
+            android:label="@string/title_activity_geo_you_tube_player" />
+
+        <activity
+            android:name=".Maths.MathsActivity"
+            android:label="Maths" />
+
+        <activity
+            android:name=".Maths.MathsYouTubePlayer"
+            android:label="Maths Tutorial"
+            android:parentActivityName=".Maths.MathsActivity" />
+
+        <activity
+            android:name=".Maths.QuizActivity"
+            android:label="Maths"
+            android:parentActivityName=".Maths.MathsActivity" />
+
+
     </application>
 
 </manifest>

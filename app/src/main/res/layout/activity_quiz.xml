@@ -1,0 +1,588 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_material_light"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="16dp">
+
+    <RelativeLayout
+        android:id="@+id/q1"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/blackboard"
+        android:gravity="center"
+        android:paddingTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/question1Text"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:id="@+id/q1Text" />
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/grid1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton"
+            android:background="@drawable/quiz_image01"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:contentDescription="@string/correct_img" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton2"
+            android:layout_row="0"
+            android:layout_column="12"
+            android:background="@drawable/quiz_image02"
+            android:contentDescription="@string/image02" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageView"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_rowSpan="2"
+            android:background="@drawable/quiz_image03"
+            android:contentDescription="@string/image03" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageView2"
+            android:background="@drawable/quiz_image04"
+            android:layout_row="6"
+            android:layout_column="12"
+            android:contentDescription="@string/wrong_img_4" />
+    </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/q2"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:background="@color/wallet_holo_blue_light"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/question2Text"
+            android:id="@+id/q2Text" />
+
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/grid2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton5"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton6"
+            android:layout_row="0"
+            android:layout_column="12"
+            android:contentDescription="@string/image02" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton7"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_rowSpan="2"
+            android:contentDescription="@string/image03" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton8"
+            android:layout_row="6"
+            android:layout_column="12" />
+    </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/q3"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:background="@color/wallet_holo_blue_light"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/question3Text"
+            android:id="@+id/q3Text" />
+
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/grid3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton9"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton10"
+            android:layout_row="0"
+            android:layout_column="12"
+            android:contentDescription="@string/image02" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton11"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_rowSpan="2"
+            android:contentDescription="@string/image03" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton12"
+            android:layout_row="6"
+            android:layout_column="12" />
+    </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/q4"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:background="@color/wallet_holo_blue_light"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/question4Text"
+            android:id="@+id/q4Text" />
+
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/grid4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton13"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton14"
+            android:layout_row="0"
+            android:layout_column="12"
+            android:contentDescription="@string/image02" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton15"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_rowSpan="2"
+            android:contentDescription="@string/image03" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton16"
+            android:layout_row="6"
+            android:layout_column="12" />
+    </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/q5"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:background="@color/wallet_holo_blue_light"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/question5Text"
+            android:id="@+id/q5Text" />
+
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/grid5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton17"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton18"
+            android:layout_row="0"
+            android:layout_column="12"
+            android:contentDescription="@string/image02" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton19"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_rowSpan="2"
+            android:contentDescription="@string/image03" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton20"
+            android:layout_row="6"
+            android:layout_column="12" />
+    </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/q6"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:background="@color/wallet_holo_blue_light"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/question6Text"
+            android:id="@+id/q6Text" />
+
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/grid6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton21"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton22"
+            android:layout_row="0"
+            android:layout_column="12"
+            android:contentDescription="@string/image02" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton23"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_rowSpan="2"
+            android:contentDescription="@string/image03" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton24"
+            android:layout_row="6"
+            android:layout_column="12" />
+    </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/q7"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:background="@color/wallet_holo_blue_light"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/question7Text"
+            android:id="@+id/q7Text" />
+
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/grid7"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton25"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton26"
+            android:layout_row="0"
+            android:layout_column="12"
+            android:contentDescription="@string/image02" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton27"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_rowSpan="2"
+            android:contentDescription="@string/image03" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton28"
+            android:layout_row="6"
+            android:layout_column="12" />
+    </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/q8"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:background="@color/wallet_holo_blue_light"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/question8Text"
+            android:id="@+id/q8Text" />
+
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/grid8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton29"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton30"
+            android:layout_row="0"
+            android:layout_column="12"
+            android:contentDescription="@string/image02" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton31"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_rowSpan="2"
+            android:contentDescription="@string/image03" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton32"
+            android:layout_row="6"
+            android:layout_column="12" />
+    </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/q9"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:background="@color/wallet_holo_blue_light"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/question9Text"
+            android:id="@+id/q9Text" />
+
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/grid9"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton33"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton34"
+            android:layout_row="0"
+            android:layout_column="12"
+            android:contentDescription="@string/image02" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton35"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_rowSpan="2"
+            android:contentDescription="@string/image03" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton36"
+            android:layout_row="6"
+            android:layout_column="12" />
+    </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/q10"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:background="@color/wallet_holo_blue_light"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:visibility="gone">
+
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/grid10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/question10Text"
+            android:id="@+id/q10Text" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton37"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton38"
+            android:layout_row="0"
+            android:layout_column="12"
+            android:contentDescription="@string/image02" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton39"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_rowSpan="2"
+            android:contentDescription="@string/image03" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/imageButton40"
+            android:layout_row="6"
+            android:layout_column="12" />
+    </GridLayout>
+
+</LinearLayout>
+
+

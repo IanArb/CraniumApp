@@ -1,47 +1,36 @@
-package com.cranium.ianarbuckle.craniumapp.History;
+package com.cranium.ianarbuckle.craniumapp.Maths;
 
+import android.content.Intent;
 import android.content.IntentSender;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
-import android.content.Intent;
 import android.view.View;
-
-import com.cranium.ianarbuckle.craniumapp.Login.LoginActivity;
-import com.cranium.ianarbuckle.craniumapp.R;
-import com.facebook.stetho.Stetho;
-
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
-import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
-import com.google.android.gms.plus.Plus;
-import com.google.android.gms.plus.model.people.Person;
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesUtil;
-
-import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.cranium.ianarbuckle.craniumapp.Login.LoginActivity;
+import com.cranium.ianarbuckle.craniumapp.R;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.plus.Plus;
+import com.google.android.gms.plus.model.people.Person;
+
 import java.io.InputStream;
 
-/**
- * The history main menu
- * Author: Ian Arbuckle
- */
 
-public class HistoryActivity extends ActionBarActivity implements ConnectionCallbacks, OnConnectionFailedListener, OnClickListener {
+public class MathsActivity extends ActionBarActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
 
-
-    private Button hangmanBtn;
+    private Button mathsBtn;
     private Button ytBtn;
 
     private static final int RC_SIGN_IN = 0;
@@ -65,17 +54,14 @@ public class HistoryActivity extends ActionBarActivity implements ConnectionCall
     private TextView txtName;
     private LinearLayout llProfileLayout;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_history);
-        Stetho.initialize(
-                Stetho.newInitializerBuilder(this)
-                        .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
-                        .enableWebKitInspector(Stetho.defaultInspectorModulesProvider(this))
-                        .build());
+        setContentView(R.layout.activity_maths_menu);
 
-        hangmanBtn = (Button) findViewById(R.id.hangmanBtn);
+
+        mathsBtn = (Button) findViewById(R.id.mathsQuizBtn);
         ytBtn = (Button) findViewById(R.id.ytBtn);
 
         btnSignOut = (Button) findViewById(R.id.btn_sign_out);
@@ -94,22 +80,20 @@ public class HistoryActivity extends ActionBarActivity implements ConnectionCall
                 .addApi(Plus.API)
                 .addScope(Plus.SCOPE_PLUS_LOGIN)
                 .build();
-
     }
 
-    public void OnClickTabs(View view) {
+    public void OnClick(View view) {
         switch (view.getId()) {
-            case R.id.hangmanBtn:
-                Intent a = new Intent(this, HangmanActivity.class);
+            case R.id.mathsQuizBtn:
+                Intent a = new Intent(this, QuizActivity.class);
                 this.startActivity(a);
                 break;
-            case R.id.ytBtn:
-                Intent b = new Intent(this, HistoryYouTubePlayer.class);
+            case R.id.mathsYt:
+                Intent b = new Intent(this, MathsYouTubePlayer.class);
                 this.startActivity(b);
                 break;
 
         }
-
     }
 
     //Google+ implementation
@@ -305,7 +289,7 @@ public class HistoryActivity extends ActionBarActivity implements ConnectionCall
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_history, menu);
+        getMenuInflater().inflate(R.menu.menu_maths, menu);
         return true;
     }
 

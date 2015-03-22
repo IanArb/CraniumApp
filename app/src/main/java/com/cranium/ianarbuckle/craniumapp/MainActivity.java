@@ -24,6 +24,7 @@ import com.cranium.ianarbuckle.craniumapp.English.EnglishActivity;
 import com.cranium.ianarbuckle.craniumapp.Geography.GeographyActivity;
 import com.cranium.ianarbuckle.craniumapp.History.HistoryActivity;
 import com.cranium.ianarbuckle.craniumapp.Login.LoginActivity;
+import com.cranium.ianarbuckle.craniumapp.Maths.MathsActivity;
 import com.facebook.stetho.Stetho;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
@@ -324,6 +325,11 @@ public class MainActivity extends Activity implements ConnectionCallbacks, OnCon
             case R.id.geoBtn:
                 Intent c = new Intent(this, GeographyActivity.class);
                 startActivity(c);
+                break;
+            case R.id.mathsBtn:
+                Intent d = new Intent(this, MathsActivity.class);
+                startActivity(d);
+                break;
         }
 
     }
