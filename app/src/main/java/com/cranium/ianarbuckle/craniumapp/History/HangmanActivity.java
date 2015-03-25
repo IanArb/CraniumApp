@@ -98,6 +98,8 @@ public class HangmanActivity extends BaseGameActivity {
 
         findViewById(R.id.sign_out_button);
         findViewById(R.id.achievements);
+        findViewById(R.id.achievements);
+        findViewById(R.id.show_leaderboard);
 
 
         rand = new Random();
@@ -143,6 +145,10 @@ public class HangmanActivity extends BaseGameActivity {
             case R.id.achievements:
                 startActivityForResult(Games.Achievements.getAchievementsIntent(
                         getApiClient()), 1);
+                break;
+            case R.id.show_leaderboard:
+                startActivityForResult(Games.Leaderboards.getLeaderboardIntent(
+                        getApiClient(), getString(R.string.hangman_leaderboard)),2);
         }
     }
 
@@ -433,6 +439,7 @@ public class HangmanActivity extends BaseGameActivity {
                 correct = true;
                 numCorr++;
                 charViews[k].setTextColor(Color.BLACK);
+
             }
         }
 
@@ -441,8 +448,14 @@ public class HangmanActivity extends BaseGameActivity {
 
         if (correct) {
             if (numCorr == numChars) {
+                if (getApiClient().isConnected())
+                    Games.Achievements.unlock(getApiClient(),
+                            getString(R.string.correct_guess_achievement));
+                    Games.Leaderboards.submitScore(getApiClient(),
+                            getString(R.string.hangman_leaderboard),numCorr);
                 //disable all buttons
                 disableBtns();
+
                 //let the user know they have won, ask if they wish to play again
                 AlertDialog.Builder winBuild = new AlertDialog.Builder(this);
                 winBuild.setTitle("Sup hoss! You guessed the correct letter " + currWord);
@@ -476,11 +489,12 @@ public class HangmanActivity extends BaseGameActivity {
                         });
                 winBuild.show();
 
+
+
+
             }
 
-            if (getApiClient().isConnected())
-                Games.Achievements.unlock(getApiClient(),
-                        getString(R.string.correct_guess_achievement));
+
         }
 
         //Check if the user still has guesses

@@ -29,6 +29,11 @@
     <string name="help_message">To play the game, you guess a letter and remember you have 6 lives!</string>
     <string name="category">Choose a Category</string>
 
+    <!--Achievements and Hangman Leaderboard-->
+    <string name="correct_guess_achievement">CgkI6JCEvPoDEAIQAA</string>
+    <string name="hangman_leaderboard">CgkI6JCEvPoDEAIQCg</string>
+    <string name="show_achievements">Achievements</string>
+
     <!-- Scramble Game text -->
 
     <string name="TextBox">Text</string>
@@ -79,11 +84,12 @@
     <string name="gamehelper_app_misconfigured">Achievements are coming soon!</string>
     <string name="gamehelper_license_failed">License failed</string>
     <string name="logout_btn">Logout</string>
-    <string name="show_achievements">Show Achievements</string>
     <string name="app_misconfigured">Achievements are coming soon!</string>
     <string name="sign_in_failed">Sign in failed</string>
     <string name="license_failed">License failed</string>
-    <string name="correct_guess_achievement">Well done, you guessed correctly!</string>
+
+
+
 
     <!-- English Section -->
     <string name="classText">Scramble Class #1</string>
@@ -128,6 +134,7 @@
     <string name="question10Text">4 x 5 + 2 - 9</string>
     <string name="correct_img">correct</string>
     <string name="wrong_img_4">wrong</string>
+    <string name="leaderboard_text">Leaderboard</string>
 
 
 </resources>
