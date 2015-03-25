@@ -135,6 +135,9 @@ public class ScrambleGame extends ActionBarActivity {
         wordLayout.removeAllViews();
 
         classText1.setVisibility(View.VISIBLE);
+        classText2.setVisibility(View.GONE);
+        classText3.setVisibility(View.GONE);
+
 
         //loop through
         for (int c = 0; c < currWord.length(); c++) {
@@ -185,7 +188,9 @@ public class ScrambleGame extends ActionBarActivity {
 
         wordLayout.removeAllViews();
 
+        classText1.setVisibility(View.GONE);
         classText2.setVisibility(View.VISIBLE);
+        classText3.setVisibility(View.GONE);
 
         //loop through
         for (int c = 0; c < currWord.length(); c++) {
@@ -237,6 +242,8 @@ public class ScrambleGame extends ActionBarActivity {
         wordLayout.removeAllViews();
 
         classText3.setVisibility(View.VISIBLE);
+        classText2.setVisibility(View.GONE);
+        classText1.setVisibility(View.GONE);
 
         //loop through
         for (int c = 0; c < currWord.length(); c++) {
