@@ -453,6 +453,7 @@ public class HangmanActivity extends BaseGameActivity {
                             getString(R.string.correct_guess_achievement));
                     Games.Leaderboards.submitScore(getApiClient(),
                             getString(R.string.hangman_leaderboard),numCorr);
+                numCorr++;
                 //disable all buttons
                 disableBtns();
 
