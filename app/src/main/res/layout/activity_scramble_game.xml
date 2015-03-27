@@ -57,7 +57,7 @@
         android:text="@string/category"
         android:id="@+id/catText"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="0dp"
 
         android:textStyle="bold" />
 
@@ -79,7 +79,7 @@
             android:onClick="onClickCat"
             android:background="@drawable/hangmanbuttons"
             android:textStyle="bold"
-            android:textColor="#FFFfFFFF" />
+            android:textColor="#FFFFFFFF" />
 
         <Button
             android:layout_width="match_parent"
@@ -240,7 +240,8 @@
         android:background="#FFFFFFFF"
         android:gravity="center"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:layout_marginTop="-60dp">
 
     </LinearLayout>
 
@@ -255,7 +256,8 @@
         android:numColumns="7"
         android:padding="5dp"
         android:stretchMode="columnWidth"
-        android:verticalSpacing="5dp" />
+        android:verticalSpacing="5dp"
+        />
 
 
 </LinearLayout>

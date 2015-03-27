@@ -1,32 +1,29 @@
 package com.cranium.ianarbuckle.craniumapp.History;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.content.res.Resources;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.view.View;
-import android.widget.ImageView;
-
 
 import com.cranium.ianarbuckle.craniumapp.LetterAdapter;
-import com.cranium.ianarbuckle.craniumapp.Login.LoginActivity;
 import com.cranium.ianarbuckle.craniumapp.R;
 import com.cranium.ianarbuckle.craniumapp.com.cranium.ianarbuckle.craniumapp.game.BaseGameActivity;
 import com.facebook.stetho.Stetho;
 import com.google.android.gms.games.Games;
-
 
 import java.util.Random;
 
@@ -36,7 +33,7 @@ import java.util.Random;
  * Reference: http://code.tutsplus.com/tutorials/create-a-hangman-game-user-interaction--mobile-21893
  */
 
-public class HangmanActivity extends BaseGameActivity {
+public class HangmanActivity extends BaseGameActivity{
 
     private String[] words;
     private String[] irishWords;
@@ -139,7 +136,7 @@ public class HangmanActivity extends BaseGameActivity {
         switch (v.getId()) {
             case R.id.sign_out_button:
                 signOut();
-                Intent i = new Intent(this, LoginActivity.class);
+                Intent i = new Intent(this, HangmanActivity.class);
                 startActivity(i);
                 break;
             case R.id.achievements:

@@ -2,29 +2,31 @@ package com.cranium.ianarbuckle.craniumapp.English;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.GridView;
 import android.widget.LinearLayout;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.cranium.ianarbuckle.craniumapp.LetterAdapter;
 import com.cranium.ianarbuckle.craniumapp.R;
+import com.cranium.ianarbuckle.craniumapp.com.cranium.ianarbuckle.craniumapp.game.BaseGameActivity;
+import com.google.android.gms.games.Games;
 
 import java.util.Random;
 
 
-public class ScrambleGame extends ActionBarActivity {
+public class ScrambleGame extends BaseGameActivity{
 
     private String[] class1;
     private String[] class2;
@@ -92,6 +94,42 @@ public class ScrambleGame extends ActionBarActivity {
         catText = (TextView) findViewById(R.id.catText);
         letterLayout = (RelativeLayout) findViewById(R.id.letterLayout);
 
+        //Google Game Services
+
+        findViewById(R.id.sign_out_button);
+        findViewById(R.id.achievements);
+        findViewById(R.id.achievements);
+        findViewById(R.id.show_leaderboard);
+
+
+    }
+
+    public void OnClick(View v){
+        switch(v.getId()){
+            case R.id.achievements:
+                startActivityForResult(Games.Achievements.getAchievementsIntent(
+                        getApiClient()), 1);
+                break;
+            case R.id.show_leaderboard:
+                startActivityForResult(Games.Leaderboards.getLeaderboardIntent(
+                        getApiClient(), getString(R.string.scramble_leaderboard)),2);
+                break;
+            case R.id.sign_out_button:
+                signOut();
+                Intent i = new Intent(this, EnglishActivity.class);
+                startActivity(i);
+                break;
+        }
+    }
+
+    @Override
+    public void onSignInFailed() {
+        findViewById(R.id.sign_out_button).setVisibility(View.GONE);
+    }
+
+    @Override
+    public void onSignInSucceeded() {
+        findViewById(R.id.sign_out_button).setVisibility(View.VISIBLE);
 
     }
 
