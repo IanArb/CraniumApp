@@ -89,12 +89,14 @@ public class MainActivity extends Activity implements ConnectionCallbacks, OnCon
         imgProfilePic = (ImageView) findViewById(R.id.imgProfilePic);
         txtName = (TextView) findViewById(R.id.txtName);
         llProfileLayout = (LinearLayout) findViewById(R.id.llProfile);
+        btnRevokeAccess = (Button) findViewById(R.id.btn_revoke_access);
 
         //Menu buttons
         hisBtn = (Button) findViewById(R.id.hisBtn);
         mathsBtn = (Button) findViewById(R.id.mathsBtn);
         geoBtn = (Button) findViewById(R.id.geoBtn);
         engBtn = (Button) findViewById(R.id.engBtn);
+
 
 
         // Button click listeners
@@ -136,6 +138,7 @@ public class MainActivity extends Activity implements ConnectionCallbacks, OnCon
                 Intent i = new Intent(this, LoginActivity.class);
                 startActivity(i);
                 break;
+
         }
 
     }

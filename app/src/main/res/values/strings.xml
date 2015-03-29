@@ -95,6 +95,8 @@
     <string name="classText">Scramble Class #1</string>
     <string name="classText2">Scramble Class #2</string>
     <string name="classText3">Scramble Class #3</string>
+    <string name="scramble_leaderboard">CgkI6JCEvPoDEAIQCw</string>
+    <string name="english_correct_guess">CgkI6JCEvPoDEAIQBA</string>
 
     <!-- Geography Section -->
     <string name="geo_text">Welcome to Geography</string>
@@ -135,7 +137,7 @@
     <string name="correct_img">correct</string>
     <string name="wrong_img_4">wrong</string>
     <string name="leaderboard_text">Leaderboard</string>
-    <string name="scramble_leaderboard">CgkI6JCEvPoDEAIQCw</string>
+
 
 
 </resources>

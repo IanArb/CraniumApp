@@ -115,7 +115,6 @@ public class ScrambleGame extends BaseGameActivity{
                         getApiClient(), getString(R.string.scramble_leaderboard)),2);
                 break;
             case R.id.sign_out_button:
-                signOut();
                 Intent i = new Intent(this, EnglishActivity.class);
                 startActivity(i);
                 break;
@@ -347,6 +346,12 @@ public class ScrambleGame extends BaseGameActivity{
 
         if (correct) {
             if (numCorr == numChars) {
+                if (getApiClient().isConnected())
+                    Games.Achievements.unlock(getApiClient(),
+                            getString(R.string.english_correct_guess));
+                Games.Leaderboards.submitScore(getApiClient(),
+                        getString(R.string.scramble_leaderboard),numCorr);
+                numCorr++;
                 //disable all buttons
                 disableBtns();
                 //let the user know they have won, ask if they wish to play again

@@ -28,8 +28,8 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 
-import com.cranium.ianarbuckle.craniumapp.YouTube.DeveloperKey;
 import com.cranium.ianarbuckle.craniumapp.R;
+import com.cranium.ianarbuckle.craniumapp.YouTube.DeveloperKey;
 import com.cranium.ianarbuckle.craniumapp.YouTube.YouTubeFailureRecoveryActivity;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
@@ -47,7 +47,7 @@ import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 public class HistoryYouTubePlayer extends YouTubeFailureRecoveryActivity implements
         View.OnClickListener,
         CompoundButton.OnCheckedChangeListener,
-        YouTubePlayer.OnFullscreenListener {
+        YouTubePlayer.OnFullscreenListener{
 
     private static final int PORTRAIT_ORIENTATION = Build.VERSION.SDK_INT < 9
             ? ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
@@ -81,6 +81,8 @@ public class HistoryYouTubePlayer extends YouTubeFailureRecoveryActivity impleme
 
         doLayout();
     }
+
+
 
     @Override
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer player,

@@ -81,6 +81,7 @@
         android:textColor="#FFFFFFFF"
         android:background="@drawable/roundedbutton" />
 
+
     <LinearLayout
         android:id="@+id/llProfile"
         android:layout_width="fill_parent"
@@ -114,6 +115,9 @@
                 android:textStyle="bold"
                 android:layout_marginTop="20dp"/>
         </LinearLayout>
+
+
+
     </LinearLayout>
 
     <TextView

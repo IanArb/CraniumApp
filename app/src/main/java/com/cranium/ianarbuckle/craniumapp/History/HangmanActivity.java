@@ -135,7 +135,6 @@ public class HangmanActivity extends BaseGameActivity{
     public void OnClick(View v) {
         switch (v.getId()) {
             case R.id.sign_out_button:
-                signOut();
                 Intent i = new Intent(this, HangmanActivity.class);
                 startActivity(i);
                 break;

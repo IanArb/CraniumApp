@@ -17,7 +17,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
-
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
@@ -34,29 +33,27 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.cranium.ianarbuckle.craniumapp.MainActivity;
 import com.cranium.ianarbuckle.craniumapp.R;
 import com.facebook.stetho.Stetho;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
+import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.common.api.Status;
 import com.google.android.gms.plus.Plus;
+import com.google.android.gms.plus.model.people.Person;
 
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
 //imports for connecting to the database
-import android.widget.Toast;
-
-
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesUtil;
-import com.google.android.gms.common.SignInButton;
-import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
-import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
-import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.common.api.Status;
-import com.google.android.gms.plus.model.people.Person;
 
 
 /**
@@ -273,13 +270,19 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
      * Updating the UI, showing/hiding buttons and profile layout
      */
     private void updateUI(boolean isSignedIn) {
+
         if (isSignedIn) {
+            /*
             btnSignIn.setVisibility(View.GONE);
             btnSignOut.setVisibility(View.VISIBLE);
             btnRevokeAccess.setVisibility(View.VISIBLE);
             llProfileLayout.setVisibility(View.VISIBLE);
             btnMainMenu.setVisibility(View.VISIBLE);
             login.setVisibility(View.GONE);
+            */
+            Intent i = new Intent(this, MainActivity.class);
+            this.startActivity(i);
+
 
         } else {
             btnSignIn.setVisibility(View.VISIBLE);
@@ -291,6 +294,7 @@ public class LoginActivity extends Activity implements OnClickListener, Connecti
 
 
         }
+
     }
 
     /**
