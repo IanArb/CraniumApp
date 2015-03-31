@@ -21,6 +21,7 @@
             android:padding="10dp"
             android:textColor="#FFFFFFFF"
             android:textStyle="bold"
+            android:layout_marginLeft="25dp"
             android:background="@drawable/roundedbutton" />
 
         <Button
@@ -33,23 +34,22 @@
             android:textColor="#FFFFFFFF"
             android:textStyle="bold"
             android:onClick="OnClick"
-            android:layout_marginLeft="5dp"/>
+            android:layout_marginLeft="25dp"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/logout_btn"
+            android:text="@string/leave_game"
             android:id="@+id/sign_out_button"
             android:onClick="OnClick"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="25dp"
             android:textColor="#FFFFFFFF"
             android:textStyle="bold"
-            android:textSize="10sp"
             android:background="@drawable/roundedbutton" />
 
 
     </LinearLayout>
-
+    <!-- Category
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -108,6 +108,7 @@
             android:textColor="#FFFfFFFF" />
 
     </GridLayout>
+    -->
 
     <RelativeLayout
         android:id="@+id/letterLayout"
@@ -116,6 +117,7 @@
         android:background="#FFFFFFFF"
         android:gravity="center"
         android:paddingTop="15dp"
+        android:layout_marginTop="-45dp"
 
         >
 
@@ -229,6 +231,18 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:visibility="invisible" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/help"
+            android:src="@drawable/help"
+            android:layout_alignTop="@+id/text"
+            android:layout_toRightOf="@+id/live5"
+            android:layout_toEndOf="@+id/live5"
+            android:layout_marginLeft="26dp"
+            android:layout_marginStart="26dp"
+            android:onClick="OnClick" />
 
     </RelativeLayout>
 

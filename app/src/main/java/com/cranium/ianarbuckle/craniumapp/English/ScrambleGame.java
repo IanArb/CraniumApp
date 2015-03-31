@@ -2,7 +2,6 @@ package com.cranium.ianarbuckle.craniumapp.English;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -11,11 +10,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
-import android.widget.Button;
-import android.widget.GridLayout;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.cranium.ianarbuckle.craniumapp.LetterAdapter;
@@ -50,12 +47,7 @@ public class ScrambleGame extends BaseGameActivity{
     private int numChars;
     private int numCorr;
 
-    private Button cat1;
-    private Button cat2;
-    private Button cat3;
-    private GridLayout category;
-    private TextView catText;
-    private RelativeLayout letterLayout;
+    private ImageButton help;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,23 +75,53 @@ public class ScrambleGame extends BaseGameActivity{
         wordLayout = (LinearLayout) findViewById(R.id.word);
         letters = (GridView) findViewById(R.id.letters);
 
+
         classText1 = (TextView) findViewById(R.id.text);
         classText2 = (TextView) findViewById(R.id.text2);
         classText3 = (TextView) findViewById(R.id.text3);
-
+        /*
         cat1 = (Button) findViewById(R.id.cat1Btn);
         cat2 = (Button) findViewById(R.id.cat2Btn);
         cat3 = (Button) findViewById(R.id.cat3Btn);
         category = (GridLayout) findViewById(R.id.category);
         catText = (TextView) findViewById(R.id.catText);
         letterLayout = (RelativeLayout) findViewById(R.id.letterLayout);
+        */
 
         //Google Game Services
 
+        AlertDialog.Builder winBuild = new AlertDialog.Builder(this);
+        winBuild.setTitle("Sup hoss! Choose your category!");
+        winBuild.setItems(R.array.scramble_cat,
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        switch (which) {
+                            case 0:
+                                ScrambleGame.this.playClass1();
+                                break;
+                            case 1:
+                                ScrambleGame.this.playClass2();
+                                break;
+                            case 2:
+                                ScrambleGame.this.playClass3();
+                                break;
+                        }
+
+
+                    }
+                });
+        winBuild.setNegativeButton("Exit",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        ScrambleGame.this.finish();
+                    }
+                });
+        winBuild.show();
+
         findViewById(R.id.sign_out_button);
         findViewById(R.id.achievements);
-        findViewById(R.id.achievements);
         findViewById(R.id.show_leaderboard);
+        findViewById(R.id.help);
 
 
     }
@@ -115,8 +137,18 @@ public class ScrambleGame extends BaseGameActivity{
                         getApiClient(), getString(R.string.scramble_leaderboard)),2);
                 break;
             case R.id.sign_out_button:
-                Intent i = new Intent(this, EnglishActivity.class);
-                startActivity(i);
+                ScrambleGame.this.finish();
+                break;
+            case R.id.help:
+                AlertDialog.Builder help = new AlertDialog.Builder(this);
+                help.setTitle("How to Play?");
+                help.setMessage("You got six lives and must guess the random generated scrambled word");
+                help.setPositiveButton("OK", new DialogInterface.OnClickListener(){
+                    public void onClick(DialogInterface dialog, int id){
+
+                    }
+                });
+                help.show();
                 break;
         }
     }
@@ -132,32 +164,6 @@ public class ScrambleGame extends BaseGameActivity{
 
     }
 
-    public void onClickCat(View v) {
-        switch (v.getId()) {
-            case R.id.cat1Btn:
-                ScrambleGame.this.playClass1();
-                category.setVisibility(View.GONE);
-                letters.setVisibility(View.VISIBLE);
-                catText.setVisibility(View.GONE);
-                letterLayout.setVisibility(View.VISIBLE);
-                break;
-            case R.id.cat2Btn:
-                ScrambleGame.this.playClass2();
-                category.setVisibility(View.GONE);
-                letters.setVisibility(View.VISIBLE);
-                catText.setVisibility(View.GONE);
-                letterLayout.setVisibility(View.VISIBLE);
-                break;
-            case R.id.cat3Btn:
-                ScrambleGame.this.playClass3();
-                category.setVisibility(View.GONE);
-                letters.setVisibility(View.VISIBLE);
-                catText.setVisibility(View.GONE);
-                letterLayout.setVisibility(View.VISIBLE);
-                break;
-
-        }
-    }
 
     public void playClass1() {
 
@@ -171,9 +177,11 @@ public class ScrambleGame extends BaseGameActivity{
 
         wordLayout.removeAllViews();
 
+
         classText1.setVisibility(View.VISIBLE);
         classText2.setVisibility(View.GONE);
         classText3.setVisibility(View.GONE);
+
 
 
         //loop through
@@ -229,6 +237,7 @@ public class ScrambleGame extends BaseGameActivity{
         classText2.setVisibility(View.VISIBLE);
         classText3.setVisibility(View.GONE);
 
+
         //loop through
         for (int c = 0; c < currWord.length(); c++) {
             charViews[c] = new TextView(this);
@@ -278,9 +287,11 @@ public class ScrambleGame extends BaseGameActivity{
 
         wordLayout.removeAllViews();
 
+
         classText3.setVisibility(View.VISIBLE);
         classText2.setVisibility(View.GONE);
         classText1.setVisibility(View.GONE);
+
 
         //loop through
         for (int c = 0; c < currWord.length(); c++) {

@@ -24,6 +24,7 @@
         android:padding="10dp"
         android:textColor="#FFFFFFFF"
         android:textStyle="bold"
+        android:layout_marginLeft="20dp"
         android:background="@drawable/roundedbutton" />
 
         <Button
@@ -36,23 +37,22 @@
             android:textColor="#FFFFFFFF"
             android:textStyle="bold"
             android:onClick="OnClick"
-            android:layout_marginLeft="5dp"/>
+            android:layout_marginLeft="30dp"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/logout_btn"
+            android:text="@string/leave_game"
             android:id="@+id/sign_out_button"
             android:onClick="OnClick"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="30dp"
             android:textColor="#FFFFFFFF"
             android:textStyle="bold"
-            android:textSize="10sp"
             android:background="@drawable/roundedbutton" />
 
 
     </LinearLayout>
-
+    <!-- Category
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -123,6 +123,7 @@
             android:textStyle="bold"
             android:textColor="#FFFfFFFF" />
     </GridLayout>
+    -->
 
 
     <RelativeLayout
@@ -132,6 +133,7 @@
         android:background="#FFFFFFFF"
         android:gravity="center"
         android:paddingTop="15dp"
+        android:layout_marginTop="-50dp"
 
         >
 
@@ -141,7 +143,8 @@
             android:contentDescription="@string/gallows"
             android:paddingRight="90dp"
             android:paddingTop="0dp"
-            android:src="@drawable/hangman_gallows" />
+            android:src="@drawable/hangman_gallows"
+            android:id="@+id/imageView3" />
 
         <ImageView
             android:id="@+id/head"
@@ -197,6 +200,16 @@
             android:paddingTop="175dp"
             android:src="@drawable/android_hangman_leg2" />
 
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/help"
+            android:onClick="OnClick"
+            android:src="@drawable/help"
+            android:layout_alignBottom="@+id/head"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
     </RelativeLayout>
 
     <LinearLayout
@@ -223,6 +236,7 @@
         android:padding="5dp"
         android:stretchMode="columnWidth"
         android:verticalSpacing="5dp"
+        android:layout_marginTop="-15dp"
 
 
         />

@@ -2,7 +2,6 @@ package com.cranium.ianarbuckle.craniumapp.History;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -11,12 +10,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
-import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.cranium.ianarbuckle.craniumapp.LetterAdapter;
@@ -62,16 +60,12 @@ public class HangmanActivity extends BaseGameActivity{
     //number correctly guessed
     private int numCorr;
 
+    private int numGuesses = 0;
+
     //help
     private AlertDialog helpAlert;
 
-    //category buttons
-    private Button cat1;
-    private Button cat2;
-    private Button cat3;
-    private Button cat4;
-    private TextView catText;
-    private RelativeLayout gallow;
+    private ImageButton help;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,26 +111,58 @@ public class HangmanActivity extends BaseGameActivity{
         bodyParts[4] = (ImageView) findViewById(R.id.leg1);
         bodyParts[5] = (ImageView) findViewById(R.id.leg2);
 
+        help = (ImageButton)findViewById(R.id.help);
+
 
         //category buttons
-
+        /*
         cat1 = (Button) findViewById(R.id.cat1Btn);
         cat2 = (Button) findViewById(R.id.cat2Btn);
         cat3 = (Button) findViewById(R.id.cat3Btn);
         cat4 = (Button) findViewById(R.id.cat4Btn);
         catText = (TextView) findViewById(R.id.catText);
         gallow = (RelativeLayout) findViewById(R.id.gallow);
-
-
         category = (GridLayout) findViewById(R.id.category);
+        */
+        //let the user know they have won, ask if they wish to play again
+        AlertDialog.Builder winBuild = new AlertDialog.Builder(this);
+        winBuild.setTitle("Sup hoss! Choose your category!");
+        winBuild.setItems(R.array.categories,
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        switch (which) {
+                            case 0:
+                                HangmanActivity.this.playGameDictatorship();
+                                break;
+                            case 1:
+                                HangmanActivity.this.playGameIrish();
+                                break;
+                            case 2:
+                                HangmanActivity.this.playGameAmerican();
+                                break;
+                            case 3:
+                                HangmanActivity.this.playGameRussian();
+                                break;
+
+                        }
+
+
+                    }
+                });
+        winBuild.setNegativeButton("Exit",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        HangmanActivity.this.finish();
+                    }
+                });
+        winBuild.show();
     }
 
 
     public void OnClick(View v) {
         switch (v.getId()) {
             case R.id.sign_out_button:
-                Intent i = new Intent(this, HangmanActivity.class);
-                startActivity(i);
+                HangmanActivity.this.finish();
                 break;
             case R.id.achievements:
                 startActivityForResult(Games.Achievements.getAchievementsIntent(
@@ -145,6 +171,19 @@ public class HangmanActivity extends BaseGameActivity{
             case R.id.show_leaderboard:
                 startActivityForResult(Games.Leaderboards.getLeaderboardIntent(
                         getApiClient(), getString(R.string.hangman_leaderboard)),2);
+                break;
+            case R.id.help:
+                AlertDialog.Builder help = new AlertDialog.Builder(this);
+                help.setTitle("How to Play?");
+                help.setMessage("You must guess the word and you have six lives!");
+                help.setPositiveButton("OK", new DialogInterface.OnClickListener(){
+                    public void onClick(DialogInterface dialog, int id){
+
+                    }
+                });
+                help.show();
+
+                break;
         }
     }
 
@@ -181,7 +220,7 @@ public class HangmanActivity extends BaseGameActivity{
         return super.onOptionsItemSelected(item);
     }
 
-
+    /*
     public void onClickCat(View v) {
         switch (v.getId()) {
             case R.id.cat1Btn:
@@ -215,6 +254,7 @@ public class HangmanActivity extends BaseGameActivity{
                 break;
         }
     }
+    */
 
 
     public void playGameDictatorship() {
@@ -443,13 +483,14 @@ public class HangmanActivity extends BaseGameActivity{
         //Check in case won
 
         if (correct) {
+            numGuesses++;
             if (numCorr == numChars) {
                 if (getApiClient().isConnected())
                     Games.Achievements.unlock(getApiClient(),
                             getString(R.string.correct_guess_achievement));
                     Games.Leaderboards.submitScore(getApiClient(),
-                            getString(R.string.hangman_leaderboard),numCorr);
-                numCorr++;
+                            getString(R.string.hangman_leaderboard),numGuesses);
+
                 //disable all buttons
                 disableBtns();
 

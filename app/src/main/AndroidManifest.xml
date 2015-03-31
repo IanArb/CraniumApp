@@ -90,7 +90,8 @@
 
         <activity
             android:name=".Maths.MathsActivity"
-            android:label="Maths" />
+            android:label="Maths"
+            android:parentActivityName=".MainActivity"/>
 
         <activity
             android:name=".Maths.MathsYouTubePlayer"
