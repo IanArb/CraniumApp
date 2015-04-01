@@ -237,12 +237,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/help"
             android:src="@drawable/help"
+            android:onClick="OnClick"
             android:layout_alignTop="@+id/text"
-            android:layout_toRightOf="@+id/live5"
-            android:layout_toEndOf="@+id/live5"
-            android:layout_marginLeft="26dp"
-            android:layout_marginStart="26dp"
-            android:onClick="OnClick" />
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
 
     </RelativeLayout>
 

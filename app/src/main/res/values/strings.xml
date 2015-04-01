@@ -138,7 +138,11 @@
     <string name="correct_img">correct</string>
     <string name="wrong_img_4">wrong</string>
     <string name="leaderboard_text">Leaders</string>
+    <string name="title_activity_profile">ProfileActivity</string>
 
+    <string name="hello_world">Hello world!</string>
+    <string name="Profile">Profile</string>
+    <string name="profileText">Welcome to your profile page!</string>
 
 
 </resources>

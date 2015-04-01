@@ -1,6 +1,5 @@
 package com.cranium.ianarbuckle.craniumapp;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.graphics.Bitmap;
@@ -11,38 +10,25 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.cranium.ianarbuckle.craniumapp.English.EnglishActivity;
-import com.cranium.ianarbuckle.craniumapp.Geography.GeographyActivity;
-import com.cranium.ianarbuckle.craniumapp.History.HistoryActivity;
 import com.cranium.ianarbuckle.craniumapp.Login.LoginActivity;
-import com.cranium.ianarbuckle.craniumapp.Maths.MathsActivity;
-import com.facebook.stetho.Stetho;
+import com.cranium.ianarbuckle.craniumapp.com.cranium.ianarbuckle.craniumapp.game.BaseGameActivity;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
-import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
+import com.google.android.gms.games.Games;
 import com.google.android.gms.plus.Plus;
 import com.google.android.gms.plus.model.people.Person;
 
 import java.io.InputStream;
 
-//scrolling
 
-/**
- * The main menu of our application
- * Author: Ian Arbuckle
- */
-public class MainActivity extends Activity implements ConnectionCallbacks, OnConnectionFailedListener, OnClickListener {
-
-
+public class ProfileActivity extends BaseGameActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
 
     private static final int RC_SIGN_IN = 0;
     // Logcat tag
@@ -68,42 +54,13 @@ public class MainActivity extends Activity implements ConnectionCallbacks, OnCon
     private ImageView imgProfilePic;
     private TextView txtName;
     private LinearLayout llProfileLayout;
-
-    private Button hisBtn;
-    private Button mathsBtn;
-    private Button geoBtn;
-    private Button engBtn;
-    private Button profileBtn;
+    private Button badges;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_profile);
 
-
-        Stetho.initialize(
-                Stetho.newInitializerBuilder(this)
-                        .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
-                        .enableWebKitInspector(Stetho.defaultInspectorModulesProvider(this))
-                        .build());
-
-        btnSignOut = (Button) findViewById(R.id.btn_sign_out);
-        imgProfilePic = (ImageView) findViewById(R.id.imgProfilePic);
-        txtName = (TextView) findViewById(R.id.txtName);
-        llProfileLayout = (LinearLayout) findViewById(R.id.llProfile);
-        btnRevokeAccess = (Button) findViewById(R.id.btn_revoke_access);
-
-        //Menu buttons
-        hisBtn = (Button) findViewById(R.id.hisBtn);
-        mathsBtn = (Button) findViewById(R.id.mathsBtn);
-        geoBtn = (Button) findViewById(R.id.geoBtn);
-        engBtn = (Button) findViewById(R.id.engBtn);
-        profileBtn = (Button) findViewById(R.id.profileBtn);
-
-
-
-        // Button click listeners
-        btnSignOut.setOnClickListener(this);
 
         // Initializing google plus api client
         mGoogleApiClient = new GoogleApiClient.Builder(this)
@@ -113,11 +70,28 @@ public class MainActivity extends Activity implements ConnectionCallbacks, OnCon
                 .addScope(Plus.SCOPE_PLUS_LOGIN)
                 .build();
 
-
+        btnSignOut = (Button) findViewById(R.id.btn_sign_out);
+        imgProfilePic = (ImageView) findViewById(R.id.imgProfilePic);
+        txtName = (TextView) findViewById(R.id.txtName);
+        llProfileLayout = (LinearLayout) findViewById(R.id.llProfile);
+        btnRevokeAccess = (Button) findViewById(R.id.btn_revoke_access);
+        badges = (Button) findViewById(R.id.show_achievements);
     }
 
 
+
     //Google+ implementation
+
+    @Override
+    public void onSignInFailed() {
+
+
+    }
+
+    @Override
+    public void onSignInSucceeded() {
+
+    }
 
     @Override
     protected void onStart() {
@@ -141,9 +115,13 @@ public class MainActivity extends Activity implements ConnectionCallbacks, OnCon
                 Intent i = new Intent(this, LoginActivity.class);
                 startActivity(i);
                 break;
-
-
-
+            case R.id.show_achievements:
+                startActivityForResult(Games.Achievements.getAchievementsIntent(
+                        getApiClient()), 1);
+                break;
+            case R.id.btn_main_menu:
+                Intent m = new Intent(this, MainActivity.class);
+                startActivity(m);
         }
 
     }
@@ -213,13 +191,6 @@ public class MainActivity extends Activity implements ConnectionCallbacks, OnCon
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-
-    }
 
 
     /**
@@ -320,33 +291,13 @@ public class MainActivity extends Activity implements ConnectionCallbacks, OnCon
     //End of Google+ Implementation
 
 
-    public void OnClickTabs(View view) {
 
-        switch (view.getId()) {
-            case R.id.hisBtn:
-                Intent a = new Intent(this, HistoryActivity.class);
-                startActivity(a);
-                break;
-            case R.id.engBtn:
-                Intent b = new Intent(this, EnglishActivity.class);
-                startActivity(b);
-                break;
-            case R.id.geoBtn:
-                Intent c = new Intent(this, GeographyActivity.class);
-                startActivity(c);
-                break;
-            case R.id.mathsBtn:
-                Intent d = new Intent(this, MathsActivity.class);
-                startActivity(d);
-                break;
-            case R.id.profileBtn:
-                Intent p = new Intent(this, ProfileActivity.class);
-                startActivity(p);
-                break;
-        }
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_profile, menu);
+        return true;
     }
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
