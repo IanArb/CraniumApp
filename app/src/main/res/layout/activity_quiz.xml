@@ -20,10 +20,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/question1Text"
+            android:text="@string/question1aText"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
-            android:id="@+id/q1Text" />
+            android:id="@+id/question1aText" />
     </RelativeLayout>
 
     <GridLayout
@@ -35,46 +35,50 @@
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton"
+            android:id="@+id/q1BtnA"
             android:background="@drawable/quiz_image01"
             android:layout_row="0"
             android:layout_column="0"
-            android:contentDescription="@string/correct_img" />
+            android:contentDescription="@string/correct_img"
+            android:onClick="GameBtns" />
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton2"
+            android:id="@+id/q1BtnB"
             android:layout_row="0"
             android:layout_column="12"
             android:background="@drawable/quiz_image02"
-            android:contentDescription="@string/image02" />
+            android:contentDescription="@string/image02"
+            android:onClick="GameBtns" />
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageView"
+            android:id="@+id/q1BtnC"
             android:layout_row="5"
             android:layout_column="0"
             android:layout_rowSpan="2"
             android:background="@drawable/quiz_image03"
-            android:contentDescription="@string/image03" />
+            android:contentDescription="@string/image03"
+            android:onClick="GameBtns"/>
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageView2"
+            android:id="@+id/q1BtnD"
             android:background="@drawable/quiz_image04"
             android:layout_row="6"
             android:layout_column="12"
-            android:contentDescription="@string/wrong_img_4" />
+            android:contentDescription="@string/wrong_img_4"
+            android:onClick="GameBtns"/>
     </GridLayout>
 
     <RelativeLayout
         android:id="@+id/q2"
         android:layout_width="fill_parent"
         android:layout_height="250dp"
-        android:background="@color/wallet_holo_blue_light"
+        android:background="@drawable/blackboard"
         android:gravity="center"
         android:paddingTop="15dp"
         android:visibility="gone">
@@ -83,7 +87,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/question2Text"
+            android:text="@string/question2aText"
             android:id="@+id/q2Text" />
 
     </RelativeLayout>
@@ -98,40 +102,48 @@
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton5"
+            android:id="@+id/q2BtnA"
+            android:background="@drawable/quiz_image05"
             android:layout_row="0"
-            android:layout_column="0" />
+            android:layout_column="0"
+            android:onClick="GameBtns"/>
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton6"
+            android:id="@+id/q2BtnB"
+            android:background="@drawable/quiz_image06"
             android:layout_row="0"
             android:layout_column="12"
-            android:contentDescription="@string/image02" />
+            android:contentDescription="@string/image02"
+            android:onClick="GameBtns"/>
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton7"
+            android:id="@+id/q2BtnC"
+            android:background="@drawable/quiz_image07"
             android:layout_row="5"
             android:layout_column="0"
             android:layout_rowSpan="2"
-            android:contentDescription="@string/image03" />
+            android:contentDescription="@string/image03"
+            android:onClick="GameBtns"/>
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton8"
+            android:id="@+id/q2BtnD"
+            android:background="@drawable/quiz_image08"
             android:layout_row="6"
-            android:layout_column="12" />
+            android:layout_column="12"
+            android:onClick="GameBtns"/>
     </GridLayout>
 
     <RelativeLayout
         android:id="@+id/q3"
         android:layout_width="fill_parent"
         android:layout_height="250dp"
-        android:background="@color/wallet_holo_blue_light"
+        android:background="@drawable/blackboard"
         android:gravity="center"
         android:paddingTop="15dp"
         android:visibility="gone">
@@ -140,7 +152,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/question3Text"
+            android:text="@string/question3aText"
             android:id="@+id/q3Text" />
 
     </RelativeLayout>
@@ -155,40 +167,48 @@
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton9"
+            android:id="@+id/q3BtnA"
+            android:background="@drawable/quiz_image09"
             android:layout_row="0"
-            android:layout_column="0" />
+            android:layout_column="0"
+            android:onClick="GameBtns"/>
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton10"
+            android:id="@+id/q3BtnB"
+            android:background="@drawable/quiz_image10"
             android:layout_row="0"
             android:layout_column="12"
-            android:contentDescription="@string/image02" />
+            android:contentDescription="@string/image02"
+            android:onClick="GameBtns"/>
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton11"
+            android:id="@+id/q3BtnC"
+            android:background="@drawable/quiz_image11"
             android:layout_row="5"
             android:layout_column="0"
             android:layout_rowSpan="2"
-            android:contentDescription="@string/image03" />
+            android:contentDescription="@string/image03"
+            android:onClick="GameBtns"/>
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton12"
+            android:background="@drawable/quiz_image12"
+            android:id="@+id/q3BtnD"
             android:layout_row="6"
-            android:layout_column="12" />
+            android:layout_column="12"
+            android:onClick="GameBtns"/>
     </GridLayout>
 
     <RelativeLayout
         android:id="@+id/q4"
         android:layout_width="fill_parent"
         android:layout_height="250dp"
-        android:background="@color/wallet_holo_blue_light"
+        android:background="@drawable/blackboard"
         android:gravity="center"
         android:paddingTop="15dp"
         android:visibility="gone">
@@ -197,7 +217,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/question4Text"
+            android:text="@string/question4aText"
             android:id="@+id/q4Text" />
 
     </RelativeLayout>
@@ -212,40 +232,48 @@
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton13"
+            android:id="@+id/q4BtnA"
+            android:background="@drawable/quiz_image13"
             android:layout_row="0"
-            android:layout_column="0" />
+            android:layout_column="0"
+            android:onClick="GameBtns"/>
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton14"
+            android:id="@+id/q4BtnB"
             android:layout_row="0"
             android:layout_column="12"
-            android:contentDescription="@string/image02" />
+            android:background="@drawable/quiz_image14"
+            android:contentDescription="@string/image02"
+            android:onClick="GameBtns"/>
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton15"
+            android:id="@+id/q4BtnC"
+            android:background="@drawable/quiz_image15"
             android:layout_row="5"
             android:layout_column="0"
             android:layout_rowSpan="2"
-            android:contentDescription="@string/image03" />
+            android:contentDescription="@string/image03"
+            android:onClick="GameBtns"/>
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton16"
+            android:id="@+id/q4BtnD"
+            android:background="@drawable/quiz_image16"
             android:layout_row="6"
-            android:layout_column="12" />
+            android:layout_column="12"
+            android:onClick="GameBtns"/>
     </GridLayout>
 
     <RelativeLayout
         android:id="@+id/q5"
         android:layout_width="fill_parent"
         android:layout_height="250dp"
-        android:background="@color/wallet_holo_blue_light"
+        android:background="@drawable/blackboard"
         android:gravity="center"
         android:paddingTop="15dp"
         android:visibility="gone">
@@ -254,7 +282,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/question5Text"
+            android:text="@string/question5aText"
             android:id="@+id/q5Text" />
 
     </RelativeLayout>
@@ -269,40 +297,48 @@
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton17"
+            android:id="@+id/q5BtnA"
+            android:background="@drawable/quiz_image17"
             android:layout_row="0"
-            android:layout_column="0" />
+            android:layout_column="0"
+            android:onClick="GameBtns"/>
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton18"
+            android:id="@+id/q5BtnB"
+            android:background="@drawable/quiz_image18"
             android:layout_row="0"
             android:layout_column="12"
-            android:contentDescription="@string/image02" />
+            android:contentDescription="@string/image02"
+            android:onClick="GameBtns"/>
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton19"
+            android:id="@+id/q5BtnC"
+            android:background="@drawable/quiz_image19"
             android:layout_row="5"
             android:layout_column="0"
             android:layout_rowSpan="2"
-            android:contentDescription="@string/image03" />
+            android:contentDescription="@string/image03"
+            android:onClick="GameBtns"/>
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton20"
+            android:id="@+id/q5BtnD"
+            android:background="@drawable/quiz_image20"
             android:layout_row="6"
-            android:layout_column="12" />
+            android:layout_column="12"
+            android:onClick="GameBtns"/>
     </GridLayout>
 
     <RelativeLayout
         android:id="@+id/q6"
         android:layout_width="fill_parent"
         android:layout_height="250dp"
-        android:background="@color/wallet_holo_blue_light"
+        android:background="@drawable/blackboard"
         android:gravity="center"
         android:paddingTop="15dp"
         android:visibility="gone">
@@ -311,7 +347,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/question6Text"
+            android:text="@string/question6aText"
             android:id="@+id/q6Text" />
 
     </RelativeLayout>
@@ -326,40 +362,48 @@
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton21"
+            android:id="@+id/q6BtnA"
+            android:background="@drawable/quiz_image21"
             android:layout_row="0"
-            android:layout_column="0" />
+            android:layout_column="0"
+            android:onClick="GameBtns"/>
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton22"
+            android:id="@+id/q6BtnB"
+            android:background="@drawable/quiz_image22"
             android:layout_row="0"
             android:layout_column="12"
-            android:contentDescription="@string/image02" />
+            android:contentDescription="@string/image02"
+            android:onClick="GameBtns"/>
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton23"
+            android:id="@+id/q6BtnC"
+            android:background="@drawable/quiz_image23"
             android:layout_row="5"
             android:layout_column="0"
             android:layout_rowSpan="2"
-            android:contentDescription="@string/image03" />
+            android:contentDescription="@string/image03"
+            android:onClick="GameBtns"/>
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton24"
+            android:id="@+id/q6BtnD"
+            android:background="@drawable/quiz_image24"
             android:layout_row="6"
-            android:layout_column="12" />
+            android:layout_column="12"
+            android:onClick="GameBtns"/>
     </GridLayout>
 
     <RelativeLayout
         android:id="@+id/q7"
         android:layout_width="fill_parent"
         android:layout_height="250dp"
-        android:background="@color/wallet_holo_blue_light"
+        android:background="@drawable/blackboard"
         android:gravity="center"
         android:paddingTop="15dp"
         android:visibility="gone">
@@ -368,7 +412,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/question7Text"
+            android:text="@string/question7aText"
             android:id="@+id/q7Text" />
 
     </RelativeLayout>
@@ -383,40 +427,48 @@
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton25"
+            android:id="@+id/q7BtnA"
             android:layout_row="0"
-            android:layout_column="0" />
+            android:background="@drawable/quiz_image25"
+            android:layout_column="0"
+            android:onClick="GameBtns"/>
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton26"
+            android:id="@+id/q7BtnB"
+            android:background="@drawable/quiz_image26"
             android:layout_row="0"
             android:layout_column="12"
-            android:contentDescription="@string/image02" />
+            android:contentDescription="@string/image02"
+            android:onClick="GameBtns"/>
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton27"
+            android:id="@+id/q7BtnC"
+            android:background="@drawable/quiz_image27"
             android:layout_row="5"
             android:layout_column="0"
             android:layout_rowSpan="2"
-            android:contentDescription="@string/image03" />
+            android:contentDescription="@string/image03"
+            android:onClick="GameBtns"/>
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton28"
+            android:id="@+id/q7BtnD"
+            android:background="@drawable/quiz_image28"
             android:layout_row="6"
-            android:layout_column="12" />
+            android:layout_column="12"
+            android:onClick="GameBtns"/>
     </GridLayout>
 
     <RelativeLayout
         android:id="@+id/q8"
         android:layout_width="fill_parent"
         android:layout_height="250dp"
-        android:background="@color/wallet_holo_blue_light"
+        android:background="@drawable/blackboard"
         android:gravity="center"
         android:paddingTop="15dp"
         android:visibility="gone">
@@ -425,7 +477,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/question8Text"
+            android:text="@string/question8aText"
             android:id="@+id/q8Text" />
 
     </RelativeLayout>
@@ -440,40 +492,48 @@
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton29"
+            android:id="@+id/q8BtnA"
+            android:background="@drawable/quiz_image29"
             android:layout_row="0"
-            android:layout_column="0" />
+            android:layout_column="0"
+            android:onClick="GameBtns"/>
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton30"
+            android:id="@+id/q8BtnB"
+            android:background="@drawable/quiz_image30"
             android:layout_row="0"
             android:layout_column="12"
-            android:contentDescription="@string/image02" />
+            android:contentDescription="@string/image02"
+            android:onClick="GameBtns"/>
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton31"
+            android:id="@+id/q8BtnC"
+            android:background="@drawable/quiz_image31"
             android:layout_row="5"
             android:layout_column="0"
             android:layout_rowSpan="2"
-            android:contentDescription="@string/image03" />
+            android:contentDescription="@string/image03"
+            android:onClick="GameBtns"/>
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton32"
+            android:id="@+id/q8BtnD"
+            android:background="@drawable/quiz_image32"
             android:layout_row="6"
-            android:layout_column="12" />
+            android:layout_column="12"
+            android:onClick="GameBtns"/>
     </GridLayout>
 
     <RelativeLayout
         android:id="@+id/q9"
         android:layout_width="fill_parent"
         android:layout_height="250dp"
-        android:background="@color/wallet_holo_blue_light"
+        android:background="@drawable/blackboard"
         android:gravity="center"
         android:paddingTop="15dp"
         android:visibility="gone">
@@ -482,7 +542,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/question9Text"
+            android:text="@string/question9aText"
             android:id="@+id/q9Text" />
 
     </RelativeLayout>
@@ -497,40 +557,48 @@
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton33"
+            android:id="@+id/q9BtnA"
+            android:background="@drawable/quiz_image33"
             android:layout_row="0"
-            android:layout_column="0" />
+            android:layout_column="0"
+            android:onClick="GameBtns"/>
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton34"
+            android:id="@+id/q9BtnB"
+            android:background="@drawable/quiz_image34"
             android:layout_row="0"
             android:layout_column="12"
-            android:contentDescription="@string/image02" />
+            android:contentDescription="@string/image02"
+            android:onClick="GameBtns"/>
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton35"
+            android:id="@+id/q9BtnC"
+            android:background="@drawable/quiz_image35"
             android:layout_row="5"
             android:layout_column="0"
             android:layout_rowSpan="2"
-            android:contentDescription="@string/image03" />
+            android:contentDescription="@string/image03"
+            android:onClick="GameBtns"/>
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton36"
+            android:id="@+id/q9BtnD"
+            android:background="@drawable/quiz_image36"
             android:layout_row="6"
-            android:layout_column="12" />
+            android:layout_column="12"
+            android:onClick="GameBtns"/>
     </GridLayout>
 
     <RelativeLayout
         android:id="@+id/q10"
         android:layout_width="fill_parent"
         android:layout_height="250dp"
-        android:background="@color/wallet_holo_blue_light"
+        android:background="@drawable/blackboard"
         android:gravity="center"
         android:paddingTop="15dp"
         android:visibility="gone">
@@ -548,39 +616,47 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/question10Text"
+            android:text="@string/question10aText"
             android:id="@+id/q10Text" />
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton37"
+            android:id="@+id/q10BtnA"
+            android:background="@drawable/quiz_image37"
             android:layout_row="0"
-            android:layout_column="0" />
+            android:layout_column="0"
+            android:onClick="GameBtns"/>
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton38"
+            android:id="@+id/q10BtnB"
+            android:background="@drawable/quiz_image38"
             android:layout_row="0"
             android:layout_column="12"
-            android:contentDescription="@string/image02" />
+            android:contentDescription="@string/image02"
+            android:onClick="GameBtns"/>
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton39"
+            android:id="@+id/q10BtnC"
+            android:background="@drawable/quiz_image39"
             android:layout_row="5"
             android:layout_column="0"
             android:layout_rowSpan="2"
-            android:contentDescription="@string/image03" />
+            android:contentDescription="@string/image03"
+            android:onClick="GameBtns"/>
 
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/imageButton40"
+            android:background="@drawable/quiz_image40"
+            android:id="@+id/q10BtnD"
             android:layout_row="6"
-            android:layout_column="12" />
+            android:layout_column="12"
+            android:onClick="GameBtns"/>
     </GridLayout>
 
 </LinearLayout>

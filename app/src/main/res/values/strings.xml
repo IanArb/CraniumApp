@@ -126,21 +126,36 @@
     <string name="question1Text">3+7 = ?</string>
     <string name="image02">image_02</string>
     <string name="image03">image04</string>
-    <string name="question2Text">4 x 9 = ?</string>
-    <string name="question3Text">8 / 2 = ?</string>
-    <string name="question4Text">70 - 14 = ?</string>
-    <string name="question5Text">(9 x 4) - 7 = ?</string>
-    <string name="question6Text">7 + 9 - 1 = ?</string>
-    <string name="question7Text">8 - 2 + 4 = ?</string>
-    <string name="question8Text">6 x 3 + 4 = ?</string>
-    <string name="question9Text">7 - 8 x 8 = ?</string>
-    <string name="question10Text">4 x 5 + 2 - 9</string>
+    <!-- Questions -->
+    <string name="question1aText">112 + 38 ÷ 3 = __</string>
+    <string name="question2aText">120 - 15 × 5 = __</string>
+    <string name="question3aText">2,376 × 15 = __</string>
+    <string name="question4aText">1/3 + 1/4 + __ = 1</string>
+    <string name="question5aText">1652 ÷ 28 = __</string>
+    <string name="question6aText">555 + 656 = __</string>
+    <string name="question7aText">722 × 16 = __ </string>
+    <string name="question8aText">984 ÷ 74 = __ </string>
+    <string name="question9aText">1/6 + 2/3 = __</string>
+    <string name="question10aText">158 - 101 × 4 = __ </string>
+
+    <string name="question1bText">What is 5/7 - 2/8 = __</string>
+    <string name="question2bText">What is the square root of 225?</string>
+    <string name="question3bText">If c=7, then what is c(21) + 8?</string>
+    <string name="question4bText">What is 18x6-24+7(5+6)? </string>
+    <string name="question5bText">What is 12/18 divided by 7/19?</string>
+    <string name="question6bText">Calculate 18+3+22+24+20+9</string>
+    <string name="question7bText">Which one of these is not a quadrilateral?</string>
+    <string name="question8bText">What is the formulae for finding area?</string>
+    <string name="question9bText">what is 4 to the power of three?</string>
+    <string name="question10bText">14 times 11 = __</string>
+
     <string name="correct_img">correct</string>
     <string name="wrong_img_4">wrong</string>
+
     <string name="leaderboard_text">Leaders</string>
     <string name="title_activity_profile">ProfileActivity</string>
 
-    <string name="hello_world">Hello world!</string>
+    <!-- Profile Section -->
     <string name="Profile">Profile</string>
     <string name="profileText">Welcome to your profile page!</string>
 
