@@ -263,7 +263,7 @@ public class QuizActivity extends ActionBarActivity {
                 AlertDialog.Builder ans = new AlertDialog.Builder(this);
                 ans.setTitle("Hurray!");
                 ans.setMessage("50 is the correct answer!");
-                ans.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                ans.setPositiveButton("Next Question", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
                         grid1.setVisibility(View.GONE);
@@ -291,7 +291,7 @@ public class QuizActivity extends ActionBarActivity {
                 AlertDialog.Builder ans2 = new AlertDialog.Builder(this);
                 ans2.setTitle("Sorry hoss that's wrong!");
                 ans2.setMessage("50 is the correct answer!");
-                ans2.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                ans2.setPositiveButton("Next Question", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
                         grid1.setVisibility(View.GONE);
@@ -320,7 +320,7 @@ public class QuizActivity extends ActionBarActivity {
                 AlertDialog.Builder ans3 = new AlertDialog.Builder(this);
                 ans3.setTitle("Sorry hoss that's wrong!");
                 ans3.setMessage("50 is the correct answer!");
-                ans3.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                ans3.setPositiveButton("Next Question", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
                         grid1.setVisibility(View.GONE);
@@ -349,7 +349,7 @@ public class QuizActivity extends ActionBarActivity {
                 AlertDialog.Builder ans4 = new AlertDialog.Builder(this);
                 ans4.setTitle("Sorry hoss that's wrong!");
                 ans4.setMessage("50 is the correct answer!");
-                ans4.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                ans4.setPositiveButton("Next Question", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
                         grid1.setVisibility(View.GONE);
@@ -379,8 +379,8 @@ public class QuizActivity extends ActionBarActivity {
 
                 AlertDialog.Builder ans5 = new AlertDialog.Builder(this);
                 ans5.setTitle("Hurray!");
-                ans5.setMessage("255 is the correct answer!");
-                ans5.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                ans5.setMessage("525 is the correct answer!");
+                ans5.setPositiveButton("Next Question", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
                         grid2.setVisibility(View.GONE);
@@ -401,6 +401,93 @@ public class QuizActivity extends ActionBarActivity {
                     }
                 });
                 ans5.show();
+
+                break;
+
+            case R.id.q2BtnB:
+
+                AlertDialog.Builder ans6 = new AlertDialog.Builder(this);
+                ans6.setTitle("Sorry hoss, that's wrong!");
+                ans6.setMessage("525 is the correct answer!");
+                ans6.setPositiveButton("Next Question", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        //set q1 to gone
+                        grid2.setVisibility(View.GONE);
+                        q2BtnA.setVisibility(View.GONE);
+                        q2BtnA.setVisibility(View.GONE);
+                        q2BtnB.setVisibility(View.GONE);
+                        q2BtnC.setVisibility(View.GONE);
+                        q2BtnD.setVisibility(View.GONE);
+                        blackboard2.setVisibility(View.GONE);
+
+                        //set up next question
+                        grid3.setVisibility(View.VISIBLE);
+                        q3BtnA.setVisibility(View.VISIBLE);
+                        q3BtnB.setVisibility(View.VISIBLE);
+                        q3BtnC.setVisibility(View.VISIBLE);
+                        q3BtnD.setVisibility(View.VISIBLE);
+                        blackboard3.setVisibility(View.VISIBLE);
+                    }
+                });
+                ans6.show();
+
+                break;
+
+            case R.id.q2BtnC:
+
+                AlertDialog.Builder ans7 = new AlertDialog.Builder(this);
+                ans7.setTitle("Sorry hoss, that's wrong!");
+                ans7.setMessage("525 is the correct answer!");
+                ans7.setPositiveButton("Next Question", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        //set q1 to gone
+                        grid2.setVisibility(View.GONE);
+                        q2BtnA.setVisibility(View.GONE);
+                        q2BtnA.setVisibility(View.GONE);
+                        q2BtnB.setVisibility(View.GONE);
+                        q2BtnC.setVisibility(View.GONE);
+                        q2BtnD.setVisibility(View.GONE);
+                        blackboard2.setVisibility(View.GONE);
+
+                        //set up next question
+                        grid3.setVisibility(View.VISIBLE);
+                        q3BtnA.setVisibility(View.VISIBLE);
+                        q3BtnB.setVisibility(View.VISIBLE);
+                        q3BtnC.setVisibility(View.VISIBLE);
+                        q3BtnD.setVisibility(View.VISIBLE);
+                        blackboard3.setVisibility(View.VISIBLE);
+                    }
+                });
+                ans7.show();
+
+                break;
+
+            case R.id.q2BtnD:
+
+                AlertDialog.Builder ans8 = new AlertDialog.Builder(this);
+                ans8.setTitle("Sorry hoss, that's wrong!");
+                ans8.setMessage("255 is the correct answer!");
+                ans8.setPositiveButton("Next Question", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        //set q1 to gone
+                        grid2.setVisibility(View.GONE);
+                        q2BtnA.setVisibility(View.GONE);
+                        q2BtnA.setVisibility(View.GONE);
+                        q2BtnB.setVisibility(View.GONE);
+                        q2BtnC.setVisibility(View.GONE);
+                        q2BtnD.setVisibility(View.GONE);
+                        blackboard2.setVisibility(View.GONE);
+
+                        //set up next question
+                        grid3.setVisibility(View.VISIBLE);
+                        q3BtnA.setVisibility(View.VISIBLE);
+                        q3BtnB.setVisibility(View.VISIBLE);
+                        q3BtnC.setVisibility(View.VISIBLE);
+                        q3BtnD.setVisibility(View.VISIBLE);
+                        blackboard3.setVisibility(View.VISIBLE);
+                    }
+                });
+                ans8.show();
 
                 break;
 
