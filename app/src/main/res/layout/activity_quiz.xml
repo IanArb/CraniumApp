@@ -88,6 +88,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/question2aText"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
             android:id="@+id/q2Text" />
 
     </RelativeLayout>

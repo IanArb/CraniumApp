@@ -70,6 +70,10 @@ public class QuizActivity extends ActionBarActivity {
 
         grid2 = (GridLayout)findViewById(R.id.grid2);
 
+        //Relative Layout (blackboard)
+
+        blackboard2 = (RelativeLayout)findViewById(R.id.q2);
+
         //question
 
         q2Text = (TextView)findViewById(R.id.q2Text);
@@ -85,34 +89,13 @@ public class QuizActivity extends ActionBarActivity {
 
         //Grid Layout
 
-        grid2 = (GridLayout)findViewById(R.id.grid2);
+        grid3 = (GridLayout)findViewById(R.id.grid3);
 
         //Relative Layout (blackboard)
 
         //question
 
         q3Text = (TextView)findViewById(R.id.q3Text);
-
-        blackboard2 = (RelativeLayout)findViewById(R.id.q2);
-
-        //buttons
-
-        q2BtnA = (ImageButton)findViewById(R.id.q2BtnA);
-        q2BtnB = (ImageButton)findViewById(R.id.q2BtnB);
-        q2BtnC = (ImageButton)findViewById(R.id.q2BtnC);
-        q2BtnD = (ImageButton)findViewById(R.id.q2BtnD);
-
-        //Question 4
-
-        //Grid Layout
-
-        grid3 = (GridLayout)findViewById(R.id.grid3);
-
-        //question
-
-        q4Text = (TextView)findViewById(R.id.q4Text);
-
-        //Relative Layout (blackboard)
 
         blackboard3 = (RelativeLayout)findViewById(R.id.q3);
 
@@ -123,7 +106,7 @@ public class QuizActivity extends ActionBarActivity {
         q3BtnC = (ImageButton)findViewById(R.id.q3BtnC);
         q3BtnD = (ImageButton)findViewById(R.id.q3BtnD);
 
-        //Question 5
+        //Question 4
 
         //Grid Layout
 
@@ -131,7 +114,7 @@ public class QuizActivity extends ActionBarActivity {
 
         //question
 
-        q5Text = (TextView)findViewById(R.id.q5Text);
+        q4Text = (TextView)findViewById(R.id.q4Text);
 
         //Relative Layout (blackboard)
 
@@ -266,9 +249,11 @@ public class QuizActivity extends ActionBarActivity {
         //buttons
 
         q10BtnA = (ImageButton)findViewById(R.id.q10BtnA);
-        q2BtnB = (ImageButton)findViewById(R.id.q10BtnB);
-        q2BtnC = (ImageButton)findViewById(R.id.q10BtnC);
-        q2BtnD = (ImageButton)findViewById(R.id.q10BtnD);
+        q10BtnB = (ImageButton)findViewById(R.id.q10BtnB);
+        q10BtnC = (ImageButton)findViewById(R.id.q10BtnC);
+        q10BtnD = (ImageButton)findViewById(R.id.q10BtnD);
+
+
 
     }
 
@@ -389,6 +374,35 @@ public class QuizActivity extends ActionBarActivity {
                 break;
 
             //question 2
+
+            case R.id.q2BtnA:
+
+                AlertDialog.Builder ans5 = new AlertDialog.Builder(this);
+                ans5.setTitle("Hurray!");
+                ans5.setMessage("255 is the correct answer!");
+                ans5.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        //set q1 to gone
+                        grid2.setVisibility(View.GONE);
+                        q2BtnA.setVisibility(View.GONE);
+                        q2BtnA.setVisibility(View.GONE);
+                        q2BtnB.setVisibility(View.GONE);
+                        q2BtnC.setVisibility(View.GONE);
+                        q2BtnD.setVisibility(View.GONE);
+                        blackboard2.setVisibility(View.GONE);
+
+                        //set up next question
+                        grid3.setVisibility(View.VISIBLE);
+                        q3BtnA.setVisibility(View.VISIBLE);
+                        q3BtnB.setVisibility(View.VISIBLE);
+                        q3BtnC.setVisibility(View.VISIBLE);
+                        q3BtnD.setVisibility(View.VISIBLE);
+                        blackboard3.setVisibility(View.VISIBLE);
+                    }
+                });
+                ans5.show();
+
+                break;
 
 
         }
