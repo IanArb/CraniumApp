@@ -58,8 +58,6 @@
     <string name="actionbar_tutorial">Testing the Youtube video activity.</string>
 
     <!-- Youtube API text -->
-    <string name="title_logo">NATIONAL GEOGRAPHIC</string>
-    <string name="btn_skip_intro">Skip Intro</string>
     <string name="error_player">Could not initialise player</string>
     <string name="history_tutorial">Welcome to your History tutorial playlist on Dictatorship and Democracy</string>
     <string name="landscape_fullscreen">Landscape</string>
@@ -158,6 +156,7 @@
     <!-- Profile Section -->
     <string name="Profile">Profile</string>
     <string name="profileText">Welcome to your profile page!</string>
+    <string name="score" />
 
 
 </resources>

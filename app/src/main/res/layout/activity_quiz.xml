@@ -32,11 +32,12 @@
         android:layout_height="match_parent"
         android:layout_marginTop="10dp">
 
+
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/q1BtnA"
-            android:background="@drawable/quiz_image01"
+            android:id="@+id/q1BtnB"
+            android:background="@drawable/quiz_image02"
             android:layout_row="0"
             android:layout_column="0"
             android:contentDescription="@string/correct_img"
@@ -45,12 +46,13 @@
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/q1BtnB"
+            android:id="@+id/q1BtnA"
             android:layout_row="0"
             android:layout_column="12"
-            android:background="@drawable/quiz_image02"
-            android:contentDescription="@string/image02"
+            android:background="@drawable/quiz_image01"
             android:onClick="GameBtns" />
+
+
 
         <ImageButton
             android:layout_width="130dp"
@@ -89,7 +91,6 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/question2aText"
             android:textColor="#FFFFFF"
-            android:textStyle="bold"
             android:id="@+id/q2Text" />
 
     </RelativeLayout>
@@ -155,7 +156,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/question3aText"
-            android:id="@+id/q3Text" />
+            android:textColor="#FFFFFF"
+            android:id="@+id/question3aText" />
 
     </RelativeLayout>
 
@@ -220,7 +222,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/question4aText"
-            android:id="@+id/q4Text" />
+            android:textColor="#FFFFFF"
+            android:id="@+id/question4aText" />
 
     </RelativeLayout>
 
@@ -285,7 +288,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/question5aText"
-            android:id="@+id/q5Text" />
+            android:textColor="#FFFFFF"
+            android:id="@+id/question5aText" />
 
     </RelativeLayout>
 
@@ -350,7 +354,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/question6aText"
-            android:id="@+id/q6Text" />
+            android:textColor="#FFFFFF"
+            android:id="@+id/question6aText" />
 
     </RelativeLayout>
 
@@ -415,7 +420,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/question7aText"
-            android:id="@+id/q7Text" />
+            android:textColor="#FFFFFF"
+            android:id="@+id/question7aText" />
 
     </RelativeLayout>
 
@@ -442,7 +448,6 @@
             android:background="@drawable/quiz_image26"
             android:layout_row="0"
             android:layout_column="12"
-            android:contentDescription="@string/image02"
             android:onClick="GameBtns"/>
 
         <ImageButton
@@ -453,7 +458,6 @@
             android:layout_row="5"
             android:layout_column="0"
             android:layout_rowSpan="2"
-            android:contentDescription="@string/image03"
             android:onClick="GameBtns"/>
 
         <ImageButton
@@ -473,14 +477,16 @@
         android:background="@drawable/blackboard"
         android:gravity="center"
         android:paddingTop="15dp"
+        android:textColor="#FFFFFF"
         android:visibility="gone">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
             android:text="@string/question8aText"
-            android:id="@+id/q8Text" />
+            android:id="@+id/question8aText" />
 
     </RelativeLayout>
 
@@ -545,7 +551,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/question9aText"
-            android:id="@+id/q9Text" />
+            android:textColor="#FFFFFF"
+            android:id="@+id/question9aText" />
 
     </RelativeLayout>
 
@@ -605,6 +612,14 @@
         android:paddingTop="15dp"
         android:visibility="gone">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/question10aText"
+            android:textColor="#FFFFFF"
+            android:id="@+id/question10aText" />
+
     </RelativeLayout>
 
     <GridLayout
@@ -613,13 +628,6 @@
         android:layout_height="match_parent"
         android:layout_marginTop="10dp"
         android:visibility="gone">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/question10aText"
-            android:id="@+id/q10Text" />
 
         <ImageButton
             android:layout_width="130dp"
@@ -660,6 +668,33 @@
             android:layout_column="12"
             android:onClick="GameBtns"/>
     </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/finish"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/blackboard"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/score"
+            android:textColor="#FFFFFF"
+            android:id="@+id/score" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/show_achievements"
+            android:layout_marginTop="50dp"
+            android:text="@string/show_achievements"
+            />
+
+    </RelativeLayout>
 
 </LinearLayout>
 
