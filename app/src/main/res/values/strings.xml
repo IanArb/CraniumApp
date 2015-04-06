@@ -147,15 +147,18 @@
     <string name="question9bText">what is 4 to the power of three?</string>
     <string name="question10bText">14 times 11 = __</string>
 
-    <string name="correct_img">correct</string>
-    <string name="wrong_img_4">wrong</string>
 
     <string name="leaderboard_text">Leaders</string>
-    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="maths_badge">CgkI6JCEvPoDEAIQBw </string>
+    <string name="maths_leaderboard">CgkI6JCEvPoDEAIQDA</string>
+
+
+
 
     <!-- Profile Section -->
     <string name="Profile">Profile</string>
     <string name="profileText">Welcome to your profile page!</string>
+    <string name="title_activity_profile">ProfileActivity</string>
     <string name="score" />
 
 

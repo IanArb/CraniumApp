@@ -3,7 +3,6 @@ package com.cranium.ianarbuckle.craniumapp.Maths;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,9 +12,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.cranium.ianarbuckle.craniumapp.R;
+import com.cranium.ianarbuckle.craniumapp.com.cranium.ianarbuckle.craniumapp.game.BaseGameActivity;
+import com.google.android.gms.games.Games;
 
 
-public class QuizActivity extends ActionBarActivity {
+public class QuizActivity extends BaseGameActivity {
 
     private GridLayout grid1, grid2, grid3, grid4, grid5, grid6, grid7, grid8, grid9, grid10;
     private RelativeLayout blackboard1, blackboard2, blackboard3, blackboard4, blackboard5, blackboard6, blackboard7, blackboard8, blackboard9, blackboard10, finish;
@@ -261,7 +262,27 @@ public class QuizActivity extends ActionBarActivity {
 
         finish = (RelativeLayout) findViewById(R.id.finish);
 
+        findViewById(R.id.show_achievements);
 
+
+    }
+
+    @Override
+    public void onSignInFailed() {
+
+    }
+
+    @Override
+    public void onSignInSucceeded() {
+
+    }
+
+    public void onClick(View v){
+        switch(v.getId()){
+            case R.id.achievements:
+                startActivityForResult(Games.Achievements.getAchievementsIntent(
+                        getApiClient()), 1);
+        }
     }
 
     public void GameBtns(View v) {
@@ -269,6 +290,9 @@ public class QuizActivity extends ActionBarActivity {
         switch (v.getId()) {
 
             case R.id.q1BtnA:
+                if (getApiClient().isConnected())
+                    Games.Achievements.unlock(getApiClient(),
+                            getString(R.string.maths_badge));
                 AlertDialog.Builder dialogA = new AlertDialog.Builder(this);
                 dialogA.setTitle("Hurray!");
                 dialogA.setMessage("50 is the correct answer!");

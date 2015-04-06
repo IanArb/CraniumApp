@@ -10,7 +10,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
-import android.widget.GridLayout;
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -43,7 +42,6 @@ public class HangmanActivity extends BaseGameActivity{
     private TextView[] charViews;
     private GridView letters;
     private LetterAdapter ltrAdapt;
-    private GridLayout category;
 
     //body part images
     private ImageView[] bodyParts;
@@ -88,7 +86,6 @@ public class HangmanActivity extends BaseGameActivity{
         //Google Game Services
 
         findViewById(R.id.sign_out_button);
-        findViewById(R.id.achievements);
         findViewById(R.id.achievements);
         findViewById(R.id.show_leaderboard);
 
@@ -220,41 +217,6 @@ public class HangmanActivity extends BaseGameActivity{
         return super.onOptionsItemSelected(item);
     }
 
-    /*
-    public void onClickCat(View v) {
-        switch (v.getId()) {
-            case R.id.cat1Btn:
-                HangmanActivity.this.playGameDictatorship();
-                category.setVisibility(View.GONE);
-                letters.setVisibility(View.VISIBLE);
-                gallow.setVisibility(View.VISIBLE);
-                catText.setVisibility(View.GONE);
-
-                break;
-            case R.id.cat2Btn:
-                HangmanActivity.this.playGameIrish();
-                category.setVisibility(View.GONE);
-                letters.setVisibility(View.VISIBLE);
-                gallow.setVisibility(View.VISIBLE);
-                catText.setVisibility(View.GONE);
-                break;
-            case R.id.cat3Btn:
-                HangmanActivity.this.playGameAmerican();
-                category.setVisibility(View.GONE);
-                letters.setVisibility(View.VISIBLE);
-                gallow.setVisibility(View.VISIBLE);
-                catText.setVisibility(View.GONE);
-                break;
-            case R.id.cat4Btn:
-                HangmanActivity.this.playGameRussian();
-                category.setVisibility(View.GONE);
-                letters.setVisibility(View.VISIBLE);
-                gallow.setVisibility(View.VISIBLE);
-                catText.setVisibility(View.GONE);
-                break;
-        }
-    }
-    */
 
 
     public void playGameDictatorship() {

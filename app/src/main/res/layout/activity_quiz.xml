@@ -40,7 +40,6 @@
             android:background="@drawable/quiz_image02"
             android:layout_row="0"
             android:layout_column="0"
-            android:contentDescription="@string/correct_img"
             android:onClick="GameBtns" />
 
         <ImageButton
@@ -72,7 +71,6 @@
             android:background="@drawable/quiz_image04"
             android:layout_row="6"
             android:layout_column="12"
-            android:contentDescription="@string/wrong_img_4"
             android:onClick="GameBtns"/>
     </GridLayout>
 
@@ -691,6 +689,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/show_achievements"
             android:layout_marginTop="50dp"
+            android:onClick="onClick"
             android:text="@string/show_achievements"
             />
 
