@@ -687,10 +687,30 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/show_achievements"
+            android:id="@+id/achievements"
             android:layout_marginTop="50dp"
             android:onClick="onClick"
             android:text="@string/show_achievements"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exit"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="100dp"
+            android:onClick="onClick"
+            android:text="@string/exit"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/show_leaderboard"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="200dp"
+            android:onClick="onClick"
+            android:text="@string/leaderboard_text"
             />
 
     </RelativeLayout>

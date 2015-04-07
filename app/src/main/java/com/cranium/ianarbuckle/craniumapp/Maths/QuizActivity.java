@@ -2,6 +2,7 @@ package com.cranium.ianarbuckle.craniumapp.Maths;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -262,7 +263,9 @@ public class QuizActivity extends BaseGameActivity {
 
         finish = (RelativeLayout) findViewById(R.id.finish);
 
-        findViewById(R.id.show_achievements);
+        findViewById(R.id.achievements);
+        findViewById(R.id.show_leaderboard);
+        findViewById(R.id.exit);
 
 
     }
@@ -282,6 +285,15 @@ public class QuizActivity extends BaseGameActivity {
             case R.id.achievements:
                 startActivityForResult(Games.Achievements.getAchievementsIntent(
                         getApiClient()), 1);
+                break;
+            case R.id.show_leaderboard:
+                startActivityForResult(Games.Leaderboards.getLeaderboardIntent(
+                        getApiClient(), getString(R.string.maths_leaderboard)),2);
+                break;
+            case R.id.exit:
+                Intent i = new Intent(this, MathsActivity.class);
+                this.startActivity(i);
+                break;
         }
     }
 
@@ -290,17 +302,20 @@ public class QuizActivity extends BaseGameActivity {
         switch (v.getId()) {
 
             case R.id.q1BtnA:
+                //increment correct answer
+                numCorr++;
                 if (getApiClient().isConnected())
                     Games.Achievements.unlock(getApiClient(),
                             getString(R.string.maths_badge));
+                Games.Leaderboards.submitScore(getApiClient(),
+                        getString(R.string.maths_leaderboard),numCorr);
                 AlertDialog.Builder dialogA = new AlertDialog.Builder(this);
                 dialogA.setTitle("Hurray!");
                 dialogA.setMessage("50 is the correct answer!");
                 dialogA.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
-                        //increment correct answer
-                        numCorr++;
+
 
                         //set q1 to gone
                         grid1.setVisibility(View.GONE);
@@ -407,14 +422,20 @@ public class QuizActivity extends BaseGameActivity {
             //Question 2
 
             case R.id.q2BtnA:
+                //increment correct answer
+                numCorr++;
+                if (getApiClient().isConnected())
+                    Games.Achievements.unlock(getApiClient(),
+                            getString(R.string.maths_badge));
+                Games.Leaderboards.submitScore(getApiClient(),
+                        getString(R.string.maths_leaderboard),numCorr);
                 AlertDialog.Builder dialogQ2A = new AlertDialog.Builder(this);
                 dialogQ2A.setTitle("Hurray!");
                 dialogQ2A.setMessage("255 is the correct answer!");
                 dialogQ2A.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
-                        //increment correct answer
-                        numCorr++;
+
 
                         //set q1 to gone
                         grid2.setVisibility(View.GONE);
@@ -526,14 +547,20 @@ public class QuizActivity extends BaseGameActivity {
 
             //question 3
             case R.id.q3BtnA:
+                //increment correct answer
+                numCorr++;
+                if (getApiClient().isConnected())
+                    Games.Achievements.unlock(getApiClient(),
+                            getString(R.string.maths_badge));
+                Games.Leaderboards.submitScore(getApiClient(),
+                        getString(R.string.maths_leaderboard),numCorr);
                 AlertDialog.Builder dialogQ3A = new AlertDialog.Builder(this);
                 dialogQ3A.setTitle("Hurray!");
                 dialogQ3A.setMessage("35,640 is the correct answer!");
                 dialogQ3A.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
-                        //increment correct answer
-                        numCorr++;
+
 
                         //set q1 to gone
                         grid3.setVisibility(View.GONE);
@@ -640,14 +667,20 @@ public class QuizActivity extends BaseGameActivity {
             //Question 4
 
             case R.id.q4BtnA:
+                //increment correct answer
+                numCorr++;
+                if (getApiClient().isConnected())
+                    Games.Achievements.unlock(getApiClient(),
+                            getString(R.string.maths_badge));
+                Games.Leaderboards.submitScore(getApiClient(),
+                        getString(R.string.maths_leaderboard),numCorr);
                 AlertDialog.Builder dialogQ4A = new AlertDialog.Builder(this);
                 dialogQ4A.setTitle("Hurray!");
                 dialogQ4A.setMessage("0.58 is the correct answer!");
                 dialogQ4A.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
-                        //increment correct answer
-                        numCorr++;
+
 
                         //set q1 to gone
                         grid4.setVisibility(View.GONE);
@@ -754,14 +787,20 @@ public class QuizActivity extends BaseGameActivity {
             //Question 5
 
             case R.id.q5BtnA:
+                //increment correct answer
+                numCorr++;
+
+                if (getApiClient().isConnected())
+                    Games.Achievements.unlock(getApiClient(),
+                            getString(R.string.maths_badge));
+                Games.Leaderboards.submitScore(getApiClient(),
+                        getString(R.string.maths_leaderboard),numCorr);
                 AlertDialog.Builder dialogQ5A = new AlertDialog.Builder(this);
                 dialogQ5A.setTitle("Hurray!");
                 dialogQ5A.setMessage("59 is the correct answer!");
                 dialogQ5A.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
-                        //increment correct answer
-                        numCorr++;
 
                         //set q1 to gone
                         grid5.setVisibility(View.GONE);
@@ -866,14 +905,20 @@ public class QuizActivity extends BaseGameActivity {
                 break;
 
             case R.id.q6BtnA:
+                //increment correct answer
+                numCorr++;
+                if (getApiClient().isConnected())
+                    Games.Achievements.unlock(getApiClient(),
+                            getString(R.string.maths_badge));
+                Games.Leaderboards.submitScore(getApiClient(),
+                        getString(R.string.maths_leaderboard),numCorr);
                 AlertDialog.Builder dialogQ6A = new AlertDialog.Builder(this);
                 dialogQ6A.setTitle("Hurray!");
                 dialogQ6A.setMessage("1,211 is the correct answer!");
                 dialogQ6A.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
-                        //increment correct answer
-                        numCorr++;
+
 
                         //set q1 to gone
                         grid6.setVisibility(View.GONE);
@@ -980,14 +1025,20 @@ public class QuizActivity extends BaseGameActivity {
             //question 7
 
             case R.id.q7BtnA:
+                //increment correct answer
+                numCorr++;
+                if (getApiClient().isConnected())
+                    Games.Achievements.unlock(getApiClient(),
+                            getString(R.string.maths_badge));
+                Games.Leaderboards.submitScore(getApiClient(),
+                        getString(R.string.maths_leaderboard),numCorr);
                 AlertDialog.Builder dialogQ7A = new AlertDialog.Builder(this);
                 dialogQ7A.setTitle("Hurray!");
                 dialogQ7A.setMessage("11,552 is the correct answer!");
                 dialogQ7A.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
-                        //increment correct answer
-                        numCorr++;
+
 
                         //set q1 to gone
                         grid7.setVisibility(View.GONE);
@@ -1094,14 +1145,20 @@ public class QuizActivity extends BaseGameActivity {
             //question 8
 
             case R.id.q8BtnA:
+                //increment correct answer
+                numCorr++;
+                if (getApiClient().isConnected())
+                    Games.Achievements.unlock(getApiClient(),
+                            getString(R.string.maths_badge));
+                Games.Leaderboards.submitScore(getApiClient(),
+                        getString(R.string.maths_leaderboard),numCorr);
                 AlertDialog.Builder dialogQ8A = new AlertDialog.Builder(this);
                 dialogQ8A.setTitle("Hurray!");
                 dialogQ8A.setMessage("13.29 is the correct answer!");
                 dialogQ8A.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
-                        //increment correct answer
-                        numCorr++;
+
 
                         //set q1 to gone
                         grid8.setVisibility(View.GONE);
@@ -1208,14 +1265,20 @@ public class QuizActivity extends BaseGameActivity {
             //question 9
 
             case R.id.q9BtnA:
+                //increment correct answer
+                numCorr++;
+                if (getApiClient().isConnected())
+                    Games.Achievements.unlock(getApiClient(),
+                            getString(R.string.maths_badge));
+                Games.Leaderboards.submitScore(getApiClient(),
+                        getString(R.string.maths_leaderboard),numCorr);
                 AlertDialog.Builder dialogQ9A = new AlertDialog.Builder(this);
                 dialogQ9A.setTitle("Wrong!");
                 dialogQ9A.setMessage("0.8 is the correct answer!");
                 dialogQ9A.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
-                        //increment correct answer
-                        numCorr++;
+
 
                         //set q1 to gone
                         grid9.setVisibility(View.GONE);
@@ -1321,14 +1384,20 @@ public class QuizActivity extends BaseGameActivity {
 
             //question 10
             case R.id.q10BtnA:
+                //increment correct answer
+                numCorr++;
+                if (getApiClient().isConnected())
+                    Games.Achievements.unlock(getApiClient(),
+                            getString(R.string.maths_badge));
+                Games.Leaderboards.submitScore(getApiClient(),
+                        getString(R.string.maths_leaderboard),numCorr);
                 AlertDialog.Builder dialogQ10A = new AlertDialog.Builder(this);
                 dialogQ10A.setTitle("Hurray!");
                 dialogQ10A.setMessage("228 is the correct answer!");
                 dialogQ10A.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
-                        //increment correct answer
-                        numCorr++;
+
                         //set q1 to gone
                         grid10.setVisibility(View.GONE);
                         q10BtnA.setVisibility(View.GONE);
@@ -1341,7 +1410,6 @@ public class QuizActivity extends BaseGameActivity {
                         finish.setVisibility(View.VISIBLE);
 
                         //Display score
-                        int newScore;
 
 
                         score.setText("Your overall score is "+numCorr);

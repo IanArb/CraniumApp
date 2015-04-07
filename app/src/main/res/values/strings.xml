@@ -160,6 +160,7 @@
     <string name="profileText">Welcome to your profile page!</string>
     <string name="title_activity_profile">ProfileActivity</string>
     <string name="score" />
+    <string name="exit">Exit</string>
 
 
 </resources>
