@@ -367,7 +367,7 @@ public class ScrambleGame extends BaseGameActivity{
                 disableBtns();
                 //let the user know they have won, ask if they wish to play again
                 AlertDialog.Builder winBuild = new AlertDialog.Builder(this);
-                winBuild.setTitle("YAY");
+                winBuild.setTitle("Sup hoss! You guessed the correct word" + currWord);
                 winBuild.setItems(R.array.scramble_cat,
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
@@ -409,7 +409,7 @@ public class ScrambleGame extends BaseGameActivity{
             //user has lost
             disableBtns();
             AlertDialog.Builder loseBuild = new AlertDialog.Builder(this);
-            loseBuild.setTitle("OOPS");
+            loseBuild.setTitle("Sorry hoss! The answer was:" + currWord +" Play again");
             loseBuild.setItems(R.array.scramble_cat,
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
