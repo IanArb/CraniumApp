@@ -27,7 +27,7 @@ public class Geo_Quiz1 extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_geo__quiz1);
 
-        findViewById(R.id.imageBritish).setOnTouchListener(new MyTouchListener());
+        findViewById(R.id.imageBritain).setOnTouchListener(new MyTouchListener());
         findViewById(R.id.imageIreland).setOnTouchListener(new MyTouchListener());
         findViewById(R.id.imageFrance).setOnTouchListener(new MyTouchListener());
         findViewById(R.id.imageDenmark).setOnTouchListener(new MyTouchListener());
@@ -37,7 +37,6 @@ public class Geo_Quiz1 extends Activity {
         findViewById(R.id.imageSweden).setOnTouchListener(new MyTouchListener());
         findViewById(R.id.imageSwiss).setOnTouchListener(new MyTouchListener());
         findViewById(R.id.imagePoland).setOnTouchListener(new MyTouchListener());
-        findViewById(R.id.draggable).setOnDragListener(new MyDragListener());
         findViewById(R.id.topleft).setOnDragListener(new MyDragListener());
         findViewById(R.id.topleft2).setOnDragListener(new MyDragListener());
         findViewById(R.id.topright).setOnDragListener(new MyDragListener());
@@ -48,6 +47,7 @@ public class Geo_Quiz1 extends Activity {
         findViewById(R.id.bottomleft2).setOnDragListener(new MyDragListener());
         findViewById(R.id.bottomright).setOnDragListener(new MyDragListener());
         findViewById(R.id.bottomright2).setOnDragListener(new MyDragListener());
+
 
     }
 
@@ -77,6 +77,7 @@ public class Geo_Quiz1 extends Activity {
                     break;
                 case DragEvent.ACTION_DRAG_ENTERED:
                     v.setBackgroundDrawable(enterShape);
+
                     break;
                 case DragEvent.ACTION_DRAG_EXITED:
                     v.setBackgroundDrawable(normalShape);

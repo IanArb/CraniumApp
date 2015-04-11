@@ -15,16 +15,13 @@
         android:layout_height="75dp"
         android:layout_row="0"
         android:background="@drawable/shape"
-        android:layout_column="0">
+        android:orientation="horizontal"
+        android:layout_column="0"
+        >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/Switzerland"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="20dp"
-            android:id="@+id/swissText" />
+
+
+
     </LinearLayout>
 
     <LinearLayout
@@ -33,16 +30,10 @@
         android:layout_height="75dp"
         android:background="@drawable/shape"
         android:layout_row="0"
+        android:orientation="horizontal"
         android:layout_column="2">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/Denmark"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="20dp"
-            android:id="@+id/denText" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -50,17 +41,11 @@
         android:layout_width="180dp"
         android:layout_height="75dp"
         android:background="@drawable/shape"
+        android:orientation="horizontal"
         android:layout_row="1"
         android:layout_column="2">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/Spain"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="20dp"
-            android:id="@+id/spainText" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -68,35 +53,23 @@
         android:layout_width="180dp"
         android:layout_height="75dp"
         android:background="@drawable/shape"
+        android:orientation="horizontal"
         android:layout_row="2"
         android:layout_column="0">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/Britain"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="20dp"
-            android:id="@+id/ukText" />
+
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/midright"
         android:layout_width="180dp"
         android:layout_height="75dp"
+        android:orientation="horizontal"
         android:background="@drawable/shape"
         android:layout_row="2"
         android:layout_column="2">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/France"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="20dp"
-            android:id="@+id/frenchText" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -105,160 +78,159 @@
         android:layout_height="75dp"
         android:background="@drawable/shape"
         android:layout_row="1"
+        android:orientation="horizontal"
         android:layout_column="0">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/Italy"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="20dp"
-            android:id="@+id/italyText" />
+
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/bottomright"
         android:layout_width="180dp"
         android:layout_height="75dp"
+        android:orientation="horizontal"
         android:background="@drawable/shape"
         android:layout_row="3"
         android:layout_column="0" >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/Germany"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="20dp"
-            android:id="@+id/germanText" />
+
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/bottomleft"
         android:layout_width="180dp"
+        android:orientation="horizontal"
         android:layout_height="75dp"
         android:background="@drawable/shape"
         android:layout_row="3"
         android:layout_column="2" >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/Ireland"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="20dp"
-            android:id="@+id/irishText" />
+
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/bottomleft2"
+        android:orientation="horizontal"
         android:layout_width="180dp"
         android:layout_height="75dp"
         android:background="@drawable/shape"
         android:layout_row="4"
         android:layout_column="0" >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/Poland"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="20dp"
-            android:id="@+id/poleText" />
+
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/bottomright2"
         android:layout_width="180dp"
+        android:orientation="horizontal"
         android:layout_height="75dp"
         android:background="@drawable/shape"
         android:layout_row="4"
         android:layout_column="2" >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/Swedish"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="20dp"
-            android:id="@+id/swedText" />
+
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/draggable"
-        android:layout_width="180dp"
-        android:layout_height="75dp"
-        android:layout_row="8"
-        android:layout_marginLeft="-100dp"
-        android:background="@drawable/shape"
-        android:layout_marginTop="50dp">
 
-        <ImageView
-            android:id="@+id/imageBritish"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/british_flag" />
-        <ImageView
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:background="@drawable/spanish_flag"
+        android:id="@+id/imageSpain"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_row="5"
+        android:layout_column="0" />
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:background="@drawable/british_flag"
+        android:id="@+id/imageBritain"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_row="5"
+        android:layout_column="2" />
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:background="@drawable/swedish_flag"
+        android:id="@+id/imageSweden"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_row="6"
+        android:layout_column="0" />
+
+    <ImageView
+            android:layout_width="75dp"
+            android:layout_height="25dp"
+            android:background="@drawable/irish_flag"
             android:id="@+id/imageIreland"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="-180dp"
-            android:src="@drawable/irish_flag" />
-        <ImageView
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_row="6"
+            android:layout_column="2" />
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:background="@drawable/italian_flag"
+        android:id="@+id/imageItaly"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_row="7"
+        android:layout_column="0" />
+
+    <ImageView
+            android:layout_width="75dp"
+            android:layout_height="25dp"
+            android:background="@drawable/french_flag"
             android:id="@+id/imageFrance"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="-180dp"
-            android:src="@drawable/french_flag" />
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_row="7"
+            android:layout_column="2" />
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:background="@drawable/polish_flag"
+        android:id="@+id/imagePoland"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_row="8"
+        android:layout_column="0" />
+
         <ImageView
-            android:id="@+id/imageGermany"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="-180dp"
-            android:src="@drawable/german_flag" />
-        <ImageView
-            android:id="@+id/imageDenmark"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="-180dp"
-            android:src="@drawable/danish_flag" />
-        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="25dp"
+            android:background="@drawable/swiss_flag"
             android:id="@+id/imageSwiss"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="-180dp"
-            android:src="@drawable/swiss_flag" />
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_row="8"
+            android:layout_column="2" />
         <ImageView
-            android:id="@+id/imagePoland"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="-180dp"
-            android:src="@drawable/polish_flag" />
-        <ImageView
-            android:id="@+id/imageSpain"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="-180dp"
-            android:src="@drawable/spanish_flag" />
-        <ImageView
-            android:id="@+id/imageItaly"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="-180dp"
-            android:src="@drawable/italian_flag" />
-        <ImageView
-            android:id="@+id/imageSweden"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="-180dp"
-            android:src="@drawable/swedish_flag" />
+            android:layout_width="75dp"
+            android:layout_height="25dp"
+            android:background="@drawable/german_flag"
+            android:id="@+id/imageGermany"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_row="9"
+            android:layout_column="2" />
 
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="25dp"
+            android:background="@drawable/danish_flag"
+            android:id="@+id/imageDenmark"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_row="9"
+            android:layout_column="0" />
 
-    </LinearLayout>
 
 </GridLayout>
