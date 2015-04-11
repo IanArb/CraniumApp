@@ -1,337 +1,264 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="5dp"
-    android:paddingRight="5dp"
-    android:paddingTop="5dp"
-    android:paddingBottom="5dp"
-    tools:context="com.cranium.ianarbuckle.craniumapp.Geography.Geo_Quiz1">
+    android:columnCount="3"
+    android:columnWidth="320dp"
+    android:orientation="vertical"
+    android:layout_marginLeft="5dp"
+    android:rowCount="11"
+    android:stretchMode="columnWidth" >
 
-    <ImageView
-        android:layout_width="187dp"
+    <LinearLayout
+        android:id="@+id/topleft"
+        android:layout_width="180dp"
         android:layout_height="75dp"
-        android:id="@+id/british_flag"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:contentDescription="@string/british_flag" />
+        android:layout_row="0"
+        android:background="@drawable/shape"
+        android:layout_column="0">
 
-    <ImageView
-        android:layout_width="187dp"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/Switzerland"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/swissText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/topright"
+        android:layout_width="180dp"
         android:layout_height="75dp"
-        android:id="@+id/irish_flag"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:contentDescription="@string/irish_flag" />
+        android:background="@drawable/shape"
+        android:layout_row="0"
+        android:layout_column="2">
 
-    <ImageView
-        android:layout_width="187dp"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/Denmark"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/denText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/topright2"
+        android:layout_width="180dp"
         android:layout_height="75dp"
-        android:id="@+id/swedish_flag"
-        android:layout_below="@+id/british_flag"
-        android:layout_alignLeft="@+id/british_flag"
-        android:layout_alignStart="@+id/british_flag"
-        android:contentDescription="@string/swedish_flag" />
+        android:background="@drawable/shape"
+        android:layout_row="1"
+        android:layout_column="2">
 
-    <ImageView
-        android:layout_width="187dp"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/Spain"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/spainText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/midleft"
+        android:layout_width="180dp"
         android:layout_height="75dp"
-        android:id="@+id/swiss_flag"
-        android:layout_below="@+id/irish_flag"
-        android:layout_alignLeft="@+id/irish_flag"
-        android:layout_alignStart="@+id/irish_flag"
-        android:contentDescription="@string/swiss_flag" />
+        android:background="@drawable/shape"
+        android:layout_row="2"
+        android:layout_column="0">
 
-    <ImageView
-        android:layout_width="187dp"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/Britain"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/ukText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/midright"
+        android:layout_width="180dp"
         android:layout_height="75dp"
-        android:id="@+id/danish_flag"
-        android:layout_below="@+id/swedish_flag"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:contentDescription="@string/danish_flag" />
+        android:background="@drawable/shape"
+        android:layout_row="2"
+        android:layout_column="2">
 
-    <ImageView
-        android:layout_width="187dp"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/France"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/frenchText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/topleft2"
+        android:layout_width="180dp"
         android:layout_height="75dp"
-        android:id="@+id/german_flag"
-        android:layout_above="@+id/italian_flag"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:contentDescription="@string/german_flag" />
+        android:background="@drawable/shape"
+        android:layout_row="1"
+        android:layout_column="0">
 
-    <ImageView
-        android:layout_width="187dp"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/Italy"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/italyText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomright"
+        android:layout_width="180dp"
         android:layout_height="75dp"
-        android:id="@+id/polish_flag"
-        android:layout_below="@+id/danish_flag"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:contentDescription="@string/polish_flag" />
+        android:background="@drawable/shape"
+        android:layout_row="3"
+        android:layout_column="0" >
 
-    <ImageView
-        android:layout_width="187dp"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/Germany"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/germanText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomleft"
+        android:layout_width="180dp"
         android:layout_height="75dp"
-        android:id="@+id/italian_flag"
-        android:layout_below="@+id/danish_flag"
-        android:layout_alignLeft="@+id/german_flag"
-        android:layout_alignStart="@+id/german_flag"
-        android:contentDescription="@string/italian_flag" />
+        android:background="@drawable/shape"
+        android:layout_row="3"
+        android:layout_column="2" >
 
-    <ImageView
-        android:layout_width="187dp"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/Ireland"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/irishText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomleft2"
+        android:layout_width="180dp"
         android:layout_height="75dp"
-        android:id="@+id/spanish_flag"
-        android:layout_below="@+id/polish_flag"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:contentDescription="@string/spanish_flag" />
+        android:background="@drawable/shape"
+        android:layout_row="4"
+        android:layout_column="0" >
 
-    <ImageView
-        android:layout_width="187dp"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/Poland"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/poleText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomright2"
+        android:layout_width="180dp"
         android:layout_height="75dp"
-        android:id="@+id/french_flag"
-        android:layout_below="@+id/polish_flag"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:contentDescription="@string/french_flag" />
+        android:background="@drawable/shape"
+        android:layout_row="4"
+        android:layout_column="2" >
 
-    <ImageView
-        android:background="@drawable/british_flag"
-        android:layout_width="187dp"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/Swedish"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/swedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/draggable"
+        android:layout_width="180dp"
         android:layout_height="75dp"
-        android:id="@+id/Flag1"
-        android:layout_below="@+id/spanish_flag"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="54dp"
-        android:contentDescription="British" />
+        android:layout_row="8"
+        android:layout_marginLeft="-100dp"
+        android:background="@drawable/shape"
+        android:layout_marginTop="50dp">
 
-    <ImageView
-        android:background="@drawable/french_flag"
-        android:layout_width="187dp"
-        android:layout_height="75dp"
-        android:id="@+id/Flag2"
-        android:layout_below="@+id/spanish_flag"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="54dp"
-        android:visibility="gone" />
+        <ImageView
+            android:id="@+id/imageBritish"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/british_flag" />
+        <ImageView
+            android:id="@+id/imageIreland"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-180dp"
+            android:src="@drawable/irish_flag" />
+        <ImageView
+            android:id="@+id/imageFrance"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-180dp"
+            android:src="@drawable/french_flag" />
+        <ImageView
+            android:id="@+id/imageGermany"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-180dp"
+            android:src="@drawable/german_flag" />
+        <ImageView
+            android:id="@+id/imageDenmark"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-180dp"
+            android:src="@drawable/danish_flag" />
+        <ImageView
+            android:id="@+id/imageSwiss"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-180dp"
+            android:src="@drawable/swiss_flag" />
+        <ImageView
+            android:id="@+id/imagePoland"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-180dp"
+            android:src="@drawable/polish_flag" />
+        <ImageView
+            android:id="@+id/imageSpain"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-180dp"
+            android:src="@drawable/spanish_flag" />
+        <ImageView
+            android:id="@+id/imageItaly"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-180dp"
+            android:src="@drawable/italian_flag" />
+        <ImageView
+            android:id="@+id/imageSweden"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-180dp"
+            android:src="@drawable/swedish_flag" />
 
-    <ImageView
-        android:background="@drawable/irish_flag"
-        android:layout_width="187dp"
-        android:layout_height="75dp"
-        android:id="@+id/Flag3"
-        android:layout_below="@+id/spanish_flag"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="54dp"
-        android:visibility="gone" />
 
-    <ImageView
-        android:background="@drawable/spanish_flag"
-        android:layout_width="187dp"
-        android:layout_height="75dp"
-        android:id="@+id/Flag4"
-        android:layout_below="@+id/spanish_flag"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="54dp"
-        android:visibility="gone" />
+    </LinearLayout>
 
-    <ImageView
-        android:background="@drawable/swedish_flag"
-        android:layout_width="187dp"
-        android:layout_height="75dp"
-        android:id="@+id/Flag5"
-        android:layout_below="@+id/spanish_flag"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="54dp"
-        android:visibility="gone" />
-
-    <ImageView
-        android:background="@drawable/italian_flag"
-        android:layout_width="187dp"
-        android:layout_height="75dp"
-        android:id="@+id/Flag6"
-        android:layout_below="@+id/spanish_flag"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="54dp"
-        android:visibility="gone" />
-
-    <ImageView
-        android:background="@drawable/swiss_flag"
-        android:layout_width="187dp"
-        android:layout_height="75dp"
-        android:id="@+id/Flag7"
-        android:layout_below="@+id/spanish_flag"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="54dp"
-        android:visibility="gone" />
-
-    <ImageView
-        android:background="@drawable/polish_flag"
-        android:layout_width="187dp"
-        android:layout_height="75dp"
-        android:id="@+id/Flag8"
-        android:layout_below="@+id/spanish_flag"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="54dp"
-        android:visibility="gone" />
-
-    <ImageView
-        android:background="@drawable/danish_flag"
-        android:layout_width="187dp"
-        android:layout_height="75dp"
-        android:id="@+id/Flag9"
-        android:layout_below="@+id/spanish_flag"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="54dp"
-        android:visibility="gone" />
-
-    <ImageView
-        android:background="@drawable/german_flag"
-        android:layout_width="187dp"
-        android:layout_height="75dp"
-        android:id="@+id/Flag10"
-        android:layout_below="@+id/spanish_flag"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="54dp"
-        android:visibility="gone" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Match Flag And Country"
-        android:id="@+id/Prompt_Text"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Country 1"
-        android:id="@+id/Country1"
-        android:layout_alignParentTop="true"
-        android:layout_above="@+id/swedish_flag"
-        android:layout_alignRight="@+id/british_flag"
-        android:layout_alignEnd="@+id/british_flag"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Country 2"
-        android:id="@+id/Country2"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_above="@+id/swiss_flag"
-        android:layout_alignLeft="@+id/irish_flag"
-        android:layout_alignStart="@+id/irish_flag" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Country 3"
-        android:id="@+id/Country3"
-        android:layout_below="@+id/british_flag"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/danish_flag"
-        android:layout_alignRight="@+id/british_flag"
-        android:layout_alignEnd="@+id/british_flag" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Country 4"
-        android:id="@+id/Country4"
-        android:layout_below="@+id/irish_flag"
-        android:layout_alignLeft="@+id/swiss_flag"
-        android:layout_alignStart="@+id/swiss_flag"
-        android:layout_above="@+id/german_flag"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Country 5"
-        android:id="@+id/Country5"
-        android:layout_below="@+id/swedish_flag"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignBottom="@+id/danish_flag"
-        android:layout_alignRight="@+id/swedish_flag"
-        android:layout_alignEnd="@+id/swedish_flag" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Country 6"
-        android:id="@+id/Country6"
-        android:layout_below="@+id/swedish_flag"
-        android:layout_toRightOf="@+id/swedish_flag"
-        android:layout_alignBottom="@+id/german_flag"
-        android:layout_alignRight="@+id/swiss_flag"
-        android:layout_alignEnd="@+id/swiss_flag" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Country 7"
-        android:id="@+id/Country7"
-        android:layout_below="@+id/danish_flag"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/spanish_flag"
-        android:layout_alignRight="@+id/polish_flag"
-        android:layout_alignEnd="@+id/polish_flag" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Country 8"
-        android:id="@+id/Country8"
-        android:layout_alignTop="@+id/polish_flag"
-        android:layout_toRightOf="@+id/polish_flag"
-        android:layout_above="@+id/french_flag"
-        android:layout_alignRight="@+id/italian_flag"
-        android:layout_alignEnd="@+id/italian_flag" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Country 9"
-        android:id="@+id/Country9"
-        android:layout_below="@+id/polish_flag"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignBottom="@+id/spanish_flag"
-        android:layout_alignRight="@+id/polish_flag"
-        android:layout_alignEnd="@+id/polish_flag" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Country 10"
-        android:id="@+id/Country10"
-        android:layout_below="@+id/italian_flag"
-        android:layout_alignLeft="@+id/italian_flag"
-        android:layout_alignStart="@+id/italian_flag"
-        android:layout_alignBottom="@+id/french_flag"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-</RelativeLayout>
+</GridLayout>

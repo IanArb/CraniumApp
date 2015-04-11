@@ -112,6 +112,16 @@
     <string name="italian_flag">Italy</string>
     <string name="spanish_flag">Spain</string>
     <string name="french_flag">France</string>
+    <string name="Switzerland">Switzerland</string>
+    <string name="Denmark">Denmark</string>
+    <string name="Italy">Italy</string>
+    <string name="Spain">Spain</string>
+    <string name="Britain">Britain</string>
+    <string name="France">France</string>
+    <string name="Germany">Germany</string>
+    <string name="Ireland">Ireland</string>
+    <string name="Poland">Poland</string>
+    <string name="Swedish">Sweden</string>
     <string name="title_activity_geo_you_tube_player">GeoYouTubePlayer</string>
     <string name="geo_tutorial">Welcome to your Geography tutorial</string>
 
@@ -161,6 +171,7 @@
     <string name="title_activity_profile">ProfileActivity</string>
     <string name="score" />
     <string name="exit">Exit</string>
+
 
 
 </resources>
