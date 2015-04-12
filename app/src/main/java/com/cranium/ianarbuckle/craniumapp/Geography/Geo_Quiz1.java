@@ -1,5 +1,7 @@
 package com.cranium.ianarbuckle.craniumapp.Geography;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -16,17 +18,21 @@ import android.view.View.OnDragListener;
 import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.content.Context;
 
 import com.cranium.ianarbuckle.craniumapp.R;
+import com.cranium.ianarbuckle.craniumapp.com.cranium.ianarbuckle.craniumapp.game.BaseGameActivity;
+import com.google.android.gms.games.Games;
 
 
-public class Geo_Quiz1 extends Activity {
+public class Geo_Quiz1 extends BaseGameActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_geo__quiz1);
 
+        //images
         findViewById(R.id.imageBritain).setOnTouchListener(new MyTouchListener());
         findViewById(R.id.imageIreland).setOnTouchListener(new MyTouchListener());
         findViewById(R.id.imageFrance).setOnTouchListener(new MyTouchListener());
@@ -37,17 +43,58 @@ public class Geo_Quiz1 extends Activity {
         findViewById(R.id.imageSweden).setOnTouchListener(new MyTouchListener());
         findViewById(R.id.imageSwiss).setOnTouchListener(new MyTouchListener());
         findViewById(R.id.imagePoland).setOnTouchListener(new MyTouchListener());
-        findViewById(R.id.topleft).setOnDragListener(new MyDragListener());
-        findViewById(R.id.topleft2).setOnDragListener(new MyDragListener());
-        findViewById(R.id.topright).setOnDragListener(new MyDragListener());
-        findViewById(R.id.topright2).setOnDragListener(new MyDragListener());
-        findViewById(R.id.midright).setOnDragListener(new MyDragListener());
-        findViewById(R.id.midleft).setOnDragListener(new MyDragListener());
-        findViewById(R.id.bottomleft).setOnDragListener(new MyDragListener());
-        findViewById(R.id.bottomleft2).setOnDragListener(new MyDragListener());
-        findViewById(R.id.bottomright).setOnDragListener(new MyDragListener());
-        findViewById(R.id.bottomright2).setOnDragListener(new MyDragListener());
 
+        //containers
+        findViewById(R.id.ireland).setOnDragListener(new MyDragListener());
+        findViewById(R.id.britain).setOnDragListener(new MyDragListener());
+        findViewById(R.id.france).setOnDragListener(new MyDragListener());
+        findViewById(R.id.germany).setOnDragListener(new MyDragListener());
+        findViewById(R.id.spain).setOnDragListener(new MyDragListener());
+        findViewById(R.id.poland).setOnDragListener(new MyDragListener());
+        findViewById(R.id.switzerland).setOnDragListener(new MyDragListener());
+        findViewById(R.id.sweden).setOnDragListener(new MyDragListener());
+        findViewById(R.id.italy).setOnDragListener(new MyDragListener());
+        findViewById(R.id.denmark).setOnDragListener(new MyDragListener());
+
+        //Google Games Services
+        findViewById(R.id.badges);
+        findViewById(R.id.leaders);
+
+
+    }
+
+    public void OnClick(View v) {
+        switch (v.getId()) {
+            case R.id.badges:
+                startActivityForResult(Games.Achievements.getAchievementsIntent(
+                        getApiClient()), 1);
+                break;
+            case R.id.leaders:
+                startActivityForResult(Games.Leaderboards.getLeaderboardIntent(
+                        getApiClient(), getString(R.string.geo_leaderboard)),2);
+                break;
+            case R.id.help:
+                AlertDialog.Builder help = new AlertDialog.Builder(this);
+                help.setTitle("How to Play?");
+                help.setMessage("You must guess the word and you have six lives!");
+                help.setPositiveButton("OK", new DialogInterface.OnClickListener(){
+                    public void onClick(DialogInterface dialog, int id){
+
+                    }
+                });
+                help.show();
+
+                break;
+        }
+    }
+
+    @Override
+    public void onSignInFailed() {
+
+    }
+
+    @Override
+    public void onSignInSucceeded() {
 
     }
 
@@ -67,6 +114,8 @@ public class Geo_Quiz1 extends Activity {
 
     class MyDragListener implements OnDragListener {
         Drawable enterShape = getResources().getDrawable(R.drawable.shape_droptarget);
+
+
         @Override
         public boolean onDrag(View v, DragEvent event) {
             int action = event.getAction();
@@ -89,8 +138,13 @@ public class Geo_Quiz1 extends Activity {
                     LinearLayout container = (LinearLayout) v;
                     container.addView(view);
                     view.setVisibility(View.VISIBLE);
+
+
+
+
                     break;
                 case DragEvent.ACTION_DRAG_ENDED:
+
 
                 default:
                     break;
