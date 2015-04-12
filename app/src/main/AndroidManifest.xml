@@ -72,17 +72,14 @@
         <activity
             android:name=".Geography.Geo_Quiz1"
             android:label="Quiz #1"
-            android:parentActivityName=".Geography.GeographyActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Geography.Geo_Quiz2"
             android:label="Quiz #2"
-            android:parentActivityName=".Geography.GeographyActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Geography.Geo_Quiz3"
             android:label="Quiz #3"
-            android:parentActivityName=".Geography.GeographyActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Geography.GeoYouTubePlayer"
