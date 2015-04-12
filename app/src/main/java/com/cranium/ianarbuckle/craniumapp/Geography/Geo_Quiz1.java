@@ -2,6 +2,7 @@ package com.cranium.ianarbuckle.craniumapp.Geography;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -76,7 +77,7 @@ public class Geo_Quiz1 extends BaseGameActivity {
             case R.id.help:
                 AlertDialog.Builder help = new AlertDialog.Builder(this);
                 help.setTitle("How to Play?");
-                help.setMessage("You must guess the word and you have six lives!");
+                help.setMessage("You drag the flag to it's correct position");
                 help.setPositiveButton("OK", new DialogInterface.OnClickListener(){
                     public void onClick(DialogInterface dialog, int id){
 
@@ -84,6 +85,10 @@ public class Geo_Quiz1 extends BaseGameActivity {
                 });
                 help.show();
 
+                break;
+            case R.id.exit:
+                Intent e = new Intent(this, GeographyActivity.class);
+                startActivity(e);
                 break;
         }
     }
