@@ -67,7 +67,6 @@ public class Geo_Quiz1 extends Activity {
 
     class MyDragListener implements OnDragListener {
         Drawable enterShape = getResources().getDrawable(R.drawable.shape_droptarget);
-        Drawable normalShape = getResources().getDrawable(R.drawable.shape);
         @Override
         public boolean onDrag(View v, DragEvent event) {
             int action = event.getAction();
@@ -76,11 +75,11 @@ public class Geo_Quiz1 extends Activity {
                     // do nothing
                     break;
                 case DragEvent.ACTION_DRAG_ENTERED:
-                    v.setBackgroundDrawable(enterShape);
+
 
                     break;
                 case DragEvent.ACTION_DRAG_EXITED:
-                    v.setBackgroundDrawable(normalShape);
+                    //do nothing
                     break;
                 case DragEvent.ACTION_DROP:
                     // Dropped, reassign View to ViewGroup
@@ -92,7 +91,7 @@ public class Geo_Quiz1 extends Activity {
                     view.setVisibility(View.VISIBLE);
                     break;
                 case DragEvent.ACTION_DRAG_ENDED:
-                    v.setBackgroundDrawable(normalShape);
+
                 default:
                     break;
 
