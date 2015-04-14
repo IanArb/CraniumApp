@@ -1468,7 +1468,7 @@ public class QuizActivity2 extends BaseGameActivity {
 
                         //Display score
 
-                        score.setText("Your overall score is "+numCorr+"%");
+                        score.setText("Your overall score is "+numCorr);
 
                     }
                 });
