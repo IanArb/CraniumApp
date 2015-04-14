@@ -690,6 +690,9 @@
             android:id="@+id/achievements"
             android:layout_marginTop="50dp"
             android:onClick="onClick"
+            android:background="@drawable/roundedbutton"
+            android:textStyle="bold"
+            android:textColor="#FFFFFFFF"
             android:text="@string/show_achievements"
             />
 
@@ -700,6 +703,9 @@
             android:layout_marginTop="50dp"
             android:layout_marginLeft="100dp"
             android:onClick="onClick"
+            android:background="@drawable/roundedbutton"
+            android:textStyle="bold"
+            android:textColor="#FFFFFFFF"
             android:text="@string/exit"
             />
 
@@ -710,6 +716,9 @@
             android:layout_marginTop="50dp"
             android:layout_marginLeft="200dp"
             android:onClick="onClick"
+            android:background="@drawable/roundedbutton"
+            android:textStyle="bold"
+            android:textColor="#FFFFFFFF"
             android:text="@string/leaderboard_text"
             />
 
