@@ -26,7 +26,7 @@ public class Geo_Quiz2 extends BaseGameActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_geo__quiz1);
+        setContentView(R.layout.activity_geo__quiz2);
 
         //images
         findViewById(R.id.imageAlabama).setOnTouchListener(new MyTouchListener());

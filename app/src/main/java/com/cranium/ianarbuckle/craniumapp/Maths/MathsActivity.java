@@ -35,7 +35,7 @@ public class MathsActivity extends ActionBarActivity implements GoogleApiClient.
 
     private static final int RC_SIGN_IN = 0;
     // Logcat tag
-    private static final String TAG = "HistoryActivity";
+    private static final String TAG = "MathsActivity";
 
     // Profile pic image size in pixels
     private static final int PROFILE_PIC_SIZE = 400;
@@ -91,7 +91,7 @@ public class MathsActivity extends ActionBarActivity implements GoogleApiClient.
                 this.startActivity(a);
                 break;
             case R.id.mathsBtn2:
-                Intent b = new Intent(this, QuizActivity.class);
+                Intent b = new Intent(this, QuizActivity2.class);
                 this.startActivity(b);
                 break;
             case R.id.mathsYt:

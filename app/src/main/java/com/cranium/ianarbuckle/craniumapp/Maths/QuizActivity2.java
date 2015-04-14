@@ -41,7 +41,7 @@ public class QuizActivity2 extends BaseGameActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz);
+        setContentView(R.layout.activity_quiz_activity2);
 
 
 
