@@ -169,8 +169,8 @@
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/q3BtnA"
-            android:background="@drawable/quiz_image09"
+            android:id="@+id/q3BtnC"
+            android:background="@drawable/quiz_image11"
             android:layout_row="0"
             android:layout_column="0"
             android:onClick="GameBtns"/>
@@ -188,8 +188,8 @@
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/q3BtnC"
-            android:background="@drawable/quiz_image11"
+            android:id="@+id/q3BtnA"
+            android:background="@drawable/quiz_image09"
             android:layout_row="5"
             android:layout_column="0"
             android:layout_rowSpan="2"
@@ -235,8 +235,8 @@
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/q4BtnA"
-            android:background="@drawable/quiz_image13"
+            android:id="@+id/q4BtnB"
+            android:background="@drawable/quiz_image14"
             android:layout_row="0"
             android:layout_column="0"
             android:onClick="GameBtns"/>
@@ -244,10 +244,10 @@
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/q4BtnB"
+            android:id="@+id/q4BtnA"
             android:layout_row="0"
             android:layout_column="12"
-            android:background="@drawable/quiz_image14"
+            android:background="@drawable/quiz_image13"
             android:contentDescription="@string/image02"
             android:onClick="GameBtns"/>
 
@@ -301,8 +301,8 @@
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/q5BtnA"
-            android:background="@drawable/quiz_image17"
+            android:id="@+id/q5BtnD"
+            android:background="@drawable/quiz_image20"
             android:layout_row="0"
             android:layout_column="0"
             android:onClick="GameBtns"/>
@@ -331,8 +331,8 @@
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/q5BtnD"
-            android:background="@drawable/quiz_image20"
+            android:id="@+id/q5BtnA"
+            android:background="@drawable/quiz_image17"
             android:layout_row="6"
             android:layout_column="12"
             android:onClick="GameBtns"/>
@@ -367,8 +367,8 @@
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/q6BtnA"
-            android:background="@drawable/quiz_image21"
+            android:id="@+id/q6BtnC"
+            android:background="@drawable/quiz_image23"
             android:layout_row="0"
             android:layout_column="0"
             android:onClick="GameBtns"/>
@@ -386,8 +386,8 @@
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/q6BtnC"
-            android:background="@drawable/quiz_image23"
+            android:id="@+id/q6BtnA"
+            android:background="@drawable/quiz_image21"
             android:layout_row="5"
             android:layout_column="0"
             android:layout_rowSpan="2"
@@ -564,8 +564,8 @@
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/q9BtnA"
-            android:background="@drawable/quiz_image33"
+            android:id="@+id/q9BtnD"
+            android:background="@drawable/quiz_image36"
             android:layout_row="0"
             android:layout_column="0"
             android:onClick="GameBtns"/>
@@ -594,8 +594,8 @@
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/q9BtnD"
-            android:background="@drawable/quiz_image36"
+            android:id="@+id/q9BtnA"
+            android:background="@drawable/quiz_image33"
             android:layout_row="6"
             android:layout_column="12"
             android:onClick="GameBtns"/>
@@ -630,8 +630,8 @@
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/q10BtnA"
-            android:background="@drawable/quiz_image37"
+            android:id="@+id/q10BtnC"
+            android:background="@drawable/quiz_image39"
             android:layout_row="0"
             android:layout_column="0"
             android:onClick="GameBtns"/>
@@ -649,8 +649,8 @@
         <ImageButton
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:id="@+id/q10BtnC"
-            android:background="@drawable/quiz_image39"
+            android:id="@+id/q10BtnA"
+            android:background="@drawable/quiz_image37"
             android:layout_row="5"
             android:layout_column="0"
             android:layout_rowSpan="2"
