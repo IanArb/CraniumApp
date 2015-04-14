@@ -44,10 +44,10 @@ public class Geo_Quiz2 extends BaseGameActivity {
         findViewById(R.id.alabama).setOnDragListener(new MyDragListener());
         findViewById(R.id.arizona).setOnDragListener(new MyDragListener());
         findViewById(R.id.california).setOnDragListener(new MyDragListener());
-        findViewById(R.id.kentucky).setOnDragListener(new MyDragListener());
+        findViewById(R.id.kentucy).setOnDragListener(new MyDragListener());
         findViewById(R.id.kansas).setOnDragListener(new MyDragListener());
         findViewById(R.id.minnesota).setOnDragListener(new MyDragListener());
-        findViewById(R.id.new_york).setOnDragListener(new MyDragListener());
+        findViewById(R.id.newyork).setOnDragListener(new MyDragListener());
         findViewById(R.id.mongolia).setOnDragListener(new MyDragListener());
         findViewById(R.id.louisiana).setOnDragListener(new MyDragListener());
         findViewById(R.id.florida).setOnDragListener(new MyDragListener());

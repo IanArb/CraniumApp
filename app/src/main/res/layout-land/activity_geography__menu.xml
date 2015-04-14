@@ -81,31 +81,15 @@
         android:id="@+id/GameBtn1"
         android:background="@drawable/roundedbutton"
         android:padding="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
         android:textStyle="bold"
         android:textColor="#FFFFFFFF"
         android:onClick="OnClickGame"
+        android:layout_marginLeft="61dp"
+        android:layout_marginStart="61dp"
         android:layout_below="@+id/textView"
-        android:layout_toLeftOf="@+id/GameBtn2"
-        android:layout_toStartOf="@+id/GameBtn2" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/geo_quiz_text_3"
-        android:id="@+id/GameBtn3"
-        android:background="@drawable/roundedbutton"
-        android:padding="10dp"
-        android:layout_marginLeft="10dp"
-        android:textStyle="bold"
-        android:textColor="#FFFFFFFF"
-        android:onClick="OnClickGame"
-        android:layout_alignTop="@+id/GameBtn1"
-        android:layout_alignRight="@+id/btn_sign_out"
-        android:layout_alignEnd="@+id/btn_sign_out"
-        android:layout_marginRight="34dp"
-        android:layout_marginEnd="34dp" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -119,8 +103,10 @@
         android:textStyle="bold"
         android:textColor="#FFFFFFFF"
         android:onClick="OnClickGame"
-        android:layout_alignTop="@+id/GameBtn3"
-        android:layout_toLeftOf="@+id/GameBtn3"
-        android:layout_toStartOf="@+id/GameBtn3" />
+        android:layout_alignTop="@+id/GameBtn1"
+        android:layout_alignRight="@+id/btn_sign_out"
+        android:layout_alignEnd="@+id/btn_sign_out"
+        android:layout_marginRight="58dp"
+        android:layout_marginEnd="58dp" />
 
 </RelativeLayout>

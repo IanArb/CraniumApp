@@ -30,7 +30,7 @@ import java.io.InputStream;
 
 public class MathsActivity extends ActionBarActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
 
-    private Button mathsBtn;
+    private Button mathsBtn, mathsBtn2;
     private Button ytBtn;
 
     private static final int RC_SIGN_IN = 0;
@@ -61,7 +61,9 @@ public class MathsActivity extends ActionBarActivity implements GoogleApiClient.
         setContentView(R.layout.activity_maths_menu);
 
 
+
         mathsBtn = (Button) findViewById(R.id.mathsQuizBtn);
+        mathsBtn2 = (Button) findViewById(R.id.mathsBtn2);
         ytBtn = (Button) findViewById(R.id.ytBtn);
 
         btnSignOut = (Button) findViewById(R.id.btn_sign_out);
@@ -88,9 +90,13 @@ public class MathsActivity extends ActionBarActivity implements GoogleApiClient.
                 Intent a = new Intent(this, QuizActivity.class);
                 this.startActivity(a);
                 break;
-            case R.id.mathsYt:
-                Intent b = new Intent(this, MathsYouTubePlayer.class);
+            case R.id.mathsBtn2:
+                Intent b = new Intent(this, QuizActivity.class);
                 this.startActivity(b);
+                break;
+            case R.id.mathsYt:
+                Intent c = new Intent(this, MathsYouTubePlayer.class);
+                this.startActivity(c);
                 break;
 
         }
