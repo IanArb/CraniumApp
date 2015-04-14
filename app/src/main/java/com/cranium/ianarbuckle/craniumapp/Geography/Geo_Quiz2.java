@@ -29,28 +29,28 @@ public class Geo_Quiz2 extends BaseGameActivity {
         setContentView(R.layout.activity_geo__quiz1);
 
         //images
-        findViewById(R.id.imageBritain).setOnTouchListener(new MyTouchListener());
-        findViewById(R.id.imageIreland).setOnTouchListener(new MyTouchListener());
-        findViewById(R.id.imageFrance).setOnTouchListener(new MyTouchListener());
-        findViewById(R.id.imageDenmark).setOnTouchListener(new MyTouchListener());
-        findViewById(R.id.imageGermany).setOnTouchListener(new MyTouchListener());
-        findViewById(R.id.imageItaly).setOnTouchListener(new MyTouchListener());
-        findViewById(R.id.imageSpain).setOnTouchListener(new MyTouchListener());
-        findViewById(R.id.imageSweden).setOnTouchListener(new MyTouchListener());
-        findViewById(R.id.imageSwiss).setOnTouchListener(new MyTouchListener());
-        findViewById(R.id.imagePoland).setOnTouchListener(new MyTouchListener());
+        findViewById(R.id.imageAlabama).setOnTouchListener(new MyTouchListener());
+        findViewById(R.id.imageArizona).setOnTouchListener(new MyTouchListener());
+        findViewById(R.id.imageCalifornia).setOnTouchListener(new MyTouchListener());
+        findViewById(R.id.imageKentucy).setOnTouchListener(new MyTouchListener());
+        findViewById(R.id.imageKansas).setOnTouchListener(new MyTouchListener());
+        findViewById(R.id.imageMinnesota).setOnTouchListener(new MyTouchListener());
+        findViewById(R.id.imageNewYork).setOnTouchListener(new MyTouchListener());
+        findViewById(R.id.imageMonoglia).setOnTouchListener(new MyTouchListener());
+        findViewById(R.id.imageLouisiana).setOnTouchListener(new MyTouchListener());
+        findViewById(R.id.imageFlorida).setOnTouchListener(new MyTouchListener());
 
         //containers
-        findViewById(R.id.ireland).setOnDragListener(new MyDragListener());
-        findViewById(R.id.britain).setOnDragListener(new MyDragListener());
-        findViewById(R.id.france).setOnDragListener(new MyDragListener());
-        findViewById(R.id.germany).setOnDragListener(new MyDragListener());
-        findViewById(R.id.spain).setOnDragListener(new MyDragListener());
-        findViewById(R.id.poland).setOnDragListener(new MyDragListener());
-        findViewById(R.id.switzerland).setOnDragListener(new MyDragListener());
-        findViewById(R.id.sweden).setOnDragListener(new MyDragListener());
-        findViewById(R.id.italy).setOnDragListener(new MyDragListener());
-        findViewById(R.id.denmark).setOnDragListener(new MyDragListener());
+        findViewById(R.id.alabama).setOnDragListener(new MyDragListener());
+        findViewById(R.id.arizona).setOnDragListener(new MyDragListener());
+        findViewById(R.id.california).setOnDragListener(new MyDragListener());
+        findViewById(R.id.kentucky).setOnDragListener(new MyDragListener());
+        findViewById(R.id.kansas).setOnDragListener(new MyDragListener());
+        findViewById(R.id.minnesota).setOnDragListener(new MyDragListener());
+        findViewById(R.id.new_york).setOnDragListener(new MyDragListener());
+        findViewById(R.id.mongolia).setOnDragListener(new MyDragListener());
+        findViewById(R.id.louisiana).setOnDragListener(new MyDragListener());
+        findViewById(R.id.florida).setOnDragListener(new MyDragListener());
 
         //Google Games Services
         findViewById(R.id.badges);
