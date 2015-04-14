@@ -143,7 +143,7 @@
     <string name="question5bText">What is 12/18 divided by 7/19?</string>
     <string name="question6bText">Calculate 18+3+22+24+20+9</string>
     <string name="question7bText">Which one of these is not a quadrilateral?</string>
-    <string name="question8bText">What is the formulae for finding area?</string>
+    <string name="question8bText">What is the formulae for finding area of rectangle?</string>
     <string name="question9bText">what is 4 to the power of three?</string>
     <string name="question10bText">14 times 11 = __</string>
 
@@ -162,6 +162,9 @@
     <string name="score" />
     <string name="exit">Exit</string>
     <string name="geo_leaderboard">CgkI6JCEvPoDEAIQDQ</string>
+    <string name="title_activity_quiz_activity2">QuizActivity2</string>
+
+    <string name="hello_world">Hello world!</string>
 
 
 </resources>

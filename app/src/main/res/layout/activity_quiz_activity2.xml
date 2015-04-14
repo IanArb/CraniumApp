@@ -1,0 +1,720 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_material_light"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="16dp">
+
+    <RelativeLayout
+        android:id="@+id/q1"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/blackboard"
+        android:gravity="center"
+        android:paddingTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/question1bText"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:id="@+id/question1bText" />
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/grid1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q1BtnB"
+            android:background="@drawable/quiz2_image02"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:onClick="GameBtns" />
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q1BtnA"
+            android:layout_row="0"
+            android:layout_column="12"
+            android:background="@drawable/quiz2_image01"
+            android:onClick="GameBtns" />
+
+
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q1BtnC"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_rowSpan="2"
+            android:background="@drawable/quiz2_image03"
+            android:contentDescription="@string/image03"
+            android:onClick="GameBtns"/>
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q1BtnD"
+            android:background="@drawable/quiz2_image04"
+            android:layout_row="6"
+            android:layout_column="12"
+            android:onClick="GameBtns"/>
+    </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/q2"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/blackboard"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/question2bText"
+            android:textColor="#FFFFFF"
+            android:id="@+id/question2bText" />
+
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/grid2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q2BtnA"
+            android:background="@drawable/quiz2_image05"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:onClick="GameBtns"/>
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q2BtnB"
+            android:background="@drawable/quiz2_image06"
+            android:layout_row="0"
+            android:layout_column="12"
+            android:contentDescription="@string/image02"
+            android:onClick="GameBtns"/>
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q2BtnC"
+            android:background="@drawable/quiz2_image07"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_rowSpan="2"
+            android:contentDescription="@string/image03"
+            android:onClick="GameBtns"/>
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q2BtnD"
+            android:background="@drawable/quiz2_image08"
+            android:layout_row="6"
+            android:layout_column="12"
+            android:onClick="GameBtns"/>
+    </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/q3"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/blackboard"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/question3bText"
+            android:textColor="#FFFFFF"
+            android:id="@+id/question3bText" />
+
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/grid3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q3BtnA"
+            android:background="@drawable/quiz2_image09"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:onClick="GameBtns"/>
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q3BtnB"
+            android:background="@drawable/quiz2_image10"
+            android:layout_row="0"
+            android:layout_column="12"
+            android:contentDescription="@string/image02"
+            android:onClick="GameBtns"/>
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q3BtnC"
+            android:background="@drawable/quiz2_image11"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_rowSpan="2"
+            android:contentDescription="@string/image03"
+            android:onClick="GameBtns"/>
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:background="@drawable/quiz2_image12"
+            android:id="@+id/q3BtnD"
+            android:layout_row="6"
+            android:layout_column="12"
+            android:onClick="GameBtns"/>
+    </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/q4"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/blackboard"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/question4bText"
+            android:textColor="#FFFFFF"
+            android:id="@+id/question4bText" />
+
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/grid4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q4BtnA"
+            android:background="@drawable/quiz2_image13"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:onClick="GameBtns"/>
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q4BtnB"
+            android:layout_row="0"
+            android:layout_column="12"
+            android:background="@drawable/quiz2_image14"
+            android:contentDescription="@string/image02"
+            android:onClick="GameBtns"/>
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q4BtnC"
+            android:background="@drawable/quiz2_image15"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_rowSpan="2"
+            android:contentDescription="@string/image03"
+            android:onClick="GameBtns"/>
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q4BtnD"
+            android:background="@drawable/quiz2_image16"
+            android:layout_row="6"
+            android:layout_column="12"
+            android:onClick="GameBtns"/>
+    </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/q5"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/blackboard"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/question5bText"
+            android:textColor="#FFFFFF"
+            android:id="@+id/question5bText" />
+
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/grid5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q5BtnA"
+            android:background="@drawable/quiz2_image17"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:onClick="GameBtns"/>
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q5BtnB"
+            android:background="@drawable/quiz2_image18"
+            android:layout_row="0"
+            android:layout_column="12"
+            android:contentDescription="@string/image02"
+            android:onClick="GameBtns"/>
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q5BtnC"
+            android:background="@drawable/quiz2_image19"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_rowSpan="2"
+            android:contentDescription="@string/image03"
+            android:onClick="GameBtns"/>
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q5BtnD"
+            android:background="@drawable/quiz2_image20"
+            android:layout_row="6"
+            android:layout_column="12"
+            android:onClick="GameBtns"/>
+    </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/q6"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/blackboard"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/question6bText"
+            android:textColor="#FFFFFF"
+            android:id="@+id/question6bText" />
+
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/grid6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q6BtnA"
+            android:background="@drawable/quiz2_image21"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:onClick="GameBtns"/>
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q6BtnB"
+            android:background="@drawable/quiz2_image22"
+            android:layout_row="0"
+            android:layout_column="12"
+            android:contentDescription="@string/image02"
+            android:onClick="GameBtns"/>
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q6BtnC"
+            android:background="@drawable/quiz2_image23"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_rowSpan="2"
+            android:contentDescription="@string/image03"
+            android:onClick="GameBtns"/>
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q6BtnD"
+            android:background="@drawable/quiz2_image24"
+            android:layout_row="6"
+            android:layout_column="12"
+            android:onClick="GameBtns"/>
+    </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/q7"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/blackboard"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/question7bText"
+            android:textColor="#FFFFFF"
+            android:id="@+id/question7bText" />
+
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/grid7"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q7BtnA"
+            android:layout_row="0"
+            android:background="@drawable/quiz2_image25"
+            android:layout_column="0"
+            android:onClick="GameBtns"/>
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q7BtnB"
+            android:background="@drawable/quiz2_image26"
+            android:layout_row="0"
+            android:layout_column="12"
+            android:onClick="GameBtns"/>
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q7BtnC"
+            android:background="@drawable/quiz2_image27"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_rowSpan="2"
+            android:onClick="GameBtns"/>
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q7BtnD"
+            android:background="@drawable/quiz2_image28"
+            android:layout_row="6"
+            android:layout_column="12"
+            android:onClick="GameBtns"/>
+    </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/q8"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/blackboard"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:textColor="#FFFFFF"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:text="@string/question8bText"
+            android:id="@+id/question8bText" />
+
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/grid8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q8BtnA"
+            android:background="@drawable/quiz2_image29"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:onClick="GameBtns"/>
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q8BtnB"
+            android:background="@drawable/quiz2_image30"
+            android:layout_row="0"
+            android:layout_column="12"
+            android:contentDescription="@string/image02"
+            android:onClick="GameBtns"/>
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q8BtnC"
+            android:background="@drawable/quiz2_image31"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_rowSpan="2"
+            android:contentDescription="@string/image03"
+            android:onClick="GameBtns"/>
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q8BtnD"
+            android:background="@drawable/quiz2_image32"
+            android:layout_row="6"
+            android:layout_column="12"
+            android:onClick="GameBtns"/>
+    </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/q9"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/blackboard"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/question9bText"
+            android:textColor="#FFFFFF"
+            android:id="@+id/question9bText" />
+
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/grid9"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q9BtnA"
+            android:background="@drawable/quiz2_image33"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:onClick="GameBtns"/>
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q9BtnB"
+            android:background="@drawable/quiz2_image34"
+            android:layout_row="0"
+            android:layout_column="12"
+            android:contentDescription="@string/image02"
+            android:onClick="GameBtns"/>
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q9BtnC"
+            android:background="@drawable/quiz2_image35"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_rowSpan="2"
+            android:contentDescription="@string/image03"
+            android:onClick="GameBtns"/>
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q9BtnD"
+            android:background="@drawable/quiz2_image36"
+            android:layout_row="6"
+            android:layout_column="12"
+            android:onClick="GameBtns"/>
+    </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/q10"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/blackboard"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/question10bText"
+            android:textColor="#FFFFFF"
+            android:id="@+id/question10bText" />
+
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/grid10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q10BtnA"
+            android:background="@drawable/quiz2_image37"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:onClick="GameBtns"/>
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q10BtnB"
+            android:background="@drawable/quiz2_image38"
+            android:layout_row="0"
+            android:layout_column="12"
+            android:contentDescription="@string/image02"
+            android:onClick="GameBtns"/>
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/q10BtnC"
+            android:background="@drawable/quiz2_image39"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_rowSpan="2"
+            android:contentDescription="@string/image03"
+            android:onClick="GameBtns"/>
+
+        <ImageButton
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:background="@drawable/quiz2_image40"
+            android:id="@+id/q10BtnD"
+            android:layout_row="6"
+            android:layout_column="12"
+            android:onClick="GameBtns"/>
+    </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/finish"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/blackboard"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/score"
+            android:textColor="#FFFFFF"
+            android:id="@+id/score" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/achievements"
+            android:layout_marginTop="50dp"
+            android:onClick="onClick"
+            android:text="@string/show_achievements"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exit"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="100dp"
+            android:onClick="onClick"
+            android:text="@string/exit"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/show_leaderboard"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="200dp"
+            android:onClick="onClick"
+            android:text="@string/leaderboard_text"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+
