@@ -99,6 +99,9 @@ public class GeographyActivity extends ActionBarActivity implements GoogleApiCli
                 Intent j = new Intent(this, Geo_Quiz2.class);
                 startActivity(j);
                 break;
+            case R.id.GameBtn3:
+                Intent k = new Intent(this, Geo_Quiz3.class);
+                startActivity(k);
 
         }
     }

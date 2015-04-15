@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="scramble_cat">
-        <item>Play Scramble Class #1</item>
-        <item>Play Scramble Class #2</item>
-        <item>Play Scramble Class #3</item>
+        <item>A. Play Scramble Class #1</item>
+        <item>B. Play Scramble Class #2</item>
+        <item>C. Play Scramble Class #3</item>
     </string-array>
 </resources>

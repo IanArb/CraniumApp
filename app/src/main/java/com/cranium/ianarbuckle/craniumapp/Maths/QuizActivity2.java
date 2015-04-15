@@ -41,7 +41,7 @@ public class QuizActivity2 extends BaseGameActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz_activity2);
+        setContentView(R.layout.activity_quiz2);
 
 
 
@@ -311,7 +311,7 @@ public class QuizActivity2 extends BaseGameActivity {
                         getString(R.string.maths_leaderboard),numCorr);
                 AlertDialog.Builder dialogA = new AlertDialog.Builder(this);
                 dialogA.setTitle("Hurray!");
-                dialogA.setMessage("50 is the correct answer!");
+                dialogA.setMessage("13/28 is the correct answer!");
                 dialogA.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
@@ -341,7 +341,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q1BtnB:
                 AlertDialog.Builder dialogB = new AlertDialog.Builder(this);
                 dialogB.setTitle("Wrong!");
-                dialogB.setMessage("50 is the correct answer!");
+                dialogB.setMessage("13/28 is the correct answer!");
                 dialogB.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
@@ -368,7 +368,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q1BtnC:
                 AlertDialog.Builder dialogC = new AlertDialog.Builder(this);
                 dialogC.setTitle("Wrong!");
-                dialogC.setMessage("50 is the correct answer!");
+                dialogC.setMessage("13/28 is the correct answer!");
                 dialogC.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
@@ -395,7 +395,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q1BtnD:
                 AlertDialog.Builder dialogD = new AlertDialog.Builder(this);
                 dialogD.setTitle("Wrong!");
-                dialogD.setMessage("50 is the correct answer!");
+                dialogD.setMessage("13/28 is the correct answer!");
                 dialogD.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
@@ -431,7 +431,7 @@ public class QuizActivity2 extends BaseGameActivity {
                         getString(R.string.maths_leaderboard),numCorr);
                 AlertDialog.Builder dialogQ2A = new AlertDialog.Builder(this);
                 dialogQ2A.setTitle("Hurray!");
-                dialogQ2A.setMessage("255 is the correct answer!");
+                dialogQ2A.setMessage("15 is the correct answer!");
                 dialogQ2A.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
@@ -461,7 +461,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q2BtnB:
                 AlertDialog.Builder dialogQ2B = new AlertDialog.Builder(this);
                 dialogQ2B.setTitle("Wrong!");
-                dialogQ2B.setMessage("255 is the correct answer!");
+                dialogQ2B.setMessage("15 is the correct answer!");
                 dialogQ2B.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
@@ -490,7 +490,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q2BtnC:
                 AlertDialog.Builder dialogQ2C = new AlertDialog.Builder(this);
                 dialogQ2C.setTitle("Wrong!");
-                dialogQ2C.setMessage("255 is the correct answer!");
+                dialogQ2C.setMessage("15 is the correct answer!");
                 dialogQ2C.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
@@ -519,7 +519,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q2BtnD:
                 AlertDialog.Builder dialogQ2D = new AlertDialog.Builder(this);
                 dialogQ2D.setTitle("Wrong!");
-                dialogQ2D.setMessage("255 is the correct answer!");
+                dialogQ2D.setMessage("15 is the correct answer!");
                 dialogQ2D.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
@@ -556,7 +556,7 @@ public class QuizActivity2 extends BaseGameActivity {
                         getString(R.string.maths_leaderboard),numCorr);
                 AlertDialog.Builder dialogQ3A = new AlertDialog.Builder(this);
                 dialogQ3A.setTitle("Hurray!");
-                dialogQ3A.setMessage("35,640 is the correct answer!");
+                dialogQ3A.setMessage("155 is the correct answer!");
                 dialogQ3A.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
@@ -586,7 +586,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q3BtnB:
                 AlertDialog.Builder dialogQ3B = new AlertDialog.Builder(this);
                 dialogQ3B.setTitle("Wrong!");
-                dialogQ3B.setMessage("35,640 is the correct answer!");
+                dialogQ3B.setMessage("155 is the correct answer!");
                 dialogQ3B.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
@@ -613,7 +613,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q3BtnC:
                 AlertDialog.Builder dialogQ3C = new AlertDialog.Builder(this);
                 dialogQ3C.setTitle("Wrong!");
-                dialogQ3C.setMessage("35,640 is the correct answer!");
+                dialogQ3C.setMessage("155 is the correct answer!");
                 dialogQ3C.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
@@ -640,7 +640,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q3BtnD:
                 AlertDialog.Builder dialogQ3D = new AlertDialog.Builder(this);
                 dialogQ3D.setTitle("Wrong!");
-                dialogQ3D.setMessage("35,640 is the correct answer!");
+                dialogQ3D.setMessage("155 is the correct answer!");
                 dialogQ3D.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
@@ -676,7 +676,7 @@ public class QuizActivity2 extends BaseGameActivity {
                         getString(R.string.maths_leaderboard),numCorr);
                 AlertDialog.Builder dialogQ4A = new AlertDialog.Builder(this);
                 dialogQ4A.setTitle("Hurray!");
-                dialogQ4A.setMessage("0.58 is the correct answer!");
+                dialogQ4A.setMessage("1001 is the correct answer!");
                 dialogQ4A.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
@@ -706,7 +706,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q4BtnB:
                 AlertDialog.Builder dialogQ4B = new AlertDialog.Builder(this);
                 dialogQ4B.setTitle("Wrong!");
-                dialogQ4B.setMessage("0.58 is the correct answer!");
+                dialogQ4B.setMessage("1001 is the correct answer!");
                 dialogQ4B.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
@@ -733,7 +733,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q4BtnC:
                 AlertDialog.Builder dialogQ4C = new AlertDialog.Builder(this);
                 dialogQ4C.setTitle("Wrong!");
-                dialogQ4C.setMessage("0.58 is the correct answer!");
+                dialogQ4C.setMessage("1001 is the correct answer!");
                 dialogQ4C.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
@@ -760,7 +760,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q4BtnD:
                 AlertDialog.Builder dialogQ4D = new AlertDialog.Builder(this);
                 dialogQ4D.setTitle("Wrong!");
-                dialogQ4D.setMessage("0.58 is the correct answer!");
+                dialogQ4D.setMessage("1001 is the correct answer!");
                 dialogQ4D.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
@@ -797,7 +797,7 @@ public class QuizActivity2 extends BaseGameActivity {
                         getString(R.string.maths_leaderboard),numCorr);
                 AlertDialog.Builder dialogQ5A = new AlertDialog.Builder(this);
                 dialogQ5A.setTitle("Hurray!");
-                dialogQ5A.setMessage("59 is the correct answer!");
+                dialogQ5A.setMessage("0.005 is the correct answer!");
                 dialogQ5A.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
@@ -826,7 +826,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q5BtnB:
                 AlertDialog.Builder dialogQ5B = new AlertDialog.Builder(this);
                 dialogQ5B.setTitle("Wrong!");
-                dialogQ5B.setMessage("59 is the correct answer!");
+                dialogQ5B.setMessage("0.005 is the correct answer!");
                 dialogQ5B.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
@@ -853,7 +853,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q5BtnC:
                 AlertDialog.Builder dialogQ5C = new AlertDialog.Builder(this);
                 dialogQ5C.setTitle("Wrong!");
-                dialogQ5C.setMessage("59 is the correct answer!");
+                dialogQ5C.setMessage("0.005 is the correct answer!");
                 dialogQ5C.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
@@ -880,7 +880,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q5BtnD:
                 AlertDialog.Builder dialogQ5D = new AlertDialog.Builder(this);
                 dialogQ5D.setTitle("Wrong!");
-                dialogQ5D.setMessage("59 is the correct answer!");
+                dialogQ5D.setMessage("0.005 is the correct answer!");
                 dialogQ5D.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
@@ -914,7 +914,7 @@ public class QuizActivity2 extends BaseGameActivity {
                         getString(R.string.maths_leaderboard),numCorr);
                 AlertDialog.Builder dialogQ6A = new AlertDialog.Builder(this);
                 dialogQ6A.setTitle("Hurray!");
-                dialogQ6A.setMessage("1,211 is the correct answer!");
+                dialogQ6A.setMessage("96 is the correct answer!");
                 dialogQ6A.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
@@ -944,7 +944,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q6BtnB:
                 AlertDialog.Builder dialogQ6B = new AlertDialog.Builder(this);
                 dialogQ6B.setTitle("Wrong!");
-                dialogQ6B.setMessage("1,211 is the correct answer!");
+                dialogQ6B.setMessage("96 is the correct answer!");
                 dialogQ6B.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
@@ -971,7 +971,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q6BtnC:
                 AlertDialog.Builder dialogQ6C = new AlertDialog.Builder(this);
                 dialogQ6C.setTitle("Wrong!");
-                dialogQ6C.setMessage("1,211 is the correct answer!");
+                dialogQ6C.setMessage("96 is the correct answer!");
                 dialogQ6C.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
@@ -998,7 +998,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q6BtnD:
                 AlertDialog.Builder dialogQ6D = new AlertDialog.Builder(this);
                 dialogQ6D.setTitle("Wrong!");
-                dialogQ6D.setMessage("1,211 is the correct answer!");
+                dialogQ6D.setMessage("96 is the correct answer!");
                 dialogQ6D.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
@@ -1034,7 +1034,7 @@ public class QuizActivity2 extends BaseGameActivity {
                         getString(R.string.maths_leaderboard),numCorr);
                 AlertDialog.Builder dialogQ7A = new AlertDialog.Builder(this);
                 dialogQ7A.setTitle("Hurray!");
-                dialogQ7A.setMessage("11,552 is the correct answer!");
+                dialogQ7A.setMessage("This is the correct answer!");
                 dialogQ7A.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
@@ -1064,7 +1064,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q7BtnB:
                 AlertDialog.Builder dialogQ7B = new AlertDialog.Builder(this);
                 dialogQ7B.setTitle("Wrong!");
-                dialogQ7B.setMessage("11,552 is the correct answer!");
+                dialogQ7B.setMessage("This is the correct answer!");
                 dialogQ7B.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
@@ -1091,7 +1091,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q7BtnC:
                 AlertDialog.Builder dialogQ7C = new AlertDialog.Builder(this);
                 dialogQ7C.setTitle("Wrong!");
-                dialogQ7C.setMessage("11,552 is the correct answer!");
+                dialogQ7C.setMessage("This is the correct answer!");
                 dialogQ7C.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
@@ -1118,7 +1118,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q7BtnD:
                 AlertDialog.Builder dialogQ7D = new AlertDialog.Builder(this);
                 dialogQ7D.setTitle("Wrong!");
-                dialogQ7D.setMessage("11,552 is the correct answer!");
+                dialogQ7D.setMessage("This is the correct answer!");
                 dialogQ7D.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
@@ -1154,7 +1154,7 @@ public class QuizActivity2 extends BaseGameActivity {
                         getString(R.string.maths_leaderboard),numCorr);
                 AlertDialog.Builder dialogQ8A = new AlertDialog.Builder(this);
                 dialogQ8A.setTitle("Hurray!");
-                dialogQ8A.setMessage("13.29 is the correct answer!");
+                dialogQ8A.setMessage("H x L is the correct answer!");
                 dialogQ8A.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
@@ -1184,7 +1184,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q8BtnB:
                 AlertDialog.Builder dialogQ8B = new AlertDialog.Builder(this);
                 dialogQ8B.setTitle("Wrong!");
-                dialogQ8B.setMessage("13.29 is the correct answer!");
+                dialogQ8B.setMessage("H x L is the correct answer!");
                 dialogQ8B.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
@@ -1211,7 +1211,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q8BtnC:
                 AlertDialog.Builder dialogQ8C = new AlertDialog.Builder(this);
                 dialogQ8C.setTitle("Wrong!");
-                dialogQ8C.setMessage("13.29 is the correct answer!");
+                dialogQ8C.setMessage("H x L is the correct answer!");
                 dialogQ8C.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
@@ -1238,7 +1238,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q8BtnD:
                 AlertDialog.Builder dialogQ8D = new AlertDialog.Builder(this);
                 dialogQ8D.setTitle("Wrong!");
-                dialogQ8D.setMessage("13.29 is the correct answer!");
+                dialogQ8D.setMessage("H x L is the correct answer!");
                 dialogQ8D.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
@@ -1273,8 +1273,8 @@ public class QuizActivity2 extends BaseGameActivity {
                 Games.Leaderboards.submitScore(getApiClient(),
                         getString(R.string.maths_leaderboard),numCorr);
                 AlertDialog.Builder dialogQ9A = new AlertDialog.Builder(this);
-                dialogQ9A.setTitle("Wrong!");
-                dialogQ9A.setMessage("0.8 is the correct answer!");
+                dialogQ9A.setTitle("Hurray!");
+                dialogQ9A.setMessage("64 is the correct answer!");
                 dialogQ9A.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
@@ -1304,7 +1304,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q9BtnB:
                 AlertDialog.Builder dialogQ9B = new AlertDialog.Builder(this);
                 dialogQ9B.setTitle("Wrong!");
-                dialogQ9B.setMessage("0.8 is the correct answer!");
+                dialogQ9B.setMessage("64 is the correct answer!");
                 dialogQ9B.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
@@ -1331,7 +1331,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q9BtnC:
                 AlertDialog.Builder dialogQ9C = new AlertDialog.Builder(this);
                 dialogQ9C.setTitle("Wrong!");
-                dialogQ9C.setMessage("0.8 is the correct answer!");
+                dialogQ9C.setMessage("64 is the correct answer!");
                 dialogQ9C.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
@@ -1358,7 +1358,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q9BtnD:
                 AlertDialog.Builder dialogQ9D = new AlertDialog.Builder(this);
                 dialogQ9D.setTitle("Wrong!");
-                dialogQ9D.setMessage("0.8 is the correct answer!");
+                dialogQ9D.setMessage("64 is the correct answer!");
                 dialogQ9D.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
@@ -1393,7 +1393,7 @@ public class QuizActivity2 extends BaseGameActivity {
                         getString(R.string.maths_leaderboard),numCorr);
                 AlertDialog.Builder dialogQ10A = new AlertDialog.Builder(this);
                 dialogQ10A.setTitle("Hurray!");
-                dialogQ10A.setMessage("228 is the correct answer!");
+                dialogQ10A.setMessage("154 is the correct answer!");
                 dialogQ10A.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
@@ -1424,7 +1424,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q10BtnB:
                 AlertDialog.Builder dialogQ10B = new AlertDialog.Builder(this);
                 dialogQ10B.setTitle("Wrong!");
-                dialogQ10B.setMessage("228 is the correct answer!");
+                dialogQ10B.setMessage("154 is the correct answer!");
                 dialogQ10B.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
@@ -1452,7 +1452,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q10BtnC:
                 AlertDialog.Builder dialogQ10C = new AlertDialog.Builder(this);
                 dialogQ10C.setTitle("Wrong!");
-                dialogQ10C.setMessage("228 is the correct answer!");
+                dialogQ10C.setMessage("154 is the correct answer!");
                 dialogQ10C.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone
@@ -1479,7 +1479,7 @@ public class QuizActivity2 extends BaseGameActivity {
             case R.id.q10BtnD:
                 AlertDialog.Builder dialogQ10D = new AlertDialog.Builder(this);
                 dialogQ10D.setTitle("Wrong!");
-                dialogQ10D.setMessage("228 is the correct answer!");
+                dialogQ10D.setMessage("154 is the correct answer!");
                 dialogQ10D.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //set q1 to gone

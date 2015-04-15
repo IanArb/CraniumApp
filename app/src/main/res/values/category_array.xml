@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="categories">
-        <item>Dictatorship and Democracy</item>
-        <item>Irish War of Independence</item>
-        <item>American Presidents</item>
-        <item>Russian Revolution</item>
+        <item>A. Dictatorship and Democracy</item>
+        <item>B. Irish War of Independence</item>
+        <item>C. American Presidents</item>
+        <item>D. Russian Revolution</item>
     </string-array>
 </resources>
