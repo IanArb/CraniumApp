@@ -24,10 +24,10 @@ import com.google.android.gms.games.Games;
 
 import java.util.Random;
 
-
 /**
- * Author: Ian Arbuckle
- * Reference: http://code.tutsplus.com/tutorials/create-a-hangman-game-user-interaction--mobile-21893
+ * Date 15/04/2015
+ @Author: Ian Arbuckle
+ @Reference: http://code.tutsplus.com/tutorials/create-a-hangman-game-user-interaction--mobile-21893
  */
 
 public class HangmanActivity extends BaseGameActivity{

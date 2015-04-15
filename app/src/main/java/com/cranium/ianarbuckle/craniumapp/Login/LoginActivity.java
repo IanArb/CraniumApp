@@ -57,9 +57,9 @@ import java.util.List;
 
 
 /**
- * A login screen that offers login via Google+
- * Reference: http://www.androidhive.info/2014/02/android-login-with-google-plus-account-1/
- * Author: Ian Arbuckle
+ * Date 15/04/2015
+ @Author: Ian Arbuckle
+ @Reference: http://androidhive.info/2014/02/android-login-with-google-plus-account-1/
  */
 public class LoginActivity extends Activity implements OnClickListener, ConnectionCallbacks, OnConnectionFailedListener, LoaderCallbacks<Cursor> {
 

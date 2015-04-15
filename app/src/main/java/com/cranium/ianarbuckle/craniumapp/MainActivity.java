@@ -34,11 +34,10 @@ import com.google.android.gms.plus.model.people.Person;
 
 import java.io.InputStream;
 
-//scrolling
-
 /**
- * The main menu of our application
- * Author: Ian Arbuckle
+ * Date 15/04/2015
+ @Author: Ian Arbuckle
+ @Reference: http://androidhive.info/2014/02/android-login-with-google-plus-account-1/
  */
 public class MainActivity extends Activity implements ConnectionCallbacks, OnConnectionFailedListener, OnClickListener {
 

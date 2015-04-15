@@ -6,10 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.cranium.ianarbuckle.craniumapp.Login.User;
-
 /**
- * Our Database set up for the normal log in form.
+ * Date 15/04/2015
  * Author: Ian Arbuckle
  * Reference: http://stackoverflow.com/questions/22209046/fix-android-studio-login-activity-template-generated-activity
  */

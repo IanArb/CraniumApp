@@ -37,11 +37,17 @@ import com.google.android.youtube.player.YouTubePlayerView;
 import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 
-/**
- * Sample activity showing how to properly enable custom fullscreen behavior.
- * <p/>
- * This is the preferred way of handling fullscreen because the default fullscreen implementation
- * will cause re-buffering of the video.
+/*
+ *
+ *
+ *
+ *
+ *
+Date 15/04/2015
+ *
+ *
+@author Cillian Murray
+ *
  */
 @TargetApi(Build.VERSION_CODES.GINGERBREAD)
 public class GeoYouTubePlayer extends YouTubeFailureRecoveryActivity implements

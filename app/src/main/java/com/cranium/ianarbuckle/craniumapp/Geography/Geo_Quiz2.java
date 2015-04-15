@@ -20,6 +20,20 @@ import com.cranium.ianarbuckle.craniumapp.R;
 import com.cranium.ianarbuckle.craniumapp.com.cranium.ianarbuckle.craniumapp.game.BaseGameActivity;
 import com.google.android.gms.games.Games;
 
+/*
+ *
+ *
+ *
+ *
+ *
+Date 15/04/2015
+ *
+ *
+@author Cillian Murray
+@reference http://www.vogella.com/tutorials/AndroidDragAndDrop/article.html
+ *
+ */
+
 
 public class Geo_Quiz2 extends BaseGameActivity {
 

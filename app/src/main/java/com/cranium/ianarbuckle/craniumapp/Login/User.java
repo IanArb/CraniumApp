@@ -1,7 +1,7 @@
 package com.cranium.ianarbuckle.craniumapp.Login;
 
 /**
- * Our normal login form instiantiable class
+ * Date 15/04/2015
  * Author: Ian Arbuckle
  * Reference: http://stackoverflow.com/questions/22209046/fix-android-studio-login-activity-template-generated-activity
  */

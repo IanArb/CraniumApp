@@ -27,6 +27,12 @@ import com.google.android.gms.plus.model.people.Person;
 
 import java.io.InputStream;
 
+/**
+ * Date 15/04/2015
+ * Author: Cian Dunne
+ *
+ */
+
 
 public class MathsActivity extends ActionBarActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
 

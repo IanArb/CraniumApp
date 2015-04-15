@@ -16,6 +16,12 @@ import com.cranium.ianarbuckle.craniumapp.R;
 import com.cranium.ianarbuckle.craniumapp.com.cranium.ianarbuckle.craniumapp.game.BaseGameActivity;
 import com.google.android.gms.games.Games;
 
+/**
+ * Date 15/04/2015
+ * Author: Cian Dunne
+ *
+ */
+
 
 public class QuizActivity2 extends BaseGameActivity {
 

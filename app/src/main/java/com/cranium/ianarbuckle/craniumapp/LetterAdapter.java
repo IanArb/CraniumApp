@@ -1,17 +1,16 @@
 package com.cranium.ianarbuckle.craniumapp;
 
 /**
- * Generating the letters of our hangman game-
+ * Date: 15/04/2015
  * Author: Ian Arbuckle
  * Reference: http://code.tutsplus.com/tutorials/create-a-hangman-game-user-interaction--mobile-21893
  */
 
-import android.text.Editable;
+import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.content.Context;
-import android.view.LayoutInflater;
 import android.widget.Button;
 
 public class LetterAdapter extends BaseAdapter {

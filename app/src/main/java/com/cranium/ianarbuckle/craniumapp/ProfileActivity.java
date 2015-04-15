@@ -27,6 +27,11 @@ import com.google.android.gms.plus.model.people.Person;
 
 import java.io.InputStream;
 
+/**
+ * Date 15/04/2015
+ @Author: Ian Arbuckle
+ @Reference: http://androidhive.info/2014/02/android-login-with-google-plus-account-1/
+ */
 
 public class ProfileActivity extends BaseGameActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
 

@@ -27,6 +27,19 @@ import com.google.android.gms.plus.model.people.Person;
 
 import java.io.InputStream;
 
+/*
+ *
+ *
+ *
+ *
+ *
+Date 15/04/2015
+ *
+ *
+@author Cillian Murray
+ *
+ */
+
 
 public class GeographyActivity extends ActionBarActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
 

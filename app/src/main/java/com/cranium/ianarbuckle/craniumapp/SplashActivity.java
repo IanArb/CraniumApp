@@ -9,6 +9,13 @@ import android.view.WindowManager;
 import com.cranium.ianarbuckle.craniumapp.Login.LoginActivity;
 
 
+/**
+ * Date 15/04/2015
+ @Author: Ian Arbuckle
+ @Reference: http://www.androidhive.info/2013/07/how-to-implement-android-splash-screen-2/
+ */
+
+
 public class SplashActivity extends Activity {
 
     private static String TAG = SplashActivity.class.getName();
