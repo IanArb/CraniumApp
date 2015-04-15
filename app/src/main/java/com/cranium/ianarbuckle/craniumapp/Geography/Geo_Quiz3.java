@@ -38,7 +38,7 @@ public class Geo_Quiz3 extends BaseGameActivity {
         findViewById(R.id.imageIndonesia).setOnTouchListener(new MyTouchListener());
         findViewById(R.id.imageJapan).setOnTouchListener(new MyTouchListener());
         findViewById(R.id.imageKorea).setOnTouchListener(new MyTouchListener());
-        findViewById(R.id.imageNewYork).setOnTouchListener(new MyTouchListener());
+        findViewById(R.id.imageSyria).setOnTouchListener(new MyTouchListener());
 
         //containers
         findViewById(R.id.afghan).setOnDragListener(new MyDragListener());
@@ -50,7 +50,7 @@ public class Geo_Quiz3 extends BaseGameActivity {
         findViewById(R.id.indonesia).setOnDragListener(new MyDragListener());
         findViewById(R.id.japan).setOnDragListener(new MyDragListener());
         findViewById(R.id.korea).setOnDragListener(new MyDragListener());
-        findViewById(R.id.newyork).setOnDragListener(new MyDragListener());
+        findViewById(R.id.syria).setOnDragListener(new MyDragListener());
 
         //Google Games Services
         findViewById(R.id.badges);
