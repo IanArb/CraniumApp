@@ -17,6 +17,7 @@
 package com.cranium.ianarbuckle.craniumapp.History;
 
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Build;
@@ -28,6 +29,7 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 
+import com.cranium.ianarbuckle.craniumapp.Maths.MathsActivity;
 import com.cranium.ianarbuckle.craniumapp.R;
 import com.cranium.ianarbuckle.craniumapp.YouTube.DeveloperKey;
 import com.cranium.ianarbuckle.craniumapp.YouTube.YouTubeFailureRecoveryActivity;
@@ -61,6 +63,7 @@ public class HistoryYouTubePlayer extends YouTubeFailureRecoveryActivity impleme
     private View otherViews;
 
     private boolean fullscreen;
+    private Button exit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +83,16 @@ public class HistoryYouTubePlayer extends YouTubeFailureRecoveryActivity impleme
         playerView.initialize(DeveloperKey.DEVELOPER_KEY, this);
 
         doLayout();
+
+        exit = (Button)findViewById(R.id.exit);
+    }
+
+    public void OnClick(View v){
+        switch(v.getId()){
+            case R.id.exit:
+                Intent e = new Intent(this, MathsActivity.class);
+                startActivity(e);
+        }
     }
 
 

@@ -17,6 +17,7 @@
 package com.cranium.ianarbuckle.craniumapp.Maths;
 
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Build;
@@ -28,8 +29,8 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 
-import com.cranium.ianarbuckle.craniumapp.YouTube.DeveloperKey;
 import com.cranium.ianarbuckle.craniumapp.R;
+import com.cranium.ianarbuckle.craniumapp.YouTube.DeveloperKey;
 import com.cranium.ianarbuckle.craniumapp.YouTube.YouTubeFailureRecoveryActivity;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
@@ -62,6 +63,8 @@ public class MathsYouTubePlayer extends YouTubeFailureRecoveryActivity implement
 
     private boolean fullscreen;
 
+    private Button exit;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,6 +75,7 @@ public class MathsYouTubePlayer extends YouTubeFailureRecoveryActivity implement
         fullscreenButton = (Button) findViewById(R.id.fullscreen_button);
         checkbox = (CompoundButton) findViewById(R.id.landscape_fullscreen_checkbox);
         otherViews = findViewById(R.id.other_views);
+        exit = (Button)findViewById(R.id.exit);
 
         checkbox.setOnCheckedChangeListener(this);
         // You can use your own button to switch to fullscreen too
@@ -80,6 +84,14 @@ public class MathsYouTubePlayer extends YouTubeFailureRecoveryActivity implement
         playerView.initialize(DeveloperKey.DEVELOPER_KEY, this);
 
         doLayout();
+    }
+
+    public void OnClick(View v){
+        switch(v.getId()){
+            case R.id.exit:
+                Intent e = new Intent(this, MathsActivity.class);
+                startActivity(e);
+        }
     }
 
     @Override
